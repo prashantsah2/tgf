@@ -186,7 +186,7 @@ export default function Service1() {
                 transition={{ delay: 0.6 }}
               >
                 {`OUR COMPANY'S`}<br />
-                <span className="text-blue-600 font-bold">VISION</span>
+                <span className="text-blue-600 font-bold">{`VISION `}</span>
               </motion.h1>
 
               <motion.div 
