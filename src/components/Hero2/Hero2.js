@@ -95,7 +95,7 @@ export default function Hero2() {
 
         {/* Right Content - Image Placeholder */}
         <div className="flex-1 flex justify-center items-center relative max-md:hidden">
-          <Image src={`/image/blazestore.in__4_-removebg-preview.png`} className=' relative max-w-[341px] object-contain' alt="Description of image" width={341} height={341} />
+          <Image src={`/image/blazestore.in__4_-removebg-preview.png`} className=' relative object-contain w-full h-[88vh] ' alt="Description of image" width={341} height={341} />
         </div>
       </div>
 

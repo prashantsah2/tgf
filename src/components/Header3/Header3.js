@@ -42,11 +42,11 @@ export default function Header3() {
       <div className="flex items-center space-x-8">
        <a href="/">
         <motion.div 
-          className="flex items-center space-x-2 text-green-400"
+          className="flex items-center space-x-2 text-primary"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="w-8 h-8 bg-green-400 rounded flex items-center justify-center">
+          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
             <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
@@ -69,11 +69,11 @@ export default function Header3() {
         </motion.div>
         <a href="/services">
         <motion.div 
-          className="flex items-center space-x-2 text-green-400"
+          className="flex items-center space-x-2 text-primary"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
             <div className="w-3 h-3 bg-white rounded-full"></div>
           </div>
           <span className="text-lg font-semibold">Services</span>

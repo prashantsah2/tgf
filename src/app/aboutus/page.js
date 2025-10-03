@@ -1,12 +1,9 @@
 "use client"
-import Footer from "@/components/Footer/Footer";
-import HeaderNew from "@/components/HeaderNew/HeaderNew";
-import AboutHero from "@/components/AboutHero/AboutHero";
-import Footer2 from "@/components/Footer2/Footer2";
-import Header from "@/components/Header/Header";
-import Header3 from "@/components/Header3/Header3";
-
-
+import Header4 from "@/components/Header4/Header4";
+import Teams from "@/components/Teams/Teams";
+import About2 from "@/components/About2/About2";
+import Footer3 from "@/components/Footer3/Footer3";
+import Service1 from "../../components/Service1/Service1";
 
 
 
@@ -17,12 +14,14 @@ export default function Aboutus(){
 
     return(
         <>
-        <Header3/>
-        <div className="flex flex-col justify-center items-center w-full min-h-[91vh]">
-         <AboutHero/>
-         <Footer2/>
+        <Header4 heading="About Us" text="Learn more about our team and mission."/>
+        <div className="flex flex-col justify-center items-center w-full min-h-[91vh] w-full bg-gray-50 pt-20">
+         <About2/>
+         
+         <Teams/>
+       
         </div>
-      
+        <Footer3/>
 
         </>
     )

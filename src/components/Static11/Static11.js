@@ -23,7 +23,7 @@ const Static11 = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-6xl lg:text-7xl font-black mb-4 font-bebas">
-                <span className="text-green-400 drop-shadow-lg">WHO WE ARE</span>
+                <span className="text-primary drop-shadow-lg">WHO WE ARE</span>
                 <br />
                 <span className="text-white">BEHIND THE SCENES</span>
               </h1>
@@ -31,11 +31,11 @@ const Static11 = () => {
             
             <div className="space-y-6 text-lg lg:text-xl leading-relaxed">
               <p className="text-white">
-                <span className="text-green-400 font-bold">Every brand needs a hero</span> — or better yet, a full team of them.
+                <span className="text-primary font-bold">Every brand needs a hero</span> — or better yet, a full team of them.
               </p>
               
               <p className="text-white">
-                <span className="text-green-400 font-bold">{`We're a crew of creative minds and tech wizards`}</span> on a 
+                <span className="text-primary font-bold">{`We're a crew of creative minds and tech wizards`}</span> on a 
                 mission to power up your business with digital superpowers. 
                 From crafting scroll-stopping content to building websites 
                 that actually work, we blend marketing magic and IT 
@@ -43,13 +43,13 @@ const Static11 = () => {
               </p>
               
               <p className="text-white">
-                <span className="text-green-400 font-bold">Think of us as the team behind the curtain</span> — coding, 
+                <span className="text-primary font-bold">Think of us as the team behind the curtain</span> — coding, 
                 creating, strategizing, while you take the spotlight.
               </p>
             </div>
             
             <div className="pt-8">
-              <h2 className="text-4xl lg:text-5xl font-bold text-green-400 transform -rotate-2">
+              <h2 className="text-4xl lg:text-5xl font-bold text-primary transform -rotate-2">
                 No capes (yet). Just results.
               </h2>
             </div>

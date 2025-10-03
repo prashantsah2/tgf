@@ -10,43 +10,43 @@ const OurProjects2 = () => {
       title: "CLAN Businesss - Marketplace", 
       description: "Clan Marketplace is a cutting-edge platform designed to connect buyers and sellers in a seamless online environment.",
       technologies: ["React", "Node.js", "AI/ML", "MongoDB"],
-      image: '/image/proj.png'
+      image: '/image/proj1.png'
     },
     {
       id: 2,
       title: "Clanfest - An artist event platforms",
       description: "A full-stack e-commerce solution with advanced analytics, inventory management, and seamless payment integration for modern businesses.",
       technologies: ["Next.js", "Stripe", "PostgreSQL", "AWS"],
-      image: `/image/proj.png`
+      image: `/image/proj2.png`
     },
     {
       id: 3,
-      title: "Weather Analytics Dashboard",
-      description: "Real-time weather monitoring and prediction system with beautiful data visualizations and historical trend analysis for multiple locations.",
+      title: "Blaze Store",
+      description: "E-commerce platform for buying and selling products with real-time inventory management and analytics.",
       technologies: ["Vue.js", "D3.js", "Python", "API"],
-      image: `/image/proj.png`
+      image: `/image/proj3.png`
     },
-    /* {
+    {
       id: 4,
-      title: "Social Media Manager",
-      description: "Comprehensive social media management tool with content scheduling, analytics tracking, and automated engagement features.",
+      title: "Gold Estates",
+      description: "Comprehensive real estate platform with property listings, virtual tours, and advanced search features.",
       technologies: ["Angular", "Express", "Redis", "Docker"],
       image: "Project Screenshot"
     },
     {
       id: 5,
-      title: "Fitness Tracker App",
+      title: "Green Farm House",
       description: "Mobile-first fitness application with workout planning, nutrition tracking, and progress visualization with social features.",
       technologies: ["React Native", "Firebase", "Charts", "GPS"],
       image: "Project Screenshot"
     },
     {
       id: 6,
-      title: "Blockchain Wallet",
-      description: "Secure cryptocurrency wallet with multi-chain support, DeFi integration, and advanced security features for digital asset management.",
+      title: "ENEN",
+      description: "Green energy solutions for a sustainable future.",
       technologies: ["Web3", "Ethereum", "Solidity", "MetaMask"],
       image: "Project Screenshot"
-    } */
+    }
   ];
 
   const containerVariants = {
@@ -88,7 +88,7 @@ const OurProjects2 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0906bd] text-white w-full relative">
+    <div className="min-h-screen bg-[#0906bd] text-white w-full relative w-full">
 
        <div className="absolute inset-0 opacity-20">
         <svg width="100%" height="100%" className="w-full h-full">
@@ -112,7 +112,7 @@ const OurProjects2 = () => {
         >
           <h1 className="text-6xl md:text-8xl font-black leading-none mb-5 font-bebas">
             OUR{' '}
-            <span className="text-green-500">PROJECTS</span>
+            <span className="text-primary">PROJECTS</span>
           </h1>
           <div className="w-20 h-1 bg-white mb-6"></div>
           <div className="text-xl md:text-2xl font-light opacity-90 mb-6">
@@ -164,7 +164,7 @@ const OurProjects2 = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <motion.span
                       key={tech}
-                      className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium border border-green-500/30"
+                      className="bg-green-500/20 text-primary px-3 py-1 rounded-full text-sm font-medium border border-green-500/30"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ 
@@ -181,7 +181,7 @@ const OurProjects2 = () => {
                 <div className="flex gap-4">
                   <motion.a
                     href="#"
-                    className="bg-green-500 text-white px-5 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:bg-green-600"
+                    className="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:bg-green-600"
                     whileHover={{ 
                       y: -2,
                       boxShadow: "0 10px 25px rgba(16, 185, 129, 0.4)"
@@ -212,7 +212,7 @@ const OurProjects2 = () => {
           transition={{ delay: 1.5, duration: 0.6 }}
         >
           <motion.button
-            className="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-green-600"
+            className="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-green-600"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 15px 30px rgba(16, 185, 129, 0.4)"

@@ -92,23 +92,7 @@ const SocialMedia = () => {
         />
       </div>
 
-      {/* Floating contact icons - Desktop only */}
-      <div className="hidden lg:flex fixed right-4 xl:right-6 top-1/2 transform -translate-y-1/2 z-50 flex-col space-y-3 z-10">
-        {[
-          { icon: <MessageCircle className="w-5 h-5" />, color: "bg-green-500" },
-          { icon: <Phone className="w-5 h-5" />, color: "bg-green-600" },
-          { icon: <Mail className="w-5 h-5" />, color: "bg-green-700" }
-        ].map((contact, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.1, x: -8 }}
-            whileTap={{ scale: 0.95 }}
-            className={`w-12 h-12 ${contact.color} rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300`}
-          >
-            <span className="text-white">{contact.icon}</span>
-          </motion.div>
-        ))}
-      </div>
+   
 
       <motion.div 
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"
