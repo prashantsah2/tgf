@@ -1,15 +1,9 @@
 "use client"
-import Hero2 from "@/components/Hero2/Hero2";
-import OurProjects from "@/components/OurProjects/OurProjects";
-import Static11 from "@/components/Static11/Static11";
-import OurProjects2 from "@/components/OurProjects2/OurProjects2";
-import BentoSet2 from "@/components/BentoSet2/BentoSet2";
-import Footer2 from "@/components/Footer2/Footer2";
+
 import Header4 from "@/components/Header4/Header4";
 import News from "@/components/News/News";
 import WhoWeAre from "@/components/WhoWeAre/WhoWeAre";
-import OurServices from "@/components/OurServices/OurServices";
-import Hero from "@/components/Hero/Hero"
+
 import ClientsSection from "@/components/ClientsSection/ClientsSection";
 import QueryForm2 from "@/components/QueryForm2/QueryForm2"
 import Footer3 from "@/components/Footer3/Footer3"
@@ -42,7 +36,7 @@ export default function Campaign() {
       <News/>
       <Overview/>
       <OurTeam/>
- 
+      
      
       <QueryForm2/>
 

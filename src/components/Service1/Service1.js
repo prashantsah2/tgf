@@ -185,7 +185,7 @@ export default function Service1() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                OUR COMPANY'S<br />
+                {`OUR COMPANY'S`}<br />
                 <span className="text-blue-600 font-bold">VISION</span>
               </motion.h1>
 
