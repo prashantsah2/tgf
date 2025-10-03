@@ -19,6 +19,7 @@ import Popup from "@/components/Popup/Popus"
 import Noteworthy from "@/components/Noteworthy/Noteworthy"
 import Stats from "@/components/Stats/Stats"
 import Overview from "@/components/Overview/Overview"
+import OurTeam from "@/components/OurTeam/OurTeam"
 
 export default function Campaign() {
 
@@ -40,6 +41,7 @@ export default function Campaign() {
       <ServicesList/>
       <News/>
       <Overview/>
+      <OurTeam/>
  
      
       <QueryForm2/>
