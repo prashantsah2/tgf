@@ -1,240 +1,253 @@
-'use client'
-import React, { useState } from 'react';
-import { Shield, TrendingUp, Users, FileText, Award, Target, CheckCircle, BarChart2, Leaf, Globe } from 'lucide-react';
+'use client';
 
-export default function ESGServicesPage() {
-  const [activeTab, setActiveTab] = useState('maturity');
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { TrendingUp, BarChart3, Users, FileText, Award, Target, CheckSquare, Leaf } from 'lucide-react';
+import Header4 from '@/components/Header4/Header4';
+import Footer3 from '@/components/Footer3/Footer3';
 
-  const services = [
-    { 
-      id: 'maturity', 
-      name: 'ESG Maturity Assessment', 
-      icon: Shield,
-      color: 'bg-slate-700',
-      hoverColor: 'hover:bg-slate-600'
-    },
-    { 
-      id: 'gap', 
-      name: 'ESG Gap Analysis', 
-      icon: TrendingUp,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'benchmarking', 
-      name: 'ESG Peer Benchmarking', 
-      icon: BarChart2,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'materiality', 
-      name: 'ESG Materiality Assessment', 
-      icon: Target,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'reporting', 
-      name: 'Sustainability (ESG) Reporting', 
-      icon: FileText,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'brsr', 
-      name: 'BRSR Reporting', 
-      icon: FileText,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'rating', 
-      name: 'ESG Rating (EcoVadis)', 
-      icon: Award,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'cdp', 
-      name: 'CDP Reporting', 
-      icon: Globe,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'sbti-target', 
-      name: 'SBTi Target Submission', 
-      icon: Target,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
-    },
-    { 
-      id: 'sbti-feasibility', 
-      name: 'SBTi Feasibility Assessment', 
-      icon: CheckCircle,
-      color: 'bg-green-600',
-      hoverColor: 'hover:bg-green-500'
+const servicesData = [
+  {
+    id: 'maturity',
+    name: 'ESG Maturity Assessment',
+    icon: TrendingUp,
+    color: 'bg-[#334155]',
+    hoverColor: 'hover:bg-[#475569]',
+    content: {
+      title: 'ESG Maturity Assessment',
+      description: "Our ESG (Environmental, Social, and Governance) maturity assessment service involves analyzing an organization's existing ESG status and performance. Through comprehensive evaluation and benchmarking against industry standards, we assess the organization's current sustainability practices, policies, and outcomes. This process identifies strengths, weaknesses, and areas for improvement across ESG pillars. Our tailored approach considers the organization's unique goals and context, providing actionable insights and recommendations to enhance ESG performance and drive long-term value creation."
     }
-  ];
+  },
+  {
+    id: 'gap',
+    name: 'ESG Gap Analysis',
+    icon: BarChart3,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'ESG Gap Analysis',
+      description: "Our ESG Gap Analysis service identifies the discrepancies between your current ESG performance and desired targets or industry benchmarks. We conduct thorough assessments of your environmental impact, social responsibility initiatives, and governance structures to pinpoint specific areas requiring improvement. This analysis provides a clear roadmap for closing gaps, prioritizing actions, and aligning your organization with best practices and stakeholder expectations."
+    }
+  },
+  {
+    id: 'benchmarking',
+    name: 'ESG Peer Benchmarking',
+    icon: Users,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'ESG Peer Benchmarking',
+      description: "Compare your ESG performance against industry peers and leaders with our comprehensive benchmarking service. We analyze key performance indicators across environmental, social, and governance dimensions, providing insights into your competitive position. Our benchmarking reports highlight areas of strength and opportunities for improvement, enabling you to set realistic targets and adopt best practices from top performers in your sector."
+    }
+  },
+  {
+    id: 'materiality',
+    name: 'ESG Materiality Assessment',
+    icon: CheckSquare,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'ESG Materiality Assessment',
+      description: "Identify and prioritize the ESG issues that matter most to your business and stakeholders. Our materiality assessment process engages key stakeholders, analyzes industry trends, and evaluates business impact to determine which environmental, social, and governance topics are most significant. This assessment forms the foundation for focused ESG strategy development and transparent reporting that addresses stakeholder concerns."
+    }
+  },
+  {
+    id: 'reporting',
+    name: 'Sustainability (ESG) Reporting',
+    icon: FileText,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'Sustainability (ESG) Reporting',
+      description: "Enhance transparency and stakeholder trust with our comprehensive sustainability reporting services. We help you develop ESG reports aligned with global frameworks including GRI, SASB, TCFD, and CDP. Our team ensures accurate data collection, meaningful disclosure, and compelling narrative that demonstrates your commitment to sustainable business practices and responsible corporate citizenship."
+    }
+  },
+  {
+    id: 'brsr',
+    name: 'BRSR Reporting',
+    icon: Award,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'BRSR Reporting',
+      description: "Navigate India's Business Responsibility and Sustainability Reporting requirements with our expert guidance. We assist organizations in preparing comprehensive BRSR reports that comply with SEBI mandates, covering all nine principles of the National Guidelines on Responsible Business Conduct. Our service ensures accurate disclosure of ESG performance metrics and qualitative information for regulatory compliance and stakeholder communication."
+    }
+  },
+  {
+    id: 'ecovadis',
+    name: 'ESG Rating (EcoVadis)',
+    icon: Award,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'ESG Rating (EcoVadis)',
+      description: "Improve your EcoVadis sustainability rating with our specialized support services. We help you understand EcoVadis assessment criteria, prepare comprehensive documentation, and implement improvements across environment, labor practices, ethics, and sustainable procurement themes. Our expertise ensures you achieve and maintain strong ratings that enhance supplier relationships and market competitiveness."
+    }
+  },
+  {
+    id: 'cdp',
+    name: 'CDP Reporting',
+    icon: Leaf,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'CDP Reporting',
+      description: "Demonstrate climate leadership through CDP (Carbon Disclosure Project) reporting. We guide organizations through CDP's comprehensive questionnaires on climate change, water security, and forests. Our service includes carbon footprint calculation, climate risk assessment, target setting support, and strategic response development to achieve high disclosure scores and recognition from investors and customers."
+    }
+  },
+  {
+    id: 'sbti-target',
+    name: 'SBTi Target Submission',
+    icon: Target,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'SBTi Target Submission',
+      description: "Set science-based emissions reduction targets aligned with limiting global warming to 1.5°C. Our SBTi (Science Based Targets initiative) service includes baseline emissions calculation, target development across scopes 1, 2, and 3, validation support, and submission preparation. We help you commit to ambitious yet achievable targets that demonstrate climate leadership and meet stakeholder expectations."
+    }
+  },
+  {
+    id: 'sbti-feasibility',
+    name: 'SBTi Feasibility Assessment',
+    icon: CheckSquare,
+    color: 'bg-[#10b981]',
+    hoverColor: 'hover:bg-[#059669]',
+    content: {
+      title: 'SBTi Feasibility Assessment',
+      description: "Evaluate the feasibility of setting science-based targets for your organization. Our assessment analyzes your current emissions profile, identifies reduction opportunities, assesses technical and financial implications, and provides recommendations on target ambition levels. This comprehensive evaluation ensures you make informed decisions about SBTi commitment and develop realistic implementation roadmaps."
+    }
+  }
+];
 
-  const keyPoints = [
-    'Comprehensive evaluation against industry standards',
-    'Identification of strengths and improvement areas',
-    'Tailored approach to unique organizational goals',
-    'Actionable insights and recommendations',
-    'Long-term value creation focus'
-  ];
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, x: -20 },
+  show: { opacity: 1, x: 0 }
+};
+
+const contentVariant = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.4
+    }
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: {
+      duration: 0.2
+    }
+  }
+};
+
+export default function ESGServices() {
+  const [selectedService, setSelectedService] = useState(servicesData[0]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="bg-green-600 p-2 rounded-lg">
-                <Leaf className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">ESG Solutions</h1>
-                <p className="text-sm text-gray-600">Environmental, Social & Governance Excellence</p>
-              </div>
-            </div>
-            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
+    <>
+    <Header4/>
+    <div className="min-h-screen bg-gradient-to-br from-[#f1f5f9] via-[#e0f2fe] to-[#f0fdf4] p-4 sm:p-6 lg:p-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mb-8"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          {servicesData.map((service) => {
+            const Icon = service.icon;
+            const isSelected = selectedService.id === service.id;
+            
+            return (
+              <motion.button
+                key={service.id}
+                variants={item}
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setSelectedService(service)}
+                className={`${service.color} ${service.hoverColor} text-white px-3 py-4 rounded-2xl font-semibold transition-all duration-300 text-sm text-center ${
+                  isSelected ? 'ring-4 ring-white ring-offset-2 ring-offset-transparent' : ''
+                }`}
+              >
+                <Icon className="w-5 h-5 mx-auto mb-2" />
+                <span className="block leading-tight">{service.name}</span>
+              </motion.button>
+            );
+          })}
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Service Pills */}
-        <div className="mb-12">
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Our Services</h2>
-          <div className="flex flex-wrap gap-3">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <button
-                  key={service.id}
-                  onClick={() => setActiveTab(service.id)}
-                  className={`${
-                    activeTab === service.id ? service.color : 'bg-white border-2 border-gray-200'
-                  } ${service.hoverColor} ${
-                    activeTab === service.id ? 'text-white' : 'text-gray-700'
-                  } px-5 py-3 rounded-full font-semibold transition-all shadow-sm hover:shadow-md flex items-center gap-2`}
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={selectedService.id}
+            className="bg-gradient-to-br from-[#1e293b] to-[#334155] rounded-3xl p-8 sm:p-10 lg:p-14 relative overflow-hidden"
+            variants={contentVariant}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#10b981] rounded-full opacity-5 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#3b82f6] rounded-full opacity-5 blur-3xl"></div>
+            
+            <div className="relative">
+              <div className="flex items-center gap-4 mb-6">
+                {(() => {
+                  const Icon = selectedService.icon;
+                  return (
+                    <motion.div
+                      className="p-4 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-2xl"
+                      initial={{ rotate: -10, scale: 0.9 }}
+                      animate={{ rotate: 0, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    </motion.div>
+                  );
+                })()}
+                
+                <motion.h2 
+                  className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 }}
                 >
-                  <Icon className="w-5 h-5" />
-                  {service.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Content Area */}
-          <div className="lg:col-span-2">
-            <div className="bg-slate-700 rounded-3xl p-10 text-white shadow-xl">
-              <div className="flex items-center gap-3 mb-6">
-                <Shield className="w-10 h-10" />
-                <h2 className="text-4xl font-bold">ESG Maturity Assessment</h2>
+                  {selectedService.content.title}
+                </motion.h2>
               </div>
               
-              <div className="space-y-4 text-slate-100 leading-relaxed">
-                <p>
-                {`  Our ESG (Environmental, Social, and Governance) maturity assessment service involves 
-                  analyzing an organization's existing ESG status and performance. Through comprehensive 
-                  evaluation and benchmarking against industry standards, we assess the organization's 
-                  current sustainability practices, policies, and outcomes.`}
-                </p>
-                
-                <p>
-                {`  This process identifies strengths, weaknesses, and areas for improvement across ESG pillars. 
-                  Our tailored approach considers the organization's unique goals and context, providing 
-                  actionable insights and recommendations to enhance ESG performance and drive long-term 
-                  value creation.`}
-                </p>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-slate-600">
-                <h3 className="text-xl font-bold mb-4">What We Deliver</h3>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {keyPoints.map((point, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <motion.div
+                className="h-1 w-24 bg-gradient-to-r from-[#10b981] to-[#059669] rounded-full mb-6"
+                initial={{ width: 0 }}
+                animate={{ width: 96 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+              ></motion.div>
+              
+              <motion.p 
+                className="text-[#cbd5e1] text-base sm:text-lg lg:text-xl leading-relaxed"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                {selectedService.content.description}
+              </motion.p>
             </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Stats Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-              <h3 className="font-bold text-gray-900 mb-4">Our Impact</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Assessments Completed</span>
-                  <span className="text-2xl font-bold text-green-600">500+</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Industries Served</span>
-                  <span className="text-2xl font-bold text-green-600">25+</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Client Satisfaction</span>
-                  <span className="text-2xl font-bold text-green-600">98%</span>
-                </div>
-              </div>
-            </div>
-
-            {/* ESG Pillars */}
-            <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6 shadow-lg text-white">
-              <h3 className="font-bold mb-4">ESG Pillars</h3>
-              <div className="space-y-3">
-                <div className="bg-white/20 backdrop-blur rounded-lg p-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Globe className="w-5 h-5" />
-                    <span className="font-semibold">Environmental</span>
-                  </div>
-                  <p className="text-sm text-green-50">Climate, resources, pollution</p>
-                </div>
-                <div className="bg-white/20 backdrop-blur rounded-lg p-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Users className="w-5 h-5" />
-                    <span className="font-semibold">Social</span>
-                  </div>
-                  <p className="text-sm text-green-50">People, community, diversity</p>
-                </div>
-                <div className="bg-white/20 backdrop-blur rounded-lg p-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Shield className="w-5 h-5" />
-                    <span className="font-semibold">Governance</span>
-                  </div>
-                  <p className="text-sm text-green-50">Ethics, compliance, leadership</p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Card */}
-            <div className="bg-slate-900 rounded-2xl p-6 shadow-lg text-white">
-              <h3 className="font-bold mb-3">Ready to Start?</h3>
-              <p className="text-slate-300 text-sm mb-4">
-                Schedule a consultation with our ESG experts today.
-              </p>
-              <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Book Consultation
-              </button>
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
+    <Footer3/>
+    </>
   );
 }

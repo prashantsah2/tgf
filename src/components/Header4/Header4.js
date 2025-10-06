@@ -12,7 +12,7 @@ const Header4 = () => {
     { title: 'Carbon Footprint', href: '/carbon-footprint' },
     { title: 'Carbon Credit', href: '/carboncredit' },
     { title: 'Sustainability', href: '/sustainability' },
-    { title: 'Certification', href: '#' },
+    { title: 'Certification', href: '/certificate' },
     { title: 'Verification', href: '/verification' },
     { title: 'Other Services', href: '/otherservices' },
   ];

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { Leaf, Award, FileText, Shield, Recycle, TreePine, Building2, Zap } from 'lucide-react';
 import Header4 from "@/components/Header4/Header4";
 import Footer3 from "@/components/Footer3/Footer3";
-
+import CertificatePopup from "@/components/CertificatePopup/CertificatePopup"
 
 
 
@@ -15,6 +15,8 @@ import Footer3 from "@/components/Footer3/Footer3";
 export default function Page(){
 
 const [hoveredCard, setHoveredCard] = useState(null);
+const [selectedCert, setSelectedCert] = useState(null);
+
 
   const certificates = [
     {
@@ -23,45 +25,70 @@ const [hoveredCard, setHoveredCard] = useState(null);
       subtitle: "Measure and reduce your carbon impact",
       description: "Complete carbon assessment and reduction plan for your organization",
       icon: <Leaf className="w-8 h-8" />,
+       fullDescription: "Your detailed description here...",
       color: "from-blue-400 to-indigo-600",
       bgColor: "bg-[#f2f2f2]",
-      textColor: "text-[#222]"
+      textColor: "text-[#222]",
+       benefits: [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
     },
     {
       id: 2,
       title: "ISO 14001 Environmental Management",
       subtitle: "International environmental standards",
       description: "Comprehensive environmental management system certification",
+       fullDescription: "Your detailed description here...",
       icon: <Shield className="w-8 h-8" />,
       color: "from-blue-400 to-indigo-600",
       bgColor: "bg-blue-50",
-      textColor: "text-blue-700"
+      textColor: "text-blue-700",
+       benefits: [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
     },
     {
       id: 3,
       title: "Green Building Certification",
       subtitle: "Sustainable construction standards",
       description: "LEED and BREEAM compliant building sustainability assessment",
+       fullDescription: "Your detailed description here...",
       icon: <Building2 className="w-8 h-8" />,
       color: "from-green-400 to-emerald-600",
       bgColor: "bg-green-50",
-      textColor: "text-green-700"
+      textColor: "text-green-700",
+       benefits: [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
     },
     {
       id: 4,
       title: "Renewable Energy Certificate",
       subtitle: "Clean energy transition verification",
       description: "Document your commitment to renewable energy sources",
+       fullDescription: "Your detailed description here...",
       icon: <Zap className="w-8 h-8" />,
       color: "from-yellow-400 to-orange-500",
       bgColor: "bg-yellow-50",
-      textColor: "text-yellow-700"
+      textColor: "text-yellow-700",
+       benefits: [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
     },
     {
       id: 5,
       title: "Waste Management Certification",
       subtitle: "Circular economy compliance",
       description: "Zero waste and recycling program certification",
+       fullDescription: "Your detailed description here...",
       icon: <Recycle className="w-8 h-8" />,
       color: "from-purple-400 to-indigo-600",
       bgColor: "bg-purple-50",
@@ -72,6 +99,7 @@ const [hoveredCard, setHoveredCard] = useState(null);
       title: "Biodiversity Protection Certificate",
       subtitle: "Ecosystem preservation standards",
       description: "Protect and restore natural habitats in your operations",
+       fullDescription: "Your detailed description here...",
       icon: <TreePine className="w-8 h-8" />,
       color: "from-green-500 to-emerald-700",
       bgColor: "bg-green-100",
@@ -82,6 +110,7 @@ const [hoveredCard, setHoveredCard] = useState(null);
       title: "Sustainability Reporting Certificate",
       subtitle: "ESG compliance and transparency",
       description: "Comprehensive sustainability reporting and disclosure certification",
+       fullDescription: "Your detailed description here...",
       icon: <FileText className="w-8 h-8" />,
       color: "from-slate-400 to-slate-600",
       bgColor: "bg-slate-50",
@@ -224,8 +253,9 @@ const [hoveredCard, setHoveredCard] = useState(null);
                   <motion.span
                     className="flex items-center justify-center gap-2"
                     whileHover={{ x: 2 }}
+                    onClick={() => setSelectedCert(cert)}
                   >
-                    Get Certified
+                    Read more
                     <Award className="w-4 h-4" />
                   </motion.span>
                 </motion.button>
@@ -251,18 +281,9 @@ const [hoveredCard, setHoveredCard] = useState(null);
             </motion.div>
           ))}
         </motion.div>
+        <CertificatePopup selectedCert={selectedCert} setSelectedCert={setSelectedCert} />
 
-        {/* Footer */}
-        <motion.div 
-          className="text-center mt-16 py-8 border-t border-slate-200"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          <p className="text-slate-500 text-sm">
-            © 2025 Environmental Certification Hub. Building a sustainable future, one certificate at a time.
-          </p>
-        </motion.div>
+        
       </div>
     </div>
 <Footer3/>
