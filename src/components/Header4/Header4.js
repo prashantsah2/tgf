@@ -13,8 +13,8 @@ const Header4 = () => {
     { title: 'Carbon Credit', href: '/carboncredit' },
     { title: 'Sustainability', href: '/sustainability' },
     { title: 'Certification', href: '#' },
-    { title: 'Verification', href: '#' },
-    { title: 'Other Services', href: '#' },
+    { title: 'Verification', href: '/verification' },
+    { title: 'Other Services', href: '/otherservices' },
   ];
 
   const toggleDropdown = (dropdown) => {
