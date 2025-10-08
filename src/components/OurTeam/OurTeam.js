@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
 
 const teamMembers = [
-  { name: 'Ruchika', surname: 'Sharma', image: '/api/placeholder/150/150' },
+  { name: 'Ruchika', surname: 'Sharma', image: '/image/page 14 - Our Core Team (2)' },
   { name: 'Abhishek K', surname: 'Srivastava', image: '/api/placeholder/150/150' },
   { name: 'Ajay', surname: 'Srivastava', image: '/api/placeholder/150/150' },
   { name: 'Nishad', surname: 'Nanavaty', image: '/api/placeholder/150/150' },
@@ -45,10 +45,10 @@ export default function OurTeam() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h1 className="text-5xl md:text-3xl text-gray-900 mb-2">
+          <h1 className="text-5xl md:text-3xl text-[#222] mb-2">
             Our Core
           </h1>
-          <h2 className="text-5xl md:text-3xl text-transparent">
+          <h2 className="text-5xl md:text-3xl text-[#222] text-transparent">
             TEAM
           </h2>
         </motion.div>
@@ -81,9 +81,9 @@ export default function OurTeam() {
                     ease: "easeInOut"
                   }}
                 />
-                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-white">
                   <img 
-                    src={member.image} 
+                    src={`/image/page 14 - Our Core Team (${index+1}).png`} 
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
@@ -124,19 +124,7 @@ export default function OurTeam() {
           ))}
         </motion.div>
 
-        {/* Company Logo */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute top-8 right-8"
-        >
-          <div className="text-right">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-              ENER GREENWATT
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </div>
   );

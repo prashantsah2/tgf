@@ -51,7 +51,26 @@ const teamMembers = [
   }
 ]
 
+
+const teamMember = [
+  { name: 'Ruchika', surname: 'Sharma', image: '/image/page 14 - Our Core Team (2)' },
+  { name: 'Abhishek K', surname: 'Srivastava', image: '/api/placeholder/150/150' },
+  { name: 'Ajay', surname: 'Srivastava', image: '/api/placeholder/150/150' },
+  { name: 'Nishad', surname: 'Nanavaty', image: '/api/placeholder/150/150' },
+  { name: 'Puneet', surname: 'Chopra', image: '/api/placeholder/150/150' },
+  { name: 'Anchal', surname: 'Srivastava', image: '/api/placeholder/150/150' },
+  { name: 'Kallol', surname: 'Borah', image: '/api/placeholder/150/150' },
+  { name: 'Aniket Kumar', surname: 'Srotriya', image: '/api/placeholder/150/150' },
+  { name: 'Utkarsh', surname: 'Thakur', image: '/api/placeholder/150/150' },
+  { name: 'Sweta', surname: 'Kn', image: '/api/placeholder/150/150' },
+  { name: 'Hemang', surname: 'Awasthi', image: '/api/placeholder/150/150' },
+  { name: 'Gayathri', surname: 'Nagalingam', image: '/api/placeholder/150/150' },
+  { name: 'Akash', surname: 'Dixit', image: '/api/placeholder/150/150' },
+  { name: 'Aakashdeep', surname: '', image: '/api/placeholder/150/150' },
+];
+
 export default function Teams() {
+
   return (
     <div className="bg-gray-50 min-h-screen w-full">
     
@@ -59,7 +78,7 @@ export default function Teams() {
       {/* Main Content */}
       <div className="max-w-[1371px] mx-auto py-16">
         {/* Header Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
           <div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Meet the talented team who make all this happen
@@ -73,21 +92,17 @@ export default function Teams() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {teamMembers.map((member) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {teamMember.map((member,index) => (
             <div key={member.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className={`${member.bgColor} aspect-square relative`}>
                 {/* Placeholder for team member image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
-                </div>
+               <img src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-purple-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
+            {/*     <p className="text-purple-600 font-medium mb-3">{member.role}</p> */}
+               {/*  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p> */}
               </div>
             </div>
           ))}

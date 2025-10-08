@@ -14,6 +14,7 @@ import Noteworthy from "@/components/Noteworthy/Noteworthy"
 import Stats from "@/components/Stats/Stats"
 import Overview from "@/components/Overview/Overview"
 import OurTeam from "@/components/OurTeam/OurTeam"
+import OurFootprint from "@/components/OurFootprint/OurFootprint"
 
 export default function Campaign() {
 
@@ -33,7 +34,9 @@ export default function Campaign() {
       <Noteworthy/>
       <Stats/>
       <ServicesList/>
+      
       <News/>
+      <OurFootprint/>
       <Overview/>
       <OurTeam/>
       
