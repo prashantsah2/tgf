@@ -2,8 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HandCoins, FileSearch, PackageSearch, Award, Users, BookOpen } from 'lucide-react';
-import Header3 from '@/components/Header3';
-import Footer3 from '@/components/Footer3';
+import Header4 from '@/components/Header4/Header4';
+import Footer3 from '@/components/Footer3/Footer3';
 
 const iconMap = {
   HandCoins,

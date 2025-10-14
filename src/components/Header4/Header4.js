@@ -9,11 +9,8 @@ const Header4 = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const servicesMenu = [
-    { title: 'Carbon Footprint', href: '/carbon-footprint' },
-    { title: 'Carbon Credit', href: '/carboncredit' },
-    { title: 'Sustainability', href: '/sustainability' },
-    { title: 'Certification', href: '/certificate' },
-    { title: 'Sustainable Supply Chains', href: '/services/supply-chains' },
+   
+    { title: 'Sustainable Supply Chains', href: '/services/supply-chain' },
     { title: 'Additional Services', href: '/services/others' },
   ];
 

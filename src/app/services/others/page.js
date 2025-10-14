@@ -93,9 +93,7 @@ export default function AdditionalServices({
           className="mb-10"
         >
           <div className="flex items-start gap-4 mb-6">
-           {/*  <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center border-2 border-${primaryColor}-500`}>
-              <MainIcon className={`w-8 h-8 text-${primaryColor}-600`} />
-            </div> */}
+           
             <div>
               <h1 className={`text-3xl font-bold text-${primaryColor}-600 mb-3`}>{title}</h1>
               <p className="text-gray-600 text-sm leading-relaxed max-w-6xl">
