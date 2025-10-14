@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HandCoins, FileSearch, PackageSearch, Award, Users, BookOpen } from 'lucide-react';
-import Header4 from '@/components/Header4/Header4';
+import Header3 from '@/components/Header4/Header4';
 import Footer3 from '@/components/Footer3/Footer3';
 
 const iconMap = {
@@ -14,7 +14,7 @@ const iconMap = {
   BookOpen
 };
 
-export default function AdditionalServices({
+export default function PageMain({
   brandName = "ENEN",
   brandSubtext = "GREEN",
   mainIcon = "PackageSearch",
@@ -76,7 +76,7 @@ export default function AdditionalServices({
 
   return (
     <>
-    <Header4/>
+    <Header3/>
     <div className={`min-h-screen bg-gradient-to-br ${backgroundColor} relative overflow-hidden`}>
       {/* Background Decorative Elements */}
       <div className={`absolute top-0 right-0 w-96 h-96 bg-${primaryColor}-400/10 rounded-full blur-3xl`}></div>
