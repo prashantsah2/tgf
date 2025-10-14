@@ -26,7 +26,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'ESG Data Management',
-      description: 'Transform your sustainability reporting with our comprehensive ESG data management platform. We help organizations collect, analyze, and report environmental, social, and governance metrics with precision and transparency. Our solutions streamline data collection processes, ensure compliance with global reporting standards, and provide actionable insights for strategic decision-making. From carbon accounting to social impact metrics, we enable you to track, measure, and communicate your sustainability performance effectively to stakeholders.'
+      description: 'Our ESG data management solutions empower organizations to effectively collect, analyze, and report on sustainability performance metrics. We streamline the process of gathering diverse ESG data from internal and external sources, ensuring accuracy, consistency, and transparency. We provide insights into key ESG indicators, enabling organizations to track progress, identify trends, and make informed decisions to drive sustainability performance. From carbon emissions and energy consumption to social impact and governance practices, our ESG data management solution helps organizations demonstrate accountability, transparency, and commitment to stakeholders while driving meaningful progress towards sustainability goals.'
     }
   },
   {
@@ -37,7 +37,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'Life Cycle Assessment (LCA)',
-      description: 'Understand the complete environmental impact of your products and services through our rigorous Life Cycle Assessment methodology. We analyze every stage from raw material extraction to end-of-life disposal, identifying opportunities for environmental improvement and resource optimization. Our LCA services help you make informed decisions about product design, material selection, and process improvements while supporting eco-labeling, green procurement, and sustainable product development initiatives.'
+      description: 'Our Life Cycle Assessment (LCA) service offers organizations a comprehensive analysis of the environmental impacts associated with their products, processes, or services throughout their entire life cycle. Utilizing internationally recognized methodologies and appropriate tools, we assess resource use, energy consumption, emissions, and other environmental indicators from raw material extraction to end-of-life disposal. By quantifying environmental impacts across the life cycle, our LCA service helps organizations minimize their environmental footprint, enhance resource efficiency, and make more sustainable choices that align with their environmental objectives and stakeholder expectations.'
     }
   },
   {
@@ -48,7 +48,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'Plastic and Water Credits',
-      description: 'Address plastic pollution and water stewardship through our innovative credit programs. We connect organizations with verified projects that remove plastic waste from the environment and improve water conservation. Our plastic credit solutions enable businesses to take responsibility for their plastic footprint while supporting waste management infrastructure in vulnerable communities. Water credit programs help companies offset water consumption and invest in watershed restoration and clean water access projects.'
+      description: 'Our Plastic and Water offsets project development service offers organizations a unique opportunity to mitigate their environmental impact by supporting initiatives that address plastic waste pollution and water scarcity. From project inception to implementation and monitoring, we provide comprehensive support to ensure successful outcomes and maximize environmental and social impact. Through the purchase of Plastic and Water credits, organizations can demonstrate their commitment to environmental stewardship, support meaningful initiatives, and contribute to global efforts to address plastic pollution and water scarcity, while enhancing their sustainability credentials and reputation.'
     }
   },
   {
@@ -59,7 +59,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'Regulation Guidance',
-      description: 'Navigate the complex landscape of environmental regulations with confidence. Our expert team provides comprehensive guidance on compliance requirements across jurisdictions, from carbon pricing mechanisms to extended producer responsibility schemes. We help you understand emerging regulations, assess compliance gaps, develop action plans, and implement systems to ensure ongoing regulatory adherence. Stay ahead of policy changes and turn regulatory requirements into competitive advantages.'
+      description: 'Our Regulation Guidance service offers businesses comprehensive support in navigating complex climate change regulations, such as the Carbon Border Adjustment Mechanism (CBAM) and other emerging policies. With expertise in regulatory analysis and compliance, we provide strategic guidance to help businesses understand the implications of these regulations on their operations, supply chains, and market competitiveness. We assist businesses in developing proactive strategies to ensure compliance, mitigate risks, and capitalize on opportunities presented by evolving regulatory landscapes. Through tailored guidance, stakeholder engagement, and policy advocacy, we empower businesses to adapt to regulatory changes effectively while advancing their sustainability goals and maintaining a competitive edge in a rapidly evolving market'
     }
   },
   {
@@ -70,7 +70,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'Training and Capacity Building',
-      description: 'Empower your team with the knowledge and skills needed to drive sustainability transformation. Our customized training programs cover topics from carbon accounting and circular economy principles to ESG reporting and sustainable supply chain management. We offer workshops, webinars, certification courses, and ongoing mentorship to build internal capacity. Whether you\'re starting your sustainability journey or advancing existing programs, we equip your organization with the expertise to achieve ambitious environmental and social goals.'
+      description: `Our Training and Capacity Building services empower individuals and organizations to enhance their sustainability knowledge, skills, and capabilities. Through interactive workshops, seminars, and online courses, we offer practical guidance on a wide range of topics, including ESG reporting, carbon management, circular economy principles, and more. Our expert instructors provide valuable insights and real-world examples to help participants deepen their understanding. Whether you're a sustainability professional looking to expand your expertise or a business leader seeking to integrate sustainability into your organization's operations, our training programs are designed to meet your needs. Join us in our upcoming trainings to gain valuable knowledge and skills that will drive positive change and unlock new opportunities for sustainable growth.`
     }
   },
   {
@@ -81,7 +81,7 @@ const servicesData = [
     hoverColor: 'hover:bg-[#059669]',
     content: {
       title: 'CSR Consultation',
-      description: 'Develop and implement meaningful Corporate Social Responsibility strategies that create shared value for your business and society. Our consultants help you identify material issues, engage stakeholders, design impactful programs, and measure outcomes. From community investment initiatives to employee volunteering programs, we guide you in building authentic CSR strategies that align with your business values, strengthen brand reputation, and contribute to sustainable development goals while delivering tangible benefits to communities.'
+      description: `Our CSR Consultation service provides tailored guidance and support to organizations seeking to develop and implement impactful Corporate Social Responsibility (CSR) strategies. With a focus on aligning CSR initiatives with business objectives and stakeholder expectations, our expert consultants collaborate closely with clients to understand their unique challenges, opportunities, and values. From strategy development and implementation planning to CSR reporting and communication, we offer strategic advice and practical solutions to help organizations maximize social and environmental value creation while enhancing brand reputation and long-term sustainability. Whether you're a multinational corporation or a small business, our CSR Consultation service equips you with the tools and insights needed to drive positive change and make a meaningful impact in your communities and beyond.`
     }
   }
 ];

@@ -11,7 +11,9 @@ const Carbon1 = () => {
     {
       title: 'Carbon Footprint Tool',
       price: '$100.00',
-      description:`Enscope is our indigenous carbon footprint tool that empowers businesses to take proactive steps towards sustainability by providing comprehensive insights into their environmental impact. With intuitive data collection and analysis capabilities, the platform enables companies to accurately measure their carbon emissions across operations and supply chains. Armed with this knowledge, businesses can identify areas for improvement and implement targeted strategies to reduce their carbon footprint, contributing to global efforts to combat climate change. Enscope's user-friendly interface and actionable recommendations make it an invaluable tool for organizations committed to environmental responsibility, fostering a greener and more sustainable future for all.`,
+      description:`Enscope is our indigenous carbon footprint tool that empowers businesses to take proactive steps towards sustainability by providing comprehensive insights into their environmental impact. With intuitive data collection and analysis capabilities, the platform enables companies to accurately measure their carbon emissions across operations and supply chains. Armed with this knowledge, businesses can identify areas for improvement and implement targeted strategies to reduce their carbon footprint, contributing to global efforts to combat climate change. Enscope's user-friendly interface and actionable recommendations make it an invaluable tool for organizations committed to environmental responsibility, fostering a greener and more sustainable future for all.
+
+`,
       buttonText: 'Read more'
     },
     {
