@@ -2,8 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HandCoins, FileSearch, PackageSearch, Award, Users, BookOpen } from 'lucide-react';
-import Header3 from '@/components/Header3';
-import Footer3 from '@/components/Footer3';
+import Header3 from '@/components/Header4/Header4';
+import Footer3 from '@/components/Footer3/Footer3';
 
 const iconMap = {
   HandCoins,
@@ -77,14 +77,14 @@ export default function AdditionalServices({
   return (
     <>
     <Header3/>
-    <div className={`min-h-screen bg-gradient-to-br ${backgroundColor} relative overflow-hidden`}>
+    <div className={`min-h-screen bg-gradient-to-br ${backgroundColor} relative overflow-hidden w-full`}>
       {/* Background Decorative Elements */}
       <div className={`absolute top-0 right-0 w-96 h-96 bg-${primaryColor}-400/10 rounded-full blur-3xl`}></div>
       <div className={`absolute bottom-0 left-0 w-96 h-96 bg-${secondaryColor}-400/10 rounded-full blur-3xl`}></div>
       
      
 
-      <div className="container mx-auto px-6 py-12 relative z-10">
+      <div className="container mx-auto px-6 py-12 relative z-10 max-w-[1371px]">
         {/* Main Title Section */}
         <motion.div 
           initial="hidden"
@@ -93,9 +93,9 @@ export default function AdditionalServices({
           className="mb-10"
         >
           <div className="flex items-start gap-4 mb-6">
-            <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center border-2 border-${primaryColor}-500`}>
+           {/*  <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center border-2 border-${primaryColor}-500`}>
               <MainIcon className={`w-8 h-8 text-${primaryColor}-600`} />
-            </div>
+            </div> */}
             <div>
               <h1 className={`text-3xl font-bold text-${primaryColor}-600 mb-3`}>{title}</h1>
               <p className="text-gray-600 text-sm leading-relaxed max-w-6xl">
