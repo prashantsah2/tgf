@@ -39,7 +39,7 @@ const News = () => {
 
   return (
     <section className="py-16 bg-gray-50 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1371px] mx-auto">
         {/* Header */}
         <div className="flex justify-between items-start mb-8">
           <div>

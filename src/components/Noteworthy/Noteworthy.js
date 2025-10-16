@@ -8,7 +8,7 @@ const achievements = [
     id: 1,
     title: "TOP 10 ESG",
     subtitle: "Among Top 10 ESG and Sustainability Consultants in India",
-    icon:`/image/page 3 - icons (1).png`,
+    icon:`/image/page 3 - icons (5).png`,
     color: "from-blue-500 to-teal-500",
 
   },
@@ -16,28 +16,28 @@ const achievements = [
     id: 2,
     title: "AA1000AS Licensed",
     subtitle: "Assurance Provider Accountability",
-    icon: `/image/page 3 - icons (2).png`,
+    icon: `/image/page 3 - icons (1).png`,
     color: "from-teal-500 to-green-500"
   },
   {
     id: 3,
     title: "GOLD 2023",
     subtitle: "EcoVadis Sustainability Rating",
-    icon: `/image/page 3 - icons (3).png`,
+    icon: `/image/page 3 - icons (2).png`,
     color: "from-blue-600 to-cyan-500"
   },
   {
     id: 4,
     title: "APPROVED",
     subtitle: "EcoVadis Consultant - Issued 2025",
-    icon: `/image/page 3 - icons (4).png`,
+    icon: `/image/page 3 - icons (3).png`,
     color: "from-green-500 to-teal-500"
   },
   {
     id: 5,
     title: "APPROVED",
     subtitle: "EcoVadis Training Partner - 2025",
-    icon: `/image/page 3 - icons (5).png`,
+    icon: `/image/page 3 - icons (4).png`,
     color: "from-teal-600 to-blue-600"
   }
 ];
@@ -126,7 +126,7 @@ export default function AchievementsShowcase() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="border-t-2 border-dashed border-gray-200 pt-8"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800">
+          <h2 className="text-xl md:text-xl font-sans text-center text-gray-800">
            {` India's First Gold-rated and Accredited Sustainability Service Provider`}
           </h2>
         </motion.div>

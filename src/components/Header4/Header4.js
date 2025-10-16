@@ -12,6 +12,8 @@ const Header4 = () => {
    
     { title: 'Sustainable Supply Chains', href: '/services/supply-chain' },
     { title: 'Additional Services', href: '/services/others' },
+      { title: 'Carbon Services', href: '/services/carbon' },
+      { title: 'Sustainable Business Practices', href: '/services/sustainable-business-practices' },
   ];
 
   const toggleDropdown = (dropdown) => {

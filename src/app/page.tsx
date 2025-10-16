@@ -13,8 +13,7 @@ import Popup from "@/components/Popup/Popus"
 import Noteworthy from "@/components/Noteworthy/Noteworthy"
 import Stats from "@/components/Stats/Stats"
 import Overview from "@/components/Overview/Overview"
-import OurTeam from "@/components/OurTeam/OurTeam"
-import OurFootprint from "@/components/OurFootprint/OurFootprint"
+import LatestBlogs from "@/components/LatestBlog/LatestBlog"
 
 export default function Campaign() {
 
@@ -36,9 +35,10 @@ export default function Campaign() {
       <ServicesList/>
       
       <News/>
-      <OurFootprint/>
+      <LatestBlogs/>
+   
       <Overview/>
-      <OurTeam/>
+   
       
      
       <QueryForm2/>
