@@ -78,28 +78,28 @@ export default function Teams() {
       {/* Main Content */}
       <div className="max-w-[1371px] mx-auto py-16">
         {/* Header Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+        <div className="grid lg:grid-cols-1  items-start mb-20">
           <div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Meet the talented team who make all this happen
+            <h1 className="text-xl lg:text-2xl font-outfit  text-gray-900 leading-[21px]">
+              Meet the talented team<br></br> who make all this happen 
             </h1>
           </div>
-          <div className="lg:pt-8">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our philosophy is simple; hire great people and give them the resources and support to do their best work.
+          <div className="lg:pt-4">
+            <p className="text-md font-sans text-gray-600 leading-relaxed">
+              Our philosophy is simple; hire great people and give <br></br> them the resources and support to do their best work.
             </p>
           </div>
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-2 mb-20">
           {teamMember.map((member,index) => (
-            <div key={member.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div key={member.id} className="bg-white rounded-sm overflow-hidden  hover:shadow-md transition-shadow">
               <div className={`${member.bgColor} aspect-square relative`}>
                 {/* Placeholder for team member image */}
                <img src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
               </div>
-              <div className="p-6">
+              <div className="p-1">
                 <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
             {/*     <p className="text-purple-600 font-medium mb-3">{member.role}</p> */}
                {/*  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p> */}

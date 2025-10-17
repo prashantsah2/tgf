@@ -15,7 +15,7 @@ export default function Aboutus(){
     return(
         <>
         <Header4 heading="About Us" text="Learn more about our team and mission."/>
-        <div className="flex flex-col justify-center items-center w-full min-h-[91vh] w-full bg-gray-50 pt-20">
+        <div className="flex flex-col justify-center items-center w-full min-h-[91vh] pt-20">
          <About2/>
          
          <Teams/>

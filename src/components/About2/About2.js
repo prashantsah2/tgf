@@ -51,7 +51,7 @@ const About2 = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen  lg:p-12 pt-[141px] max-sm:pt-0 w-full">
+    <div className="bg-[#fff] min-h-screen  lg:p-12 pt-[141px] max-sm:pt-0 w-full">
       <motion.div 
         className="max-w-[1371px] mx-auto w-full"
         variants={containerVariants}
@@ -72,18 +72,21 @@ const About2 = () => {
 
             {/* Main Heading */}
             <motion.div variants={itemVariants}>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                About our firm
+              <h1 className="text-4xl lg:text-5xl font-outfit text-gray-900 leading-tight mb-[-22px]">
+                About Enen Green
               </h1>
             </motion.div>
 
             {/* Description */}
             <motion.div variants={itemVariants}>
-              <p className="text-gray-600 text-lg leading-relaxed max-w-md">
-                At our firm, we pride ourselves on delivering tailored solutions 
-                that empower businesses to thrive. With years of experience 
-                across various industries, our dedicated team is committed to 
-                driving growth and operational excellence.
+              <p className="text-gray-600 text-md font-sans leading-relaxed max-w-md">
+            ENEN Green is a market leader in the domains of climate change and sustainability. We strive to bring about a change in the Indian market by transforming traditional businesses into sustainable green businesses. We are constantly working towards a green future.
+
+ 
+
+We assist organisations to reduce their carbon footprint and tackle environment degradation through green business practices.
+
+
               </p>
             </motion.div>
 
@@ -117,24 +120,24 @@ const About2 = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900">99%</div>
-                <div className="text-sm text-gray-500 mt-1">Customer satisfaction rate</div>
+                <div className="text-3xl lg:text-4xl font-sans text-gray-900">11+</div>
+                <div className="text-sm text-gray-500 mt-1">Years of Experience</div>
               </motion.div>
               <motion.div 
                 className="text-center lg:text-left"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900">10+</div>
-                <div className="text-sm text-gray-500 mt-1">Industries and counting</div>
+                <div className="text-3xl lg:text-4xl font-sans text-gray-900">40+</div>
+                <div className="text-sm text-gray-500 mt-1">Projects completed</div>
               </motion.div>
               <motion.div 
                 className="text-center lg:text-left"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900">$10m</div>
-                <div className="text-sm text-gray-500 mt-1">Capital allocated to growth</div>
+                <div className="text-3xl lg:text-4xl font-sans text-gray-900">40+</div>
+                <div className="text-sm text-gray-500 mt-1">Industries Served</div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -146,9 +149,9 @@ const About2 = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                src="/image/2672292.jpg"
                 alt="Professional woman looking confidently to the side"
                 className="w-full h-96 lg:h-[500px] object-cover"
               />
