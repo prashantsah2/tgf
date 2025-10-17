@@ -109,10 +109,10 @@ export default function CourseDescription() {
 
           <div className="text-sm font-sans text-[#313131] leading-relaxed font-light">
             For more information, please reach out to us at: <br/>
-           <div className=" flex justify-between w-[331px]"> <span className="font-semibold pt-2 mb-2">Email:</span> trainings@enengspl.com</div>
+            <span className="font-semibold pt-2 mb-2">Email:</span> trainings@enengspl.com
 
             <br/>
-            <div className=" flex justify-between w-[331px]"> <span className="font-semibold pt-2 mb-2">Phone:</span> +91-8697156199</div>  
+            <span className="font-semibold pt-2 mb-2 ">Phone:</span> +91-8697156199
             </div>
         </div>
 
