@@ -4,6 +4,7 @@ import Teams from "@/components/Teams/Teams";
 import About2 from "@/components/About2/About2";
 import Footer3 from "@/components/Footer3/Footer3";
 import Service1 from "../../components/Service1/Service1";
+import OurStory from "@/components/OurStory/OurStory";
 
 
 
@@ -19,7 +20,7 @@ export default function Aboutus(){
          <About2/>
          
          <Teams/>
-       
+        <OurStory/>
         </div>
         <Footer3/>
 

@@ -93,21 +93,21 @@ We assist organisations to reduce their carbon footprint and tackle environment 
             {/* Buttons */}
             <motion.div className="flex gap-4" variants={itemVariants}>
               <motion.button
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-blue-700 transition-colors"
+                className="bg-[#35dd0b] text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-[#222c] transition-colors"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
-                Get Started →
+              Contact us 
               </motion.button>
-              <motion.button
+             {/*  <motion.button
                 className="bg-white text-gray-700 px-6 py-3 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
               >
                 Free Trial
-              </motion.button>
+              </motion.button> */}
             </motion.div>
 
             {/* Statistics */}

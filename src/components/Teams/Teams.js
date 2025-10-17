@@ -99,9 +99,9 @@ export default function Teams() {
                 {/* Placeholder for team member image */}
                <img src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
               </div>
-              <div className="p-1">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
-            {/*     <p className="text-purple-600 font-medium mb-3">{member.role}</p> */}
+              <div className="pt-3 pb-6 pl-2">
+                <h3 className="text-md font-sans text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
+                <p className="text-[#bfbfbf] font-sans text-sm mb-3">{member.role?member.role:'this is role'}</p>
                {/*  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p> */}
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function Teams() {
         </div>
 
         {/* Hiring Section */}
-        <div className="text-center">
+       {/*  <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
            {` We're looking for talented people`}
           </h2>
@@ -117,7 +117,7 @@ export default function Teams() {
             Untitled is growing fast, and we are always looking for passionate, dynamic, 
             and talented individuals to join our distributed team all around the world.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   )
