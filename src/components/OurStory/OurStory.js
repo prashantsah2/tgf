@@ -3,9 +3,9 @@ import { Leaf, TrendingDown, Globe } from 'lucide-react';
 
 export default function OurStory() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white max-sm:pb-16">
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-8 py-16">
+      <div className="max-w-4xl mx-auto px-8 py-16 max-sm:py-2 max-sm:px-0 ">
         {/* Title */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-sans text-gray-900 mb-4">Our Story</h1>

@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <>
     <Header4 />
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p pt-20">
+    <div className="min-h-screen bg-[#fff] flex flex-col items-center justify-center p pt-20 pb-20">
       <ContactForm />
   
     </div>

@@ -72,7 +72,7 @@ const teamMember = [
 export default function Teams() {
 
   return (
-    <div className="bg-gray-50 min-h-screen w-full">
+    <div className="bg-[#fff] min-h-screen w-full">
     
 
       {/* Main Content */}
@@ -84,15 +84,15 @@ export default function Teams() {
               Meet the talented team<br></br> who make all this happen 
             </h1>
           </div>
-          <div className="lg:pt-4">
-            <p className="text-md font-sans text-gray-600 leading-relaxed">
+          <div className="pt-4">
+            <p className="text-md font-sans text-gray-600 leading-relaxed max-sm:text-xs max-sm:leading-2">
               Our philosophy is simple; hire great people and give <br></br> them the resources and support to do their best work.
             </p>
           </div>
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-2 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-20">
           {teamMember.map((member,index) => (
             <div key={member.id} className="bg-white rounded-sm overflow-hidden  hover:shadow-md transition-shadow">
               <div className={`${member.bgColor} aspect-square relative`}>

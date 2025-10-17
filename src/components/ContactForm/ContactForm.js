@@ -118,7 +118,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-100 p-4 md:p-8">
+    <div className="min-h-screen bg-stone-100 border-[1px] border-solid border-[#6a6a6a] rounded-2xl p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         <div className="bg-stone-200/60 rounded-3xl p-6 md:p-12 grid lg:grid-cols-2 gap-8 md:gap-12 bg-[#fff]">
           
