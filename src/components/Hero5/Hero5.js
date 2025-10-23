@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Hero5() {
@@ -7,7 +6,7 @@ export default function Hero5() {
   
   const slides = [
     {
-      title: <p>Uncovering opportunities <br/> in product life-cycle</p>,
+      title: `Uncovering opportunities  in product life-cycle`,
       subtitle: "Sustainability Reporting"
     },
     {
@@ -41,20 +40,26 @@ export default function Hero5() {
   };
 
   return (
-    <div className="relative h-[91vh] overflow-hidden w-full flex justify-center items-center">
+    <div className="relative h-screen overflow-hidden w-full flex justify-center items-center z-50">
       {/* Background Image with Overlay */}
-      <div 
+      <motion.div 
+        key={`bg-${currentSlide}`}
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          
-        }}
       >
-        <Image src={`/image/wall1.jpeg`} width={211} height={133} className="w-full h-full" />
+        <img 
+          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop" 
+          alt="Background" 
+          className="w-full h-full object-cover z-50" 
+        />
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-      </div>
+      </motion.div>
 
       {/* Content */}
-      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8 md:px-8">
+      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8 md:px-12">
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0, y: 30 }}
@@ -63,7 +68,7 @@ export default function Hero5() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h1 className="text-2xl md:text-6xl lg:text-3xl text-white max-w-4xl leading-tight">
+          <h1 className="text-xl md:text-2xl lg:text-4xl text-white max-w-4xl leading-tight font-outfit">
             {slides[currentSlide].title}
           </h1>
           
@@ -77,7 +82,7 @@ export default function Hero5() {
         </motion.div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-12   flex items-start space-x-8 justify-start w-full">
+        <div className="absolute bottom-12 flex items-start space-x-8 justify-start w-full max-w-7xl z-50">
           {slides.map((slide, index) => (
             <button
               key={index}
@@ -88,7 +93,7 @@ export default function Hero5() {
                 <span className="text-white text-sm font-medium mb-1">
                   0{index + 1}/05
                 </span>
-                <span className="text-white text-left  text-xs opacity-80">
+                <span className="text-white text-left text-xs opacity-80">
                   {slide.subtitle}
                 </span>
               </div>
@@ -104,7 +109,7 @@ export default function Hero5() {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="absolute right-1 md:right-8 lg:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+        <div className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

@@ -48,7 +48,7 @@ const Header4 = () => {
             <nav className="hidden lg:flex items-center space-x-1 ">
               <motion.a 
                 href="/" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2  font-medium transition-colors relative group"
+                className="text-[#222] font-outfit text-xs hover:text-teal-600 px-4 py-2  font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -56,11 +56,21 @@ const Header4 = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
 
+               <motion.a 
+                href="/enscope" 
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+              GREEN FUTURE
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </motion.a>
+
               {/* Services Dropdown */}
               <div className="relative">
                 <motion.button
                   onClick={() => toggleDropdown('services')}
-                  className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium flex items-center gap-1 transition-colors relative group"
+                  className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium flex items-center gap-1 transition-colors relative group"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -77,7 +87,7 @@ const Header4 = () => {
 
               <motion.a 
                 href="/enscope" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -87,7 +97,7 @@ const Header4 = () => {
 
               <motion.a 
                 href="/aboutus" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -97,7 +107,7 @@ const Header4 = () => {
 
               <motion.a 
                 href="#" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -107,7 +117,7 @@ const Header4 = () => {
 
               <motion.a 
                 href="/training" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -117,7 +127,7 @@ const Header4 = () => {
 
               <motion.a 
                 href="/careers" 
-                className="text-[#222] text-xs hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -130,7 +140,7 @@ const Header4 = () => {
             <div className="hidden lg:flex items-center">
               <motion.a
                 href="/contact"
-                className="px-6 py-2.5 font-medium text-[#222] text-xs border-2 border-gray-300 rounded-full hover:border-teal-600 hover:text-teal-600 transition-colors"
+                className="px-6 py-2.5 font-medium font-outfit text-[#222] text-xs border-2 border-gray-300 rounded-full hover:border-teal-600 hover:text-teal-600 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

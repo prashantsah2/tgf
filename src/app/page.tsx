@@ -14,7 +14,7 @@ import Noteworthy from "@/components/Noteworthy/Noteworthy"
 import Stats from "@/components/Stats/Stats"
 import Overview from "@/components/Overview/Overview"
 import LatestBlogs from "@/components/LatestBlog/LatestBlog"
-
+import ServicesHome from "@/components/ServicesHome/ServicesHome"
 export default function Campaign() {
 
 
@@ -26,13 +26,15 @@ export default function Campaign() {
       {/* <HeaderNew/> */}
 
       <Header4/>
-      <Popup/>
+     {/*  <Popup/> */}
        <Hero5/>
            <WhoWeAre/>
+           <ServicesHome/>
       <ClientsSection/>
       <Noteworthy/>
       <Stats/>
       <ServicesList/>
+
       
       <News/>
       <LatestBlogs/>

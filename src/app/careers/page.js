@@ -20,7 +20,7 @@ return(
 <Header4 />
 
 
-<div className='flex flex-col justify-center items-center w-full pt-20 '>
+<div className='flex flex-col justify-center items-center w-full  '>
 
 <CareerPage />
 

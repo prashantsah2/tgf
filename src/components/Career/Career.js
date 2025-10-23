@@ -1,12 +1,24 @@
 "use client";
 import { useState, useMemo } from 'react';
-import { Search, MapPin, Clock, DollarSign, Users, Filter, Briefcase, Star } from 'lucide-react';
+import { Search, MapPin, Clock, DollarSign, Users, Filter, Briefcase, Star, X, Plus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CareersPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
+  const [showForm, setShowForm] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [newSkill, setNewSkill] = useState('');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    skills: [],
+    bio: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
 
   const jobs = [
     {
@@ -132,18 +144,68 @@ export default function CareersPage() {
     });
   }, [searchTerm, selectedDepartment, selectedLocation, selectedType]);
 
+  const handleApply = (job) => {
+    setSelectedJob(job);
+    setShowForm(true);
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const addSkill = () => {
+    if (newSkill.trim()) {
+      setFormData(prev => ({
+        ...prev,
+        skills: [...prev.skills, newSkill.trim()]
+      }));
+      setNewSkill('');
+    }
+  };
+
+  const removeSkill = (index) => {
+    setFormData(prev => ({
+      ...prev,
+      skills: prev.skills.filter((_, i) => i !== index)
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Application submitted:', { job: selectedJob?.title, ...formData });
+    setSubmitted(true);
+    setTimeout(() => {
+      setShowForm(false);
+      setSubmitted(false);
+      setFormData({ fullName: '', email: '', phone: '', skills: [], bio: '' });
+      setSelectedJob(null);
+    }, 2000);
+  };
+
+  const closeForm = () => {
+    setShowForm(false);
+    setFormData({ fullName: '', email: '', phone: '', skills: [], bio: '' });
+    setSelectedJob(null);
+  };
+
   const JobCard = ({ job }) => (
-    <div className={`bg-white rounded-lg shadow-md border ${job.featured ? 'border-green-200' : 'border-gray-200'} p-6 hover:shadow-lg transition-shadow`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className={`bg-white rounded-lg shadow-md border ${job.featured ? 'border-green-200' : 'border-gray-200'} p-6 hover:shadow-lg transition-shadow`}
+    >
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
             <Briefcase className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-black">
-              {job.title}
-            </h3>
-            <p className="text-gray-600">{job.department}</p>
+            <h3 className="text-xl font-bold text-black">{job.title}</h3>
+            <p className="text-gray-600 text-sm">{job.department}</p>
           </div>
         </div>
         {job.featured && (
@@ -154,58 +216,61 @@ export default function CareersPage() {
         )}
       </div>
 
-      <p className="text-gray-600 mb-4">{job.description}</p>
+      <p className="text-gray-600 text-sm mb-4">{job.description}</p>
 
       <div className="grid grid-cols-2 gap-3 mb-4">
-        <div className="flex items-center gap-2 text-gray-600">
-          <MapPin className="w-4 h-4 text-green-500" />
-          <span className="text-sm">{job.location}</span>
+        <div className="flex items-center gap-2 text-gray-600 text-sm">
+          <MapPin className="w-4 h-4 text-green-500 flex-shrink-0" />
+          <span>{job.location}</span>
         </div>
-        <div className="flex items-center gap-2 text-gray-600">
-          <Clock className="w-4 h-4 text-green-500" />
-          <span className="text-sm">{job.type}</span>
+        <div className="flex items-center gap-2 text-gray-600 text-sm">
+          <Clock className="w-4 h-4 text-green-500 flex-shrink-0" />
+          <span>{job.type}</span>
         </div>
-        <div className="flex items-center gap-2 text-gray-600">
-          <DollarSign className="w-4 h-4 text-green-500" />
-          <span className="text-sm font-medium">{job.salary}</span>
+        <div className="flex items-center gap-2 text-gray-600 text-sm">
+          <DollarSign className="w-4 h-4 text-green-500 flex-shrink-0" />
+          <span className="font-medium">{job.salary}</span>
         </div>
-        <div className="flex items-center gap-2 text-gray-600">
-          <Users className="w-4 h-4 text-green-500" />
-          <span className="text-sm">{job.experience}</span>
+        <div className="flex items-center gap-2 text-gray-600 text-sm">
+          <Users className="w-4 h-4 text-green-500 flex-shrink-0" />
+          <span>{job.experience}</span>
         </div>
       </div>
 
       <div className="mb-4">
-        <h4 className="text-sm font-semibold text-black mb-2">Key Requirements:</h4>
+        <h4 className="text-xs font-semibold text-black mb-2">Requirements:</h4>
         <div className="flex flex-wrap gap-2">
           {job.requirements.slice(0, 3).map((req, index) => (
-            <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-lg text-xs">
+            <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
               {req}
             </span>
           ))}
           {job.requirements.length > 3 && (
-            <span className="text-gray-500 text-xs">+{job.requirements.length - 3} more</span>
+            <span className="text-gray-500 text-xs">+{job.requirements.length - 3}</span>
           )}
         </div>
       </div>
 
       <div className="flex justify-between items-center">
-        <span className="text-sm text-gray-500">{job.posted}</span>
-        <button className="bg-green-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-600 transition-colors">
+        <span className="text-xs text-gray-500">{job.posted}</span>
+        <button 
+          onClick={() => handleApply(job)}
+          className="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 transition-colors text-sm"
+        >
           Apply Now
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-green-500 text-white py-20">
-        <div className=" mx-auto px-4 text-center">
+        <div className="mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Join Our Amazing Team</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-         {`   We're looking for talented individuals to help us build the future. Discover exciting career opportunities and grow with us.`}
+            {`We're looking for talented individuals to help us build the future. Discover exciting career opportunities and grow with us.`}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <div className="bg-white bg-opacity-20 rounded-lg px-6 py-3">
@@ -228,21 +293,19 @@ export default function CareersPage() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="bg-white rounded-lg shadow-md p-8 mb-8 border border-gray-200">
           <div className="grid md:grid-cols-4 gap-4">
-            {/* Search */}
             <div className="md:col-span-2 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search jobs, departments, or keywords..."
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
 
-            {/* Department Filter */}
             <select
-              className="py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
               value={selectedDepartment}
               onChange={(e) => setSelectedDepartment(e.target.value)}
             >
@@ -252,9 +315,8 @@ export default function CareersPage() {
               ))}
             </select>
 
-            {/* Location Filter */}
             <select
-              className="py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
             >
@@ -268,7 +330,7 @@ export default function CareersPage() {
           <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
             <div className="flex items-center gap-2">
               <Filter className="w-5 h-5 text-gray-500" />
-              <span className="text-gray-600">
+              <span className="text-gray-600 text-sm">
                 Showing {filteredJobs.length} of {jobs.length} positions
               </span>
             </div>
@@ -308,13 +370,187 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-4">{`Don't See the Right Position?`}</h2>
           <p className="text-xl mb-8 text-gray-300">
-            {`We're always looking for exceptional talent. Send us your resume and we'll keep you in mind for future opportunities.`}
+           {` We're always looking for exceptional talent. Send us your resume and we'll keep you in mind for future opportunities.`}
           </p>
-          <button className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors">
+          <button 
+            onClick={() => {
+              setSelectedJob(null);
+              setShowForm(true);
+            }}
+            className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors"
+          >
             Send General Application
           </button>
         </div>
       </div>
+
+      {/* Application Form Modal */}
+      <AnimatePresence>
+        {showForm && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={closeForm}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-white rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {!submitted ? (
+                <>
+                  <div className="sticky top-0 bg-green-500 text-white p-6 flex justify-between items-start">
+                    <div>
+                      <h2 className="text-2xl font-bold">Apply Now</h2>
+                      {selectedJob && <p className="text-green-100 text-sm mt-1">{selectedJob.title}</p>}
+                    </div>
+                    <button
+                      onClick={closeForm}
+                      className="p-1 hover:bg-green-600 rounded-lg transition"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+
+                  <div className="p-6 space-y-4">
+                    {/* Full Name */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleFormChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none text-sm"
+                        placeholder="John Doe"
+                      />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none text-sm"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+
+                    {/* Phone */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Phone *
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleFormChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none text-sm"
+                        placeholder="(555) 123-4567"
+                      />
+                    </div>
+
+                    {/* Skills */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Skills
+                      </label>
+                      <div className="flex gap-2 mb-2">
+                        <input
+                          type="text"
+                          value={newSkill}
+                          onChange={(e) => setNewSkill(e.target.value)}
+                          onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addSkill())}
+                          className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none text-sm"
+                          placeholder="Add a skill"
+                        />
+                        <button
+                          type="button"
+                          onClick={addSkill}
+                          className="px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition flex items-center gap-1"
+                        >
+                          <Plus size={16} />
+                        </button>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {formData.skills.map((skill, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0 }}
+                            className="flex items-center gap-1 bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium"
+                          >
+                            {skill}
+                            <button
+                              type="button"
+                              onClick={() => removeSkill(index)}
+                              className="hover:text-green-900"
+                            >
+                              <X size={14} />
+                            </button>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Bio */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        About You
+                      </label>
+                      <textarea
+                        name="bio"
+                        value={formData.bio}
+                        onChange={handleFormChange}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none resize-none text-sm"
+                        rows="3"
+                        placeholder="Tell us about yourself..."
+                      />
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      onClick={handleSubmit}
+                      className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition text-sm"
+                    >
+                      Submit Application
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <div className="p-12 text-center">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <span className="text-3xl text-green-500">✓</span>
+                  </motion.div>
+                  <h3 className="text-xl font-bold text-black mb-2">Success!</h3>
+                  <p className="text-gray-600">Your application has been submitted successfully.</p>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

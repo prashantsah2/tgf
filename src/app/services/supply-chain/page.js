@@ -8,6 +8,7 @@ import {
 
   ClipboardList, Leaf, CheckCircle
 } from 'lucide-react';
+import Image from 'next/image';
 
 const iconMap = {
   HandCoins,
@@ -134,7 +135,7 @@ export default function PageMain({
                     className="bg-white/60 backdrop-blur-sm rounded-xl p-5 text-center border border-gray-200"
                   >
                     <div className={`bg-gradient-to-br from-${primaryColor}-500 to-${secondaryColor}-500 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3`}>
-                      <ServiceIcon className="w-7 h-7 text-white" />
+                      <ServiceIcon className="w-7 h-7 text-[#444]" />
                     </div>
                     <h3 className="font-semibold text-gray-800 italic text-xs">{service.title}</h3>
                   </motion.div>
@@ -151,11 +152,7 @@ export default function PageMain({
             >
               <div className={`w-full h-48 bg-gradient-to-r from-slate-800 to-${primaryColor}-900 rounded-xl overflow-hidden border border-gray-300`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                    <DecorativeIcon className="w-6 h-6" />
-                  </div>
-                </div>
+                <Image src={`/image/27553.jpg`} className='h-full' alt="Decorative" layout="fill" objectFit="cover" />
               </div>
             </motion.div>
           </div>

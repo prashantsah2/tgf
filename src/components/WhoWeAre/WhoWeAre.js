@@ -25,10 +25,10 @@ const WhoWeAre = () => {
               driving progress that leaves a lasting impact.
             </p>
             
-            <button className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium transition-colors duration-200 group">
+           {/*  <button className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium transition-colors duration-200 group">
               Read More
               <ArrowUpRight className="ml-1 h-5 w-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
-            </button>
+            </button> */}
           </div>
 
           {/* Right Content - Team Photo */}

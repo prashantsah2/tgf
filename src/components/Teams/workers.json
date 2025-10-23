@@ -1,0 +1,113 @@
+[
+  
+   {
+   "id":21,
+  "name": "Sweta",
+  "role": "HR Manager",
+  "company": "ENÈR GREEN",
+  "image": "/api/placeholder/400/400",
+  "bio": [
+    "She brings five years of versatile experience across the Healthcare, Manufacturing, and Climate Change sectors, with strong expertise in HR operations, talent management, payroll processing, and office administration. Her professional background includes managing correspondence, designing efficient filing systems, supervising clerical staff, and ensuring timely updates on compliance requirements.",
+    "She holds a Master's degree in Economics (2025) and an Economics Honors degree from Kalindi College, University of Delhi (2019). With a strong foundation in economic principles and organizational behavior, she applies analytical and strategic thinking to HR management, aligning workforce strategies with business objectives, fostering employee engagement, and ensuring compliance with labor regulations."
+  ],
+  "contact": {
+    "email": "sweta@energreen.com",
+    "phone": "+91 98765 43210",
+    "location": "New Delhi, India",
+    "linkedin": "linkedin.com/in/sweta"
+  },
+  "experience": 5,
+  "education": "Master's in Economics",
+  "sectors": ["Healthcare", "Manufacturing", "Climate Change"],
+  "skills": [
+    { "name": "Public Relations", "value": 95 },
+    { "name": "Problem Solving", "value": 90 },
+    { "name": "Conflict Resolution", "value": 85 },
+    { "name": "Emotional Intelligence", "value": 88 },
+    { "name": "Trustworthiness", "value": 92 },
+    { "name": "Creativity", "value": 80 }
+  ]
+},
+{
+  "name": "Puneet Chopra",
+  "role": "DGM-Sustainability",
+  "company": "ENÈR GREEN",
+  "image": "/api/placeholder/400/400",
+  "bio": [
+ "A seasoned professional with over 14 years of experience in EHS, ESG reporting, GHG accounting, auditing, and industrial safety. He has led sustainability initiatives, industrial hygiene studies, and construction safety programs across various sectors.With expertise in business development, operations, and regulatory compliance, he helps organizations implement effective environmental and sustainability strategies, ensuring alignment with global best practices and evolving regulatory frameworks.",
+
+"He holds multiple certifications, including ISO 14064-1 Lead Auditor (GHG), ISO 50001 Lead Auditor (Energy Management), and ISO 45001 Internal Auditor (Occupational Health & Safety). He has also completed specialized training in CSRD, ESG compliance, risk management, and net zero strategies from globally recognized institutions."
+    
+  ],
+
+  "skills": [
+    { "name": "Public Relations", "value": 95 },
+    { "name": "Problem Solving", "value": 90 },
+    { "name": "Conflict Resolution", "value": 85 },
+    { "name": "Emotional Intelligence", "value": 88 },
+    { "name": "Trustworthiness", "value": 92 },
+    { "name": "Creativity", "value": 80 }
+  ]
+},
+{
+  "name": "Nishad Nanavaty",
+  "role": "DGM-Sustainability",
+  "company": "ENÈR GREEN",
+  "image": "/api/placeholder/400/400",
+  "bio": [
+"A seasoned professional with over 14 years of experience in EHS, ESG reporting, GHG accounting, auditing, and industrial safety. He has led sustainability initiatives, industrial hygiene studies, and construction safety programs across various sectors.With expertise in business development, operations, and regulatory compliance, he helps organizations implement effective environmental and sustainability strategies, ensuring alignment with global best practices and evolving regulatory frameworks.",
+
+"He holds multiple certifications, including ISO 14064-1 Lead Auditor (GHG), ISO 50001 Lead Auditor (Energy Management), and ISO 45001 Internal Auditor (Occupational Health & Safety). He has also completed specialized training in CSRD, ESG compliance, risk management, and net zero strategies from globally recognized institutions."
+    
+  ],
+
+  "skills": [
+    { "name": "Public Relations", "value": 100 },
+    { "name": "Problem Solving", "value": 80 },
+    { "name": "Conflict Resolution", "value": 80 }
+  
+  ]
+},
+{
+  "name": "Hemang Awasthi",
+  "role": "DGM-Sustainability",
+  "company": "ENÈR GREEN",
+  "image": "/image/page 14 - Our Core Team (10).png",
+  "bio": [
+"A dynamic professional with hands-on experience in executing 30+ carbon projects under GHG crediting mechanisms such as GS4GG, GCC, CDM, and VCS. Skilled in end-to-end project execution, client portfolio management, and identifying future opportunities, he has successfully completed key projects including two GS4GG validations and four RfR submissions under GCC. ",
+"He is known for maintaining strong client and DOE relationships, he consistently attracted repeat business. His prior internships involved PCB licensing support, ESG data analysis, and sewage treatment quality assessment with Indore Municipal Corporation. ",
+"Academically, he has worked on biofuel research using Solanum Virginianum and attended a food processing workshop in collaboration with FSSAI. Dedicated to climate action and advancing UN SDGs through impactful project delivery."
+
+  ],
+
+  "skills": [
+    { "name": "Public Relations", "value": 85 },
+    { "name": "Problem Solving", "value": 80 },
+    { "name": "Conflict Resolution", "value": 81 },
+    { "name": "Emotional Intelligence", "value": 88 },
+    { "name": "Trustworthiness", "value": 82 },
+    { "name": "Creativity", "value": 80 }
+  ]
+},
+{  "id":18,
+  "name": "Kallol Borah",
+  "role": "Consultant-Sustainability",
+  "company": "ENÈR GREEN",
+  "image": "/image/page 14 - Our Core Team (10).png",
+  "bio": [
+"A dynamic professional with hands-on experience in executing 30+ carbon projects under GHG crediting mechanisms such as GS4GG, GCC, CDM, and VCS. Skilled in end-to-end project execution, client portfolio management, and identifying future opportunities, he has successfully completed key projects including two GS4GG validations and four RfR submissions under GCC. ",
+"He is known for maintaining strong client and DOE relationships, he consistently attracted repeat business. His prior internships involved PCB licensing support, ESG data analysis, and sewage treatment quality assessment with Indore Municipal Corporation. ",
+"Academically, he has worked on biofuel research using Solanum Virginianum and attended a food processing workshop in collaboration with FSSAI. Dedicated to climate action and advancing UN SDGs through impactful project delivery."
+
+  ],
+
+  "skills": [
+    { "name": "Public Relations", "value": 100 },
+    { "name": "Problem Solving", "value": 80 },
+    { "name": "Conflict Resolution", "value": 81 },
+    { "name": "Emotional Intelligence", "value": 88 },
+    { "name": "Trustworthiness", "value": 99 },
+    { "name": "Creativity", "value": 80 }
+  ]
+}
+]

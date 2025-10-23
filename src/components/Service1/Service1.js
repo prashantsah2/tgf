@@ -79,11 +79,7 @@ export default function Service1() {
             initial="hidden"
             animate="visible"
           >
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white transform translate-x-32 -translate-y-32"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white transform -translate-x-24 translate-y-24"></div>
-            </div>
+          
             
             <div className="relative z-10 space-y-12">
               {/* Item 1 */}

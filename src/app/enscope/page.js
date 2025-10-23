@@ -13,7 +13,7 @@ const EnscopePage = () => {
   return (
     <>
     <Header4 heading="Enscope" text="Discover our innovative solutions and services."/>
-    <div className="flex flex-col justify-center items-center w-full min-h-[91vh] bg-gray-50 pt-20">
+    <div className="flex flex-col justify-center items-center w-full">
       <Enscope />
     </div>
     <Footer3 />

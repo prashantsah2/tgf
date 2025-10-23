@@ -16,7 +16,7 @@ const CarbonCourseCard = () => {
       </div>
 
       {/* Course Card */}
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto mt-28">
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Illustration */}
           <div className="lg:w-1/2 bg-gradient-to-br from-red-700 to-red-900 relative overflow-hidden">
@@ -86,11 +86,11 @@ const CarbonCourseCard = () => {
 
           {/* Right Side - Course Details */}
           <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 leading-tight">
+            <h2 className="text-2xl font-outfit text-gray-800 mb-2 leading-tight">
               Understanding Carbon Market - Level 1
             </h2>
             
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-600 text-md font-sans leading-2 mb-8">
               Dive into the fundamentals of carbon markets with our beginner-level course led by industry experts.
             </p>
             
@@ -99,14 +99,15 @@ const CarbonCourseCard = () => {
                 Ended
               </span>
               
-              <div className="text-2xl font-bold text-gray-800">
+              <div className="text-md font-outfit font-light text-gray-800">
                 From ₹8,999
               </div>
             </div>
             
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 w-fit">
+           <a href='/training/carbon-training'><button className="bg-[#10ce06] text-white font-outfit py-3 px-8 rounded-lg transition-colors duration-200 w-fit">
               View Course
             </button>
+            </a> 
           </div>
         </div>
       </div>

@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import WorkProfile from '../WorkProfile/WorkProfile';
+import { useState } from 'react';
+import workers from './workers.json';
 
 const teamMembers = [
   {
@@ -53,23 +56,38 @@ const teamMembers = [
 
 
 const teamMember = [
-  { name: 'Ruchika', surname: 'Sharma', image: '/image/page 14 - Our Core Team (2)' },
-  { name: 'Abhishek K', surname: 'Srivastava', image: '/api/placeholder/150/150' },
-  { name: 'Ajay', surname: 'Srivastava', image: '/api/placeholder/150/150' },
-  { name: 'Nishad', surname: 'Nanavaty', image: '/api/placeholder/150/150' },
-  { name: 'Puneet', surname: 'Chopra', image: '/api/placeholder/150/150' },
-  { name: 'Anchal', surname: 'Srivastava', image: '/api/placeholder/150/150' },
-  { name: 'Kallol', surname: 'Borah', image: '/api/placeholder/150/150' },
-  { name: 'Aniket Kumar', surname: 'Srotriya', image: '/api/placeholder/150/150' },
-  { name: 'Utkarsh', surname: 'Thakur', image: '/api/placeholder/150/150' },
-  { name: 'Sweta', surname: 'Kn', image: '/api/placeholder/150/150' },
-  { name: 'Hemang', surname: 'Awasthi', image: '/api/placeholder/150/150' },
-  { name: 'Gayathri', surname: 'Nagalingam', image: '/api/placeholder/150/150' },
-  { name: 'Akash', surname: 'Dixit', image: '/api/placeholder/150/150' },
-  { name: 'Aakashdeep', surname: '', image: '/api/placeholder/150/150' },
+  { name: 'Ruchika', surname: 'Sharma', image: '/image/page 14 - Our Core Team (2)',id:12 },
+  { name: 'Abhishek K', surname: 'Srivastava', image: '/api/placeholder/150/150',id:13 },
+  { name: 'Ajay', surname: 'Srivastava', image: '/api/placeholder/150/150',id:14 },
+  { name: 'Nishad', surname: 'Nanavaty', image: '/api/placeholder/150/150',id:15 },
+  { name: 'Puneet', surname: 'Chopra', image: '/api/placeholder/150/150',id:16 },
+  { name: 'Anchal', surname: 'Srivastava', image: '/api/placeholder/150/150',id:17 },
+  { name: 'Kallol', surname: 'Borah', image: '/api/placeholder/150/150',id:18 },
+  { name: 'Aniket Kumar', surname: 'Srotriya', image: '/api/placeholder/150/150',id:19 },
+  { name: 'Utkarsh', surname: 'Thakur', image: '/api/placeholder/150/150',id:20 },
+  { name: 'Sweta', surname: 'Kn', image: '/api/placeholder/150/150',id:21 },
+  { name: 'Hemang', surname: 'Awasthi', image: '/api/placeholder/150/150',id:22 },
+  { name: 'Gayathri', surname: 'Nagalingam', image: '/api/placeholder/150/150',id:23 },
+  { name: 'Akash', surname: 'Dixit', image: '/api/placeholder/150/150',id:24 },
+  { name: 'Aakashdeep', surname: '', image: '/api/placeholder/150/150',id:25 },
 ];
 
 export default function Teams() {
+
+  const [showWorkProfile, setShowWorkProfile] = useState(false);
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  function handleClick(userId) {
+  const user = workers.find((u) => u.id === userId);
+  if (user){
+
+  setShowWorkProfile(true);
+  setSelectedMember(user);}
+  else{
+    setSelectedMember(false);
+  }
+}
+
 
   return (
     <div className="bg-[#fff] min-h-screen w-full">
@@ -94,12 +112,17 @@ export default function Teams() {
         {/* Team Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-20">
           {teamMember.map((member,index) => (
-            <div key={member.id} className="bg-white rounded-sm overflow-hidden  hover:shadow-md transition-shadow">
-              <div className={`${member.bgColor} aspect-square relative`}>
+            <div key={member.id} className="bg-white border-[1px] border-[#eee] border-solid rounded-lg  overflow-hidden  hover:shadow-md transition-shadow"
+            onClick={() => {
+             handleClick(member.id);
+            }}
+
+            >
+              <div className={`${member.bgColor} aspect-square relative mx-4 scale-75` }>
                 {/* Placeholder for team member image */}
-               <img src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
+               <img className='rounded-full' src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
               </div>
-              <div className="pt-3 pb-6 pl-2">
+              <div className="pt-3 pb-6 pl-2 text-center">
                 <h3 className="text-md font-sans text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
                 <p className="text-[#bfbfbf] font-sans text-sm mb-3">{member.role?member.role:'this is role'}</p>
                {/*  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p> */}
@@ -118,6 +141,9 @@ export default function Teams() {
             and talented individuals to join our distributed team all around the world.
           </p>
         </div> */}
+        {showWorkProfile && <>
+        <WorkProfile member={selectedMember} onClose={()=>{setShowWorkProfile(false)}} />
+        </>}
       </div>
     </div>
   )

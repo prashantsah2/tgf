@@ -5,6 +5,7 @@ import About2 from "@/components/About2/About2";
 import Footer3 from "@/components/Footer3/Footer3";
 import Service1 from "../../components/Service1/Service1";
 import OurStory from "@/components/OurStory/OurStory";
+import WhoWeAre from "@/components/WhoWeAre/WhoWeAre";
 
 
 
@@ -18,6 +19,7 @@ export default function Aboutus(){
         <Header4 heading="About Us" text="Learn more about our team and mission."/>
         <div className="flex flex-col justify-center items-center w-full min-h-[91vh] pt-20 max-sm:px-4">
          <About2/>
+         <WhoWeAre/>
          
          <Teams/>
         <OurStory/>
