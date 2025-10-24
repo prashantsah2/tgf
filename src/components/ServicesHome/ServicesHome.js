@@ -9,6 +9,7 @@ const pillars = [
     textColor: 'text-blue-600',
     title: 'CLIMATE CHANGE',
     description: 'Comprehensive strategies to address climate change impacts, reduce environmental footprint, and implement sustainable practices across your organization\'s operations.',
+    path:'/services/supply-chain'
   },
   {
     id: 2,
@@ -52,15 +53,13 @@ export default function ServicesHome() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-outfit mb-6 bg-teal-500 bg-clip-text text-transparent">
             OUR SERVICES
           </h1>
-          <p className="text-2xl text-slate-800 font-semibold mb-4 max-w-4xl mx-auto">
+          <p className="text-md text-[#999]  mb-4 max-w-4xl mx-auto">
             At the core of our Sustainability Solutions are FIVE pillars designed to provide One Stop Solution for more sustainable business practices.
           </p>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Within each pillar, services are structured to resolve key issues across the value chain, adapting to the maturity of the organization.
-          </p>
+       
         </div>
 
         {/* Pillars */}
@@ -80,10 +79,10 @@ export default function ServicesHome() {
                 <div className={`flex items-center gap-12 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
                   {/* Content Side */}
                   <div className={`flex-1 ${isEven ? 'text-left' : 'text-right'}`}>
-                    <h3 className={`${pillar.textColor} font-bold text-xl mb-3 tracking-wide`}>
+                    <h3 className={`${pillar.textColor} font-outfit text-xl mb-3 tracking-wide`}>
                       {pillar.title}
                     </h3>
-                    <p className="text-slate-600 text-base leading-relaxed">
+                    <p className="text-slate-600 text-base font-sans leading-relaxed text-[#888]">
                       {pillar.description}
                     </p>
                   </div>
@@ -97,7 +96,7 @@ export default function ServicesHome() {
                     
                     {/* Arc Background */}
                     <div className={`relative transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}>
-                      <svg width="160" height="160" viewBox="0 0 160 160" className="transform rotate-180">
+                      <svg width="160" height="160" viewBox="0 0 160 160" className={`transform rotate-${!isEven ? '0' : '180'} transition-transform duration-500`}>
                         <defs>
                           <linearGradient id={`gradient-${pillar.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stopColor={pillar.color.includes('blue') ? '#3b82f6' : pillar.color.includes('orange') ? '#fb923c' : pillar.color.includes('teal') && pillar.id === 3 ? '#14b8a6' : pillar.color.includes('purple') ? '#a855f7' : '#14b8a6'} />
@@ -126,12 +125,12 @@ export default function ServicesHome() {
                     </div>
 
                     {/* Connection Dot and Line */}
-                    <div className={`absolute ${isEven ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} top-1/2 -translate-y-1/2`}>
+                  {/*   <div className={`absolute ${isEven ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} top-1/2 -translate-y-1/2`}>
                       <div className="relative">
                         <div className={`w-4 h-4 rounded-full ${pillar.textColor.replace('text-', 'bg-')} transition-all duration-300 ${isHovered ? 'scale-150 shadow-lg' : 'scale-100'} border-2 border-white`} />
                         <div className={`absolute top-1/2 ${isEven ? 'right-full' : 'left-full'} w-24 h-0.5 ${pillar.textColor.replace('text-', 'bg-')} -translate-y-1/2 opacity-60`} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Empty Side for Balance */}
@@ -142,23 +141,7 @@ export default function ServicesHome() {
           })}
         </div>
 
-        {/* Footer Info */}
-        <div className="mt-20 bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-4xl mx-auto border border-teal-100">
-          <ul className="space-y-4 text-slate-700">
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-teal-500 mt-2 flex-shrink-0" />
-              <p className="text-base">
-                <strong>Companies may engage us for specific services</strong> to address focused environmental, social, or governance priorities within one or more pillars.
-              </p>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-              <p className="text-base">
-                <strong>For organizations seeking a broader approach,</strong> we provide an integrated framework that delivers a holistic sustainability strategy and long-term support throughout their journey.
-              </p>
-            </li>
-          </ul>
-        </div>
+      
       </div>
     </div>
   );
