@@ -47,7 +47,7 @@ development and feasibility study.`,
               <div 
                 key={index}
 
-                className={`flex items-center gap-6  border-b-[2px] border-gray-300 pb-12 border-solid ${isRight ? 'flex-row-reverse justify-start ml-auto max-w-3xl' : 'justify-start max-w-3xl'}`}
+                className={`flex items-center gap-6  border-b-[1px] border-gray-300 pb-12 border-solid ${isRight ? 'flex-row-reverse justify-start ml-auto max-w-3xl' : 'justify-start max-w-3xl'}`}
               >
                 <div className={`w-36 h-36 rounded-full bg-gradient-to-br ${step.gradient} p-1 flex-shrink-0`}>
                   <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
