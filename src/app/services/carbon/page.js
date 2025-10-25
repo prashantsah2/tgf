@@ -7,8 +7,10 @@ import ServiceMain from '@/components/ServiceMain/ServiceMain';
 export default function OptionsInfographic() {
 
 const servicesData = {
-  title: "OUR SERVICES",
+  title: "CARBON",
+  title2: "FOOTPRINT",
   services: [
+
     {
       id: 1,
       icon: "Cloud",
