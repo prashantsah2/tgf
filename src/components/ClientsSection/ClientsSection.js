@@ -25,10 +25,10 @@ const ClientsSection = () => {
   const displayedClients = Array(4).fill(clients).flat();
 
   return (
-    <div className=" bg-white py-8 px-4 overflow-hidden max-w-[1371px] mx-auto pt-12 pb-12">
+    <div className=" bg-white py-8 px-4 overflow-hidden max-w-[1371px] mx-auto pt-12 pb-12 max-sm:pb-6">
 
-      <div className='w-full text-3xl text-center'>
-        <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-center">
+      <div className='w-full text-3xl text-center max-sm:text-xl'>
+        <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-center max-sm:mb-4">
           OUR <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">CLIENTS</span>
         </h2>
       </div>
@@ -47,13 +47,13 @@ const ClientsSection = () => {
             <motion.div
               key={`${client.id}-${idx}`}
               className={` aspect-[1.5] flex items-center justify-center p-4 hover:shadow-md transition-all cursor-pointer border border-gray-200 rounded-xl flex-shrink-0`}
-              style={{ width: '200px' }}
+              
               whileHover={{ scale: 1.05 }}
             >
               <div className={`${client.textStyle} text-center`}>
                 <img
                   src={`/image/${client.image}`}
-                  className="w-full max-w-[100px] mx-auto object-contain"
+                  className="w-full max-w-[100px] mx-auto object-contain max-sm:max-w-[51px]"
                   alt={client.name}
                 />
               </div>

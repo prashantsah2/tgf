@@ -59,7 +59,7 @@ export default function Hero5() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8 md:px-12">
+      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8 md:px-12 max-sm:px-4">
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0, y: 30 }}
@@ -82,7 +82,7 @@ export default function Hero5() {
         </motion.div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-12 flex items-start space-x-8 justify-start w-full max-w-7xl z-50">
+        <div className="absolute bottom-12 max-sm:overflow-scroll max-w-[100vw]  flex items-start space-x-8 justify-start w-full max-w-7xl z-50">
           {slides.map((slide, index) => (
             <button
               key={index}
@@ -109,7 +109,7 @@ export default function Hero5() {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
+        <div className="absolute  max-w-[100vw] right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

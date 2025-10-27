@@ -59,25 +59,21 @@ const item = {
 
 export default function AchievementsShowcase() {
   return (
-    <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <div className=" bg-white py-16 px-4 max-sm:px-4 lg:px-8 flex flex-col items-center justify-center max-sm:pb-8">
       <div className="max-w-[1391px] mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-sm:mb-0"
         >
-          <div className="flex items-center justify-between mb-12">
-            <h1 className="text-xl md:text-3xl font-bold font-outfit">
-              NOTEWORTHY{' '}
-              <span className="bg-gradient-to-r  from-blue-600 to-teal-500 bg-clip-text text-transparent font-outfit">
-                ACHIEVEMENTS
-              </span>
-            </h1>
-            <div className="text-right">
-             
-            </div>
+          <div className="flex items-center justify-between mb-12 max-sm:mb-2">
+             <div className='w-full text-3xl text-center max-sm:text-xl'>
+        <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-left max-sm:mb-4">
+         NOTEWORTHY <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">ARCHIVEMENTS</span>
+        </h2>
+      </div>
           </div>
         </motion.div>
 
@@ -86,7 +82,7 @@ export default function AchievementsShowcase() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12 max-sm:gap-2 max-sm:mb-4"
         >
           {achievements.map((achievement) => {
             const Icon = achievement.icon;
@@ -97,20 +93,20 @@ export default function AchievementsShowcase() {
                 whileHover={{ scale: 1.05 }}
                 className="relative"
               >
-                <div className="bg-white rounded-2xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-100">
+                <div className="bg-white rounded-2xl p-6 max-sm:px-2 h-full flex flex-col items-center text-center border-2 border-gray-100">
                   {/* Icon Badge */}
-                  <div className={`w-20 h-20 rounded-full  flex items-center justify-center mb-4`}>
+                  <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 max-sm:mb-2 `}>
                     
                     <img src={`${achievement.icon}`} width={311} height={411} className='w-full h-full' />
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-outfit text-gray-800 mb-2">
+                  <h3 className="text-xl font-outfit text-gray-800 mb-2 max-sm:text-sm">
                     {achievement.title}
                   </h3>
                   
                   {/* Subtitle */}
-                  <p className="text-sm text-gray-600 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-600 leading-relaxed font-sans max-xs:text-xs">
                     {achievement.subtitle}
                   </p>
                 </div>
@@ -126,7 +122,7 @@ export default function AchievementsShowcase() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="border-t-2 border-dashed border-gray-200 pt-8"
         >
-          <h2 className="text-xl md:text-xl font-sans text-center text-gray-800">
+          <h2 className="text-xl md:text-xl font-sans text-center text-gray-800 max-sm:text-sm">
            {` India's First Gold-rated and Accredited Sustainability Service Provider`}
           </h2>
         </motion.div>

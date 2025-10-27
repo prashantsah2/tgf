@@ -15,13 +15,13 @@ export default function Overview() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#fff] px-6 sm:px-10">
+    <div className=" flex items-center justify-center bg-[#fff] px-6 sm:px-10 pt-8">
       <div className="w-full max-w-[1371px] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE */}
         <motion.div
           initial="hidden"
           animate={visible ? "visible" : "hidden"}
-          className="rounded-3xl bg-gradient-to-br from-blue-600 via-teal-500 to-emerald-400 p-10 sm:p-14 text-white flex flex-col justify-center min-h-[400px]"
+          className="rounded-3xl min-h-[571px] bg-gradient-to-br from-blue-400 via-teal-600 to-emerald-400 p-10 sm:p-14 text-white flex flex-col justify-center "
         >
           {[
             "Work towards global carbon neutrality.",
@@ -32,10 +32,10 @@ export default function Overview() {
               key={i}
               custom={i}
               variants={fadeUp}
-              className="flex items-start gap-4 mb-8 last:mb-0"
+              className="flex items-start gap-4 mb-16 last:mb-0 relative"
             >
-              <div className="text-lg font-semibold">{i + 1}.</div>
-              <p className="text-base sm:text-lg leading-relaxed font-light">
+              <div className={`text-lg font-semibold bg-[#444] w-12 h-12 flex justify-center items-center right-[-75px] rounded-full absolute top-[${i*25}px]`}>{i + 1}.</div>
+              <p className="text-base w-full text-right sm:text-lg leading-relaxed font-light">
                 {text}
               </p>
             </motion.div>
@@ -48,13 +48,7 @@ export default function Overview() {
           animate={visible ? "visible" : "hidden"}
           className="space-y-6 flex flex-col justify-center min-h-[400px]"
         >
-          <motion.h3
-            variants={fadeUp}
-            custom={0}
-            className="text-teal-600 text-sm sm:text-base font-semibold tracking-widest"
-          >
-            ENEO GREEN
-          </motion.h3>
+        
 
           <motion.h2
             variants={fadeUp}

@@ -5,18 +5,18 @@ export default function Stats() {
        
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-4xl font-outfit text-gray-800 mb-2">
+        <div className="text-center mb-12 max-sm:mb-4">
+          <h2 className="text-xl sm:text-3xl font-outfit text-gray-800 mb-2 max-sm:text-xl">
             OVER A DECADE OF DEDICATION
           </h2>
-          <h3 className="text-4xl sm:text-6xl font-bold font-outfit">
+          <h3 className="text-xl sm:text-3xl font-bold font-outfit max-sm:text-xl">
             <span className="text-blue-600">WHY</span>{" "}
             <span className="text-teal-500">US?</span>
           </h3>
-          <p className="text-gray-600 text-base sm:text-sm font-sans mt-4">
+          <p className="text-gray-600 text-base sm:text-sm font-sans mt-4 max-sm:hidden">
             Serving clients globally with a team of certified experts
           </p>
-          <p className="text-gray-700 text-base sm:text-sm font-sans mt-2">
+          <p className="text-gray-700 text-base sm:text-sm font-sans mt-2  max-sm:hidden">
             Over 75+ years of combined experience.
           </p>
         </div>
@@ -33,15 +33,15 @@ export default function Stats() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="text-center py-8 px-4 border-b sm:border-b-0 sm:border-r last:border-r-0 border-gray-100"
+                className="text-center py-8 px-4 border-b sm:border-b-0 sm:border-r last:border-r-0 border-gray-100 max-sm:p-4"
               >
-                <div className="text-gray-800 text-3xl sm:text-5xl font-bold mb-2 font-outfit">
+                <div className="text-gray-800 text-xl sm:text-5xl font-bold mb-2 font-outfit ">
                   {item.value}
                 </div>
-                <div className="text-gray-600 text-sm sm:text-base font-sans">
+                <div className="text-gray-600 text-sm sm:text-base font-sans max-sm:text-xs">
                   {item.label1}
                 </div>
-                <div className="text-gray-600 text-sm sm:text-base font-sans">
+                <div className="text-gray-600 text-sm sm:text-base font-sans max-sm:text-xs">
                   {item.label2}
                 </div>
               </div>

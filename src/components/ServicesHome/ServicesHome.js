@@ -49,7 +49,7 @@ export default function ServicesHome() {
   const [hoveredPillar, setHoveredPillar] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-50 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-50 p-8 max-sm:px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -76,7 +76,7 @@ export default function ServicesHome() {
                 onMouseEnter={() => setHoveredPillar(pillar.id)}
                 onMouseLeave={() => setHoveredPillar(null)}
               >
-                <div className={`flex items-center gap-12 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div className={`flex items-center gap-12 max-sm:flex-col ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
                   {/* Content Side */}
                   <div className={`flex-1 ${isEven ? 'text-left' : 'text-right'}`}>
                     <h3 className={`${pillar.textColor} font-outfit text-xl mb-3 tracking-wide`}>
@@ -88,7 +88,7 @@ export default function ServicesHome() {
                   </div>
 
                   {/* Center Circle with Arc */}
-                  <div className="relative flex-shrink-0">
+                  <div className="relative flex-shrink-0 max-sm:scale-50 my-[-35px]">
                     {/* Connecting Line */}
                     {index < pillars.length - 1 && (
                       <div className="absolute top-full left-1/2 w-1 h-20 bg-gradient-to-b from-teal-300 to-transparent transform -translate-x-1/2 z-0" />

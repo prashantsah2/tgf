@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Leaf, Award, TrendingUp, Shield, ArrowRight } from 'lucide-react';
+import { Leaf, Award, TrendingUp, Shield, ArrowRight, Box } from 'lucide-react';
+import { title } from 'process';
 
 const ServicesList = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -8,30 +9,41 @@ const ServicesList = () => {
     {
       id: 1,
       icon: Leaf,
-      title: "Carbon Footprint",
-      description: "Our program helps organizations and people make environmentally conscious decisions by calculating and reducing carbon footprints. We offer tailored evaluations and practical advice to successfully reduce environmental impact.",
+      title: "CLIMATE CHANGE",
+      description: `Our solutions accelerate the transition to a low-carbon future, reducing emissions across the
+value chain while unlocking opportunities for climate resilience and sustainable growth.
+`,
       color: "from-emerald-700 to-emerald-900"
     },
     {
       id: 2,
       icon: TrendingUp,
-      title: "Carbon Credit",
+      title: "SUSTAINABLE BUSINESS PRACTICES",
       description: "By promoting efforts to reduce greenhouse gas emissions, carbon credits aid in emissions offsets. Our service makes it easier to buy and keep track of these credits, allowing you to assist international sustainability programs and achieve environmental goals.",
       color: "from-slate-100 to-slate-200"
     },
     {
       id: 3,
       icon: Shield,
-      title: "Sustainability (ESG)",
-      description: "In order to improve sustainability, ensure social responsibility, ethical governance, and long-term stewardship—thus promoting resilience and good effect in a changing world—we assist firms in integrating ESG (Environmental, Social, and Governance) techniques.",
+      title: "CARBON",
+      description: `Our carbon services empower businesses to measure, manage, and reduce emissions through robust accounting, verification,
+and decarbonization strategies, enabling climate leadership and compliance while unlocking new value opportunities.
+`,
       color: "from-slate-100 to-slate-200"
     },
     {
       id: 4,
       icon: Award,
-      title: "Certifications",
-      description: "We offer ESG and sustainability certifications to support businesses in rigorously validating their adherence to global standards, improving their reputation, gaining the trust of stakeholders, and improving the environment and community.",
+      title: "SUSTAINABLE SUPPLY CHAIN",
+      description: `Our sustainable supply chain solutions help businesses build transparency, resilience, and responsibility across their value chains by
+embedding ESG principles, reducing risks, and driving long-term supplier partnerships that align with global sustainability goals.
+`,
       color: "from-slate-100 to-slate-200"
+    },{
+      id:5,
+      icon:Box,
+      title:'ADDITIONAL SERVICES',
+      description:''
     }
   ];
 
@@ -40,10 +52,10 @@ const ServicesList = () => {
       <div className="max-w-[1391px] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <span className="text-xl md:text-3xl text-[#fff] bg-gradient-to-r font-outfit font-bold bg-clip-text text-transparent from-blue-500 to-teal-700  mb-4">
             Our Services
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          </span>
+          <p className="text-md text-gray-600 max-w-3xl mx-auto mt-2 ">
             Empowering organizations to achieve sustainability goals through comprehensive environmental solutions and expert guidance.
           </p>
         </div>
@@ -108,12 +120,7 @@ const ServicesList = () => {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <button className="px-8 py-4 bg-emerald-700 text-white rounded-lg font-semibold text-lg hover:bg-emerald-800 transition-colors duration-300 shadow-lg hover:shadow-xl">
-            Start Your Sustainability Journey
-          </button>
-        </div>
+    
       </div>
     </div>
   );
