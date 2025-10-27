@@ -59,7 +59,7 @@ const item = {
 
 export default function AchievementsShowcase() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <div className="max-w-[1391px] mx-auto">
         {/* Header */}
         <motion.div
@@ -69,9 +69,9 @@ export default function AchievementsShowcase() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-between mb-12">
-            <h1 className="text-xl md:text-3xl font-bold">
+            <h1 className="text-xl md:text-3xl font-bold font-outfit">
               NOTEWORTHY{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r  from-blue-600 to-teal-500 bg-clip-text text-transparent font-outfit">
                 ACHIEVEMENTS
               </span>
             </h1>
@@ -105,12 +105,12 @@ export default function AchievementsShowcase() {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-outfit text-gray-800 mb-2">
                     {achievement.title}
                   </h3>
                   
                   {/* Subtitle */}
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed font-sans">
                     {achievement.subtitle}
                   </p>
                 </div>

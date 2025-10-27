@@ -6,15 +6,9 @@ import { ChevronLeft, ChevronRight, Leaf, Cloud, Briefcase, Package, Plus, Wind 
 // Services data from JSON
 
 
-const iconComponents = {
-  Cloud: Cloud,
-  Briefcase: Briefcase,
-  Package: Package,
-  Plus: Plus,
-  Wind: Wind
-};
 
-export default function ServiceMain({servicesData}) {
+
+export default function ServiceMain({servicesData,iconComponents}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedService, setSelectedService] = useState(servicesData.services[2]);
 
@@ -92,7 +86,7 @@ export default function ServiceMain({servicesData}) {
                     onClick={() => handleServiceClick(service)}
                     className={`flex-shrink-0 w-[calc(33.333%-16px)] cursor-pointer transition-all duration-300 z-50 max-md:w-[calc(47.333%-16px)] ${
                       selectedService.id === service.id
-                        ? 'scale-100 -translate-y-2'
+                        ? ''
                         : 'hover:scale-100'
                     }`}
                   >

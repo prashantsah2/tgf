@@ -1,97 +1,104 @@
+"use client";
 import React from 'react';
-import { Brain, Lightbulb, MousePointerClick, Mountain, Info } from 'lucide-react';
+import { Cloud, Wind, Package, Briefcase, Plus } from 'lucide-react';
 import Footer3 from '@/components/Footer3/Footer3';
 import Header3 from '@/components/Header4/Header4';
 import ServiceMain from '@/components/ServiceMain/ServiceMain';
 
 export default function OptionsInfographic() {
 
-const servicesData = {
-  title: "CARBON",
-  title2: "FOOTPRINT",
-  services: [
+  const servicesData = {
+    title: "CARBON",
+    title2: "",
+    services: [
+      {
+        id: 1,
+        icon: "Cloud",
+        title: "CARBON FOOTPRINT",
+        description: "Our carbon services empower businesses to measure, manage, and reduce emissions through robust accounting...",
+        details: {
+          title: "CARBON FOOTPRINT",
+          points: [
+            "Our carbon services empower businesses to measure, manage, and reduce emissions through robust accounting, verification, and decarbonization strategies.",
+            "We enable climate leadership and compliance while unlocking new value opportunities for your organization.",
+            "Comprehensive carbon footprint assessment and management solutions tailored to your business needs."
+          ]
+        }
+      },
+      {
+        id: 2,
+        icon: "Wind",
+        title: "DECARBONIZATION SOLUTIONS",
+        description: "Strategic pathways to reduce carbon footprints and transition to net-zero operations...",
+        details: {
+          title: "DECARBONIZATION SOLUTIONS",
+          points: [
+            "Carbon Accounting Tools and Decarbonization Solutions enable precise emissions tracking and establish effective pathways to reduce carbon footprints.",
+            "Develop comprehensive decarbonization roadmaps aligned with climate goals and industry best practices.",
+            "Implementation support for transitioning to low-carbon operations and achieving net-zero targets."
+          ]
+        }
+      },
+      {
+        id: 3,
+        icon: "Package",
+        title: "ISO 14064 VERIFICATION",
+        description: "Greenhouse Gas Accounting and Verification ensuring accurate emissions measurement and reporting...",
+        details: {
+          title: "ISO 14064 VERIFICATION & ASSURANCE",
+          points: [
+            "Carbon Footprint, Product Carbon Footprint, Carbon Footprint Assurance, and Greenhouse Gas Accounting and Verification (ISO 14064) services available.",
+            "GHG Verification Against Corporate Voluntary Schemes enable accurate emissions measurement, reporting, and validation.",
+            "Third-party verification and assurance services ensuring credibility and compliance with international standards."
+          ]
+        }
+      },
+      {
+        id: 4,
+        icon: "Briefcase",
+        title: "REGULATION GUIDANCE",
+        description: "CDP Disclosures, SBTi Disclosures, and Regulation Guidance ensuring compliance with global frameworks...",
+        details: {
+          title: "ESG DISCLOSURES & REGULATION GUIDANCE",
+          points: [
+            "CDP Disclosures, SBTi Disclosures, and Regulation Guidance (CBAM) ensure compliance with global frameworks and enable transparent ESG communication.",
+            "Expert support for carbon disclosure projects and sustainability reporting requirements.",
+            "Guidance on emerging regulations including Carbon Border Adjustment Mechanism (CBAM) and other compliance frameworks."
+          ]
+        }
+      },
+      {
+        id: 5,
+        icon: "Plus",
+        title: "ENERGY SERVICES",
+        description: "Energy Audits & Optimization, Energy Savings Measurement & Verification, and renewable energy solutions...",
+        details: {
+          title: "ENERGY SERVICES & PCF",
+          points: [
+            "Energy Audits & Optimization, Energy Savings Measurement & Verification, Inspection & Monitoring Services for Renewable Energy Systems.",
+            "Self-Consumption Feasibility studies enhance efficiency, reliability, and energy independence.",
+            "Product Carbon Footprint (PCF) assessment enabling product-level emissions tracking and reduction strategies."
+          ]
+        }
+      }
+    ]
+  };
 
-    {
-      id: 1,
-      icon: "Cloud",
-      title: "CLIMATE CHANGE",
-      description: "At the core of our Sustainability Solutions are FIVE pillars designed to provide ............",
-      details: {
-        title: "CLIMATE CHANGE",
-        points: [
-          "At the core of our Sustainability Solutions are FIVE pillars designed to provide One Stop Solution for climate action and mitigation strategies.",
-          "Within each pillar, services are structured to resolve key climate issues across sectors, adapting to the maturity of the organization.",
-          "Companies may engage us for specific services to address focused climate priorities. We provide an integrated framework that delivers comprehensive climate solutions and long-term support throughout their journey."
-        ]
-      }
-    },
-    {
-      id: 2,
-      icon: "Briefcase",
-      title: "SUSTAINABLE BUSINESS PRACTICES",
-      description: "At the core of our Sustainability Solutions are FIVE pillars............",
-      details: {
-        title: "SUSTAINABLE BUSINESS PRACTICES",
-        points: [
-          "At the core of our Sustainability Solutions are FIVE pillars designed to transform business operations for sustainability.",
-          "Within each pillar, services are structured to integrate sustainable practices across all business functions.",
-          "Companies may engage us for specific services to address focused business sustainability goals. We provide frameworks that deliver operational excellence and long-term value creation."
-        ]
-      }
-    },
-    {
-      id: 3,
-      icon: "Package",
-      title: "SUSTAINABLE SUPPLY CHAIN",
-      description: "At the core of our Sustainability Solutions are FIVE pillars designed to provide ............",
-      details: {
-        title: "SUSTAINABLE SUPPLY CHAIN",
-        points: [
-          "At the core of our Sustainability Solutions are FIVE pillars designed to provide One Stop Solution for more sustainable business practices.",
-          "Within each pillar, services are structured to resolve key issues across the value chain, adapting to the maturity of the organization.",
-          "Companies may engage us for specific services to address focused environmental, social, or governance priorities within one or more pillars. For organizations seeking a broader approach, we provide an integrated framework that delivers a holistic sustainability strategy and long-term support throughout their journey."
-        ]
-      }
-    },
-    {
-      id: 4,
-      icon: "Plus",
-      title: "ADDITIONAL SERVICES",
-      description: "At the core of our Sustainability Solutions are FIVE pillars designed to provide ............",
-      details: {
-        title: "ADDITIONAL SERVICES",
-        points: [
-          "At the core of our Sustainability Solutions are FIVE pillars designed to provide comprehensive support services.",
-          "Within each pillar, services are structured to address unique organizational needs and emerging sustainability challenges.",
-          "Companies may engage us for specialized services tailored to their specific requirements. We provide flexible solutions that complement core sustainability initiatives."
-        ]
-      }
-    },
-    {
-      id: 5,
-      icon: "Wind",
-      title: "CARBON",
-      description: "At the core of our Sustainability Solutions are FIVE pillars designed to provide ............",
-      details: {
-        title: "CARBON",
-        points: [
-          "At the core of our Sustainability Solutions are FIVE pillars designed to provide complete carbon management solutions.",
-          "Within each pillar, services are structured to measure, reduce, and offset carbon emissions across operations.",
-          "Companies may engage us for carbon-focused services including footprint assessment, reduction strategies, and offset programs. We provide end-to-end carbon management support."
-        ]
-      }
-    }
-  ]
-};
-
+  const iconComponents = {
+    Cloud: Cloud,
+    Wind: Wind,
+    Package: Package,
+    Briefcase: Briefcase,
+    Plus: Plus
+  };
 
   return (
-      <><Header3 />
+    <>
+      <Header3 />
       <div>
-        <ServiceMain servicesData={servicesData} />
+        <ServiceMain servicesData={servicesData} iconComponents={iconComponents} />
       </div>
-       <Footer3/>
-        
-        </>
+      <Footer3 />
+    </>
   );
 }

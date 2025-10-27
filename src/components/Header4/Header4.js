@@ -3,21 +3,22 @@ import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { title } from 'process';
 
 const Header4 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const servicesMenu = [
-   
-    { title: 'Sustainable Supply Chains', href: '/services/supply-chain' },
-    { title: 'Additional Services', href: '/services/others' },
+    { title: 'Climate Change', href: '/services/climate-change' },
+    { title: 'Supply Chain', href: '/services/supply-chain' },
       { title: 'Carbon Services', href: '/services/carbon' },
-      { title: 'Sustainable Business Practices', href: '/services/sustainable-business-practices' },
+      { title: 'Sustainable Business Practices', href: '/services/sustainable-business-practice' },
+      { title: 'Additional Services', href: '/services/additional-services' },
   ];
 
-  const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  const toggleDropdown = () => {
+    setActiveDropdown(true);
   };
 
   return (
@@ -69,7 +70,8 @@ const Header4 = () => {
               {/* Services Dropdown */}
               <div className="relative">
                 <motion.button
-                  onClick={() => toggleDropdown('services')}
+                  onMouseEnter={() => toggleDropdown('services')}
+                  onMouseLeave={()=>{setActiveDropdown(false)}}
                   className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium flex items-center gap-1 transition-colors relative group"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
@@ -163,7 +165,7 @@ const Header4 = () => {
 
         {/* Services Dropdown Menu */}
         <AnimatePresence>
-          {activeDropdown === 'services' && (
+          {activeDropdown  && (
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -171,7 +173,9 @@ const Header4 = () => {
               transition={{ duration: 0.2 }}
               className="absolute top-full mt-2 left-1/3 -translate-x-1/2 bg-white shadow-lg rounded-lg border border-gray-200 z-50 min-w-[220px]"
             >
-              <div className="py-2">
+              <div className="py-2" onMouseLeave={()=>{setActiveDropdown(false)}}
+                            onMouseEnter={()=>{setActiveDropdown(true)}}
+                >
                 {servicesMenu.map((item, index) => (
                   <motion.a
                     key={index}

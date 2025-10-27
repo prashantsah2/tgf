@@ -25,11 +25,11 @@ const ClientsSection = () => {
   const displayedClients = Array(4).fill(clients).flat();
 
   return (
-    <div className="min-h-screen bg-white py-8 px-4 overflow-hidden max-w-[1371px] mx-auto">
+    <div className=" bg-white py-8 px-4 overflow-hidden max-w-[1371px] mx-auto pt-12 pb-12">
 
       <div className='w-full text-3xl text-center'>
         <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-center">
-          OUR <span className="text-teal-500">CLIENTS</span>
+          OUR <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">CLIENTS</span>
         </h2>
       </div>
       {/* Infinite Scrolling Container */}
@@ -38,7 +38,7 @@ const ClientsSection = () => {
           className="flex gap-3"
           animate={{ x: '-50%' }}
           transition={{
-            duration: 60,
+            duration: 15,
             repeat: Infinity,
             ease: 'linear'
           }}

@@ -53,11 +53,11 @@ export default function ServicesHome() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl font-outfit mb-6 bg-teal-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl bg-gradient-to-r  from-blue-600 to-teal-500 bg-clip-text text-transparent font-outfit font-bold ">
             OUR SERVICES
           </h1>
-          <p className="text-md text-[#999]  mb-4 max-w-4xl mx-auto">
-            At the core of our Sustainability Solutions are FIVE pillars designed to provide One Stop Solution for more sustainable business practices.
+          <p className="text-md text-[#999]  mb-4 max-w-4xl mx-auto mt-4 font-sans text-sm">
+            At the core of our Sustainability Solutions are FIVE pillars designed to<br></br> provide One Stop Solution for more sustainable business practices.
           </p>
        
         </div>
@@ -110,9 +110,7 @@ export default function ServicesHome() {
                           strokeWidth="22"
                           strokeLinecap="round"
                           className="transition-all duration-500"
-                          style={{
-                            filter: isHovered ? 'drop-shadow(0 6px 12px rgba(0,0,0,0.25))' : 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
-                          }}
+                         
                         />
                       </svg>
                       
