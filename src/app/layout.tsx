@@ -60,7 +60,7 @@ export default function RootLayout({
           {children}
        
         </Layout>
-         <div style={{ position: "fixed", bottom: "99px", right: "40px", zIndex: 1000,boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", borderRadius: "51%",cursor: "pointer", padding: "10px" }}>
+         <div style={{ position: "fixed", bottom: "99px", right: "40px", zIndex: 1000,borderRadius: "51%",cursor: "pointer" }}>
           <a href="tel:918826612805" target="_blank">
            <Image src={"/image/call icon.png"} alt="whatsapp" width={41} height={41} className="object-cover rounded-full" />
 
@@ -68,13 +68,16 @@ export default function RootLayout({
           
        </div>
 
-        <div style={{ position: "fixed", bottom: "40px", right: "40px", zIndex: 1000,boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", borderRadius: "50%",cursor: "pointer", padding: "10px" }}>
+        <div style={{ position: "fixed", bottom: "40px", right: "40px", zIndex: 1000, borderRadius: "50%",cursor: "pointer" }}>
           
            <a href="https://wa.me/919818793773" target="_blank">
          <Image src={"/image/whatsapp.png"} alt="whatsapp" width={41} height={41} className="object-cover" />
         
         </a>
-          <noscript>
+        
+       </div>
+
+         <noscript>
           <img
             height="1"
             width="1"
@@ -83,7 +86,6 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
-       </div>
       </body>
     </html>
   );

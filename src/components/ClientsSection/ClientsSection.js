@@ -29,7 +29,7 @@ const ClientsSection = () => {
 
       <div className='w-full text-3xl text-center max-sm:text-xl'>
         <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-center max-sm:mb-4">
-          OUR <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">CLIENTS</span>
+          OUR <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">CREDIBILITY</span>
         </h2>
       </div>
       {/* Infinite Scrolling Container */}
@@ -63,8 +63,7 @@ const ClientsSection = () => {
       </div>
 
       {/* Fade Effect */}
-      <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white to-transparent pointer-events-none" />
+  
     </div>
   );
 };

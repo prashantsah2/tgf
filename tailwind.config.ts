@@ -9,7 +9,7 @@ const config: Config = withMT({
   theme: {
     extend: {
       colors: {
-        'primary': '#25ea2f',
+        'primary': '#1bc9a3',
         
       },
       spacing: {

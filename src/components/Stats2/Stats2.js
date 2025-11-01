@@ -1,0 +1,53 @@
+export default function Stats2() {
+  return (
+    <div className=" bg-[#fff] flex items-center justify-center p-4 sm:p-10">
+      <div className="w-full max-w-[1371px]">
+       
+
+        {/* Header */}
+        <div className="text-center mb-12 max-sm:mb-4">
+          <h2 className="text-xl sm:text-3xl font-outfit text-gray-800 mb-2 max-sm:text-xl">
+            OVER A DECADE OF DEDICATION
+          </h2>
+          <h3 className="text-xl sm:text-3xl font-bold font-outfit max-sm:text-xl">
+            <span className="text-blue-600">WHY</span>{" "}
+            <span className="text-teal-500">US?</span>
+          </h3>
+       
+          <p className="text-gray-700 text-base sm:text-sm font-sans mt-2  max-sm:hidden">
+            Over 75+ years of combined experience.
+          </p>
+        </div>
+
+        {/* Stats Section */}
+        <div className="bg-white rounded-2xl  overflow-hidden">
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 border-t border-gray-100">
+            {[
+              { value: "15+", label1: "Years ", label2: "Experience" },
+              { value: "40+", label1: "Projects", label2: "Completed" },
+              { value: "45+", label1: "Projects", label2: "Served" },
+         
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="text-center py-8 px-4 border-b sm:border-b-0 sm:border-r last:border-r-0 border-gray-100 max-sm:p-4"
+              >
+                <div className="text-gray-800 text-xl sm:text-5xl font-bold mb-2 font-outfit ">
+                  {item.value}
+                </div>
+                <div className="text-gray-600 text-sm sm:text-base font-sans max-sm:text-xs">
+                  {item.label1}
+                </div>
+                <div className="text-gray-600 text-sm sm:text-base font-sans max-sm:text-xs">
+                  {item.label2}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      
+      </div>
+    </div>
+  );
+}

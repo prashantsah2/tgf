@@ -40,7 +40,7 @@ export default function Hero5() {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden w-full flex justify-center items-center z-50">
+    <div className="relative h-screen overflow-hidden w-full flex justify-center items-center -z-1 ">
       {/* Background Image with Overlay */}
       <motion.div 
         key={`bg-${currentSlide}`}
@@ -53,13 +53,13 @@ export default function Hero5() {
         <img 
           src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop" 
           alt="Background" 
-          className="w-full h-full object-cover z-50" 
+          className="w-full h-full object-cover -z-1" 
         />
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       </motion.div>
 
       {/* Content */}
-      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8 md:px-12 max-sm:px-4">
+      <div className="relative h-full w-full max-w-[1371px] flex flex-col justify-center px-8  max-sm:px-4">
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0, y: 30 }}

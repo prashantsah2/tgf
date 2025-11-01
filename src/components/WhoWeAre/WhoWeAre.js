@@ -8,21 +8,14 @@ const WhoWeAre = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Who Are We?
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900">
+            <span className='text-teal-500'>  WHO</span> <span className='text-blue-500'>WE ARE?</span>
             </h2>
-            
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Your vision turns into our reality as we transform business, responsibly.
-            </p>
+  
             
             <p className="text-base text-gray-600 leading-relaxed">
-              At Cognitud, we are driven by a passion to translate ideas into tangible 
-              realities. Challenging the norm is our modus operandi. We strive for 
-              excellence. We believe in the power of extraordinary ideas that are so 
-              bold, so innovative, that they demand attention. We are committed to 
-              nurturing these ideas, achieving long-term, sustainable growth, and 
-              driving progress that leaves a lasting impact.
+             ENEN Green is a market leader in the domains of climate change and sustainability. We strive to bring about a change in the Indian market by transforming traditional businesses into sustainable green businesses. We are constantly working towards a green future.
+We assist organizations to reduce their carbon footprint and tackle environment degradation through green business practices.
             </p>
             
            {/*  <button className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium transition-colors duration-200 group">

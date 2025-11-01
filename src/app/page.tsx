@@ -33,10 +33,10 @@ export default function Campaign() {
       <ClientsSection/>
       <Noteworthy/>
       <Stats/>
-      <ServicesList/>
+     {/*  <ServicesList/> */}
 
       
-      <News/>
+     {/*  <News/> */}
       <LatestBlogs/>
    
       <Overview/>

@@ -10,71 +10,111 @@ export default function Overview() {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.8, ease: "easeOut" },
+      transition: { delay: i * 0.15, duration: 0.7, ease: "easeOut" },
     }),
   };
 
-  return (
-    <div className=" flex items-center justify-center bg-[#fff] px-6 sm:px-10 pt-8">
-      <div className="w-full max-w-[1371px] grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* LEFT SIDE */}
-        <motion.div
-          initial="hidden"
-          animate={visible ? "visible" : "hidden"}
-          className="rounded-3xl min-h-[571px] bg-gradient-to-br from-blue-400 via-teal-600 to-emerald-400 p-10 sm:p-14 text-white flex flex-col justify-center "
-        >
-          {[
-            "Work towards global carbon neutrality.",
-            "Minimize environmental impact to zero.",
-            "Implement global initiatives with tangible social and economic benefits.",
-          ].map((text, i) => (
-            <motion.div
-              key={i}
-              custom={i}
-              variants={fadeUp}
-              className="flex items-start gap-4 mb-16 last:mb-0 relative"
-            >
-              <div className={`text-lg font-semibold bg-[#444] w-12 h-12 flex justify-center items-center right-[-75px] rounded-full absolute top-[${i*25}px]`}>{i + 1}.</div>
-              <p className="text-base w-full text-right sm:text-lg leading-relaxed font-light">
-                {text}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: (i) => ({
+      opacity: 1,
+      scale: 1,
+      transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+    }),
+  };
 
-        {/* RIGHT SIDE */}
+  const visionPoints = [
+    {
+      icon: "🌍",
+      title: "Carbon Neutrality",
+      text: "Work towards global carbon neutrality through innovative solutions and sustainable practices.",
+    },
+    {
+      icon: "🌱",
+      title: "Zero Impact",
+      text: "Minimize environmental impact to zero, ensuring a healthier planet for future generations.",
+    },
+    {
+      icon: "🤝",
+      title: "Global Initiatives",
+      text: "Implement worldwide initiatives with tangible social and economic benefits for communities.",
+    },
+  ];
+
+  return (
+    <div className="flex items-center justify-center bg-[#fff] px-6 sm:px-10 py-16 sm:py-24">
+      <div className="w-full max-w-[1371px]">
+        {/* Header Section */}
         <motion.div
           initial="hidden"
           animate={visible ? "visible" : "hidden"}
-          className="space-y-6 flex flex-col justify-center min-h-[400px]"
+          className="text-center mb-16"
         >
-        
+         
 
           <motion.h2
             variants={fadeUp}
             custom={1}
-            className="text-gray-800 text-3xl sm:text-4xl font-semibold"
+            className="text-gray-800 text-xl sm:text-3xl font-bold mt-6 mb-1"
           >
-            OUR COMPANY’S VISION
+            OUR
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 ml-2">
+             COMPANY VISION
+            </span>
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
             custom={2}
-            className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-lg"
+            className="text-gray-600 text-sm max-w-xl mx-auto leading-comfortable"
           >
-            To achieve global carbon neutrality with zero net harm while
-            generating measurable, positive environmental and social outcomes.
+           To attain global carbon neutrality with
+zero net harm while creating
+measurable positive impacts
           </motion.p>
-
-          <motion.div
-            variants={fadeUp}
-            custom={3}
-            className="h-1 w-28 bg-gradient-to-r from-blue-600 to-teal-500 rounded-full"
-          />
-
-       
         </motion.div>
+
+        {/* Vision Cards Grid */}
+        <motion.div
+          initial="hidden"
+          animate={visible ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {visionPoints.map((point, i) => (
+            <motion.div
+              key={i}
+              custom={i + 3}
+              variants={scaleIn}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="group relative bg-white rounded-2xl p-8  transition-all duration-300 border border-gray-100"
+            >
+              {/* Number Badge */}
+              <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg ">
+                {i + 1}
+              </div>
+
+              {/* Icon */}
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {point.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                {point.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 leading-relaxed text-sm">
+                {point.text}
+              </p>
+
+              {/* Decorative Line */}
+              <div className="mt-6 h-1 w-16 bg-gradient-to-r from-blue-600 to-teal-500 rounded-full opacity-0 group-hover:opacity-100  duration-300" />
+            </motion.div>
+          ))}
+        </motion.div>
+
+      
       </div>
     </div>
   );

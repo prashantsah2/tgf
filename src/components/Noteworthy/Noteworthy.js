@@ -4,10 +4,17 @@ import { Award, Shield, Medal, Users, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 const achievements = [
+    {
+    id: 3,
+    title: "EcoVadis Gold",
+    subtitle: "First in India in Climate Change Sunstainability",
+    icon: `/image/page 3 - icons (2).png`,
+    color: "from-blue-600 to-cyan-500"
+  },
   {
     id: 1,
     title: "TOP 10 ESG",
-    subtitle: "Among Top 10 ESG and Sustainability Consultants in India",
+    subtitle: "India's Top 10 ESG and Sustainability Consultants",
     icon:`/image/page 3 - icons (5).png`,
     color: "from-blue-500 to-teal-500",
 
@@ -15,30 +22,24 @@ const achievements = [
   {
     id: 2,
     title: "AA1000AS Licensed",
-    subtitle: "Assurance Provider Accountability",
+    subtitle: "Assurance Provider",
     icon: `/image/page 3 - icons (1).png`,
     color: "from-teal-500 to-green-500"
   },
-  {
-    id: 3,
-    title: "GOLD 2023",
-    subtitle: "EcoVadis Sustainability Rating",
-    icon: `/image/page 3 - icons (2).png`,
-    color: "from-blue-600 to-cyan-500"
-  },
-  {
-    id: 4,
-    title: "APPROVED",
-    subtitle: "EcoVadis Consultant - Issued 2025",
-    icon: `/image/page 3 - icons (3).png`,
-    color: "from-green-500 to-teal-500"
-  },
+
+ 
   {
     id: 5,
     title: "APPROVED",
-    subtitle: "EcoVadis Training Partner - 2025",
+    subtitle: "EcoVadis Training Partner ",
     icon: `/image/page 3 - icons (4).png`,
     color: "from-teal-600 to-blue-600"
+  }, {
+    id: 4,
+    title: "APPROVED",
+    subtitle: "EcoVadis Consultant - Issued",
+    icon: `/image/page 3 - icons (3).png`,
+    color: "from-green-500 to-teal-500"
   }
 ];
 
@@ -71,7 +72,7 @@ export default function AchievementsShowcase() {
           <div className="flex items-center justify-between mb-12 max-sm:mb-2">
              <div className='w-full text-3xl text-center max-sm:text-xl'>
         <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-left max-sm:mb-4">
-         NOTEWORTHY <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">ARCHIVEMENTS</span>
+         NOTEWORTHY <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">ACHIEVEMENTS</span>
         </h2>
       </div>
           </div>
@@ -95,7 +96,7 @@ export default function AchievementsShowcase() {
               >
                 <div className="bg-white rounded-2xl p-6 max-sm:px-2 h-full flex flex-col items-center text-center border-2 border-gray-100">
                   {/* Icon Badge */}
-                  <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 max-sm:mb-2 `}>
+                  <div className={`w-[221px] h-[221px] rounded-full flex items-center justify-center mb-4 max-sm:mb-2 `}>
                     
                     <img src={`${achievement.icon}`} width={311} height={411} className='w-full h-full' />
                   </div>

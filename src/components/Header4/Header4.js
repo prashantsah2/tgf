@@ -15,10 +15,12 @@ const Header4 = () => {
       { title: 'Carbon Services', href: '/services/carbon' },
       { title: 'Sustainable Business Practices', href: '/services/sustainable-business-practice' },
       { title: 'Additional Services', href: '/services/additional-services' },
+       { title: 'Enscope', href: '/enscope' },
+        { title: 'Training', href: '/training' },
   ];
 
-  const toggleDropdown = () => {
-    setActiveDropdown(true);
+  const toggleDropdown = (status) => {
+    setActiveDropdown(status);
   };
 
   return (
@@ -28,57 +30,42 @@ const Header4 = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200"
+        className="fixed w-full z-55220 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50"
       >
         <div className="max-w-[1391px] mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <motion.div 
+            <motion.a
               className="flex-shrink-0 mr-16 max-sm:mr-4"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
+              href='/'
             >
               <img 
                 src="/image/enenlogo.avif" 
                 alt="Logo" 
                 className="h-14 w-auto"
               />
-            </motion.div>
+            </motion.a>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1 ">
-              <motion.a 
-                href="/" 
-                className="text-[#222] font-outfit text-xs hover:text-teal-600 px-4 py-2  font-medium transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                HOME
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+           
 
-               <motion.a 
-                href="/enscope" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-              GREEN FUTURE
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+               
 
               {/* Services Dropdown */}
               <div className="relative">
                 <motion.button
-                  onMouseEnter={() => toggleDropdown('services')}
-                  onMouseLeave={()=>{setActiveDropdown(false)}}
+                  onMouseEnter={() => toggleDropdown(true)}
+                 /*  onMouseLeave={()=>{setActiveDropdown(false)}} */
                   className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium flex items-center gap-1 transition-colors relative group"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
-                  SERVICES
+                  OUR SOLUTIONS
                   <motion.div
-                    animate={{ rotate: activeDropdown === 'services' ? 180 : 0 }}
+                    animate={{ rotate: activeDropdown ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     <ChevronDown className="h-4 w-4" />
@@ -93,9 +80,11 @@ const Header4 = () => {
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                ENSCOPE
+              OUR GREEN FUTURE
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
+
+             
 
               <motion.a 
                 href="/aboutus" 
@@ -117,15 +106,7 @@ const Header4 = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
 
-              <motion.a 
-                href="/training" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                TRAINING
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+             
 
               <motion.a 
                 href="/careers" 
@@ -171,7 +152,7 @@ const Header4 = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full mt-2 left-1/3 -translate-x-1/2 bg-white shadow-lg rounded-lg border border-gray-200 z-50 min-w-[220px]"
+              className="absolute z-50 top-full mt-2 left-1/3 -translate-x-1/2 bg-white shadow-lg rounded-lg border border-gray-200 z-50 min-w-[220px]"
             >
               <div className="py-2" onMouseLeave={()=>{setActiveDropdown(false)}}
                             onMouseEnter={()=>{setActiveDropdown(true)}}
@@ -244,11 +225,11 @@ const Header4 = () => {
                 {/* Mobile Services */}
                 <div>
                   <motion.button
-                    onClick={() => toggleDropdown('mobile-services')}
+                    onClick={() => toggleDropdown()}
                     className="w-full text-left text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
                     whileHover={{ x: 5 }}
                   >
-                    SERVICES
+                    OUR SOLUTIONS
                     <motion.div
                       animate={{ rotate: activeDropdown === 'mobile-services' ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
@@ -257,7 +238,7 @@ const Header4 = () => {
                     </motion.div>
                   </motion.button>
                   <AnimatePresence>
-                    {activeDropdown === 'mobile-services' && (
+                    {activeDropdown  && (
                       <motion.div 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
@@ -316,7 +297,7 @@ const Header4 = () => {
 
       {/* Overlay for dropdown */}
       <AnimatePresence>
-        {activeDropdown === 'services' && (
+        {activeDropdown && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

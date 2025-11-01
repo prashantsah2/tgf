@@ -2,6 +2,7 @@ import Image from 'next/image'
 import WorkProfile from '../WorkProfile/WorkProfile';
 import { useState } from 'react';
 import workers from './workers.json';
+import { Mail } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -55,7 +56,7 @@ const teamMembers = [
 ]
 
 
-const teamMember = [
+const team = [
   { name: 'Ruchika', surname: 'Sharma', image: '/image/page 14 - Our Core Team (2)',id:12 },
   { name: 'Abhishek K', surname: 'Srivastava', image: '/api/placeholder/150/150',id:13 },
   { name: 'Ajay', surname: 'Srivastava', image: '/api/placeholder/150/150',id:14 },
@@ -72,7 +73,7 @@ const teamMember = [
   { name: 'Aakashdeep', surname: '', image: '/api/placeholder/150/150',id:25 },
 ];
 
-export default function Teams() {
+export default function Teams({ title,title2 ,teamMember=team}) {
 
   const [showWorkProfile, setShowWorkProfile] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -96,21 +97,21 @@ export default function Teams() {
       {/* Main Content */}
       <div className="max-w-[1371px] mx-auto py-16">
         {/* Header Section */}
-        <div className="grid lg:grid-cols-1  items-start mb-20">
+        <div className="grid lg:grid-cols-1  items-start mb-4">
           <div>
-            <h1 className="text-xl lg:text-2xl font-outfit  text-gray-900 leading-[21px]">
-              Meet the talented team<br></br> who make all this happen 
+            <h1 className="text-xl lg:text-2xl font-bold font-outfit  text-blue-600  leading-[21px]">
+          {title} <span className="text-[#009688]"> {title2}</span>
             </h1>
           </div>
-          <div className="pt-4">
-            <p className="text-md font-sans text-gray-600 leading-relaxed max-sm:text-xs max-sm:leading-2">
-              Our philosophy is simple; hire great people and give <br></br> them the resources and support to do their best work.
-            </p>
+          <div className="pt-1 text-sm text-[#444]">
+         
+               Meet the talented team<br></br> who make all this happen 
+          
           </div>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-6 gap-3 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-20">
           {teamMember.map((member,index) => (
             <div key={member.id} className="bg-white border-[1px] border-[#eee] border-solid rounded-lg  overflow-hidden  hover:shadow-md transition-shadow"
             onClick={() => {
@@ -120,11 +121,17 @@ export default function Teams() {
             >
               <div className={`${member.bgColor} aspect-square relative mx-4 scale-75` }>
                 {/* Placeholder for team member image */}
-               <img className='rounded-full' src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
+               <img className='rounded-full bg-transparent' src={`/image/page 14 - Our Core Team (${index+1}).png`} width={1211} height={1211} />
               </div>
-              <div className="pt-3 pb-6 pl-2 text-center">
-                <h3 className="text-md font-sans text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
+              <div className="pt-3  w-full justify-between flex pr-3 pl-3">
+               <div className='flex-col justify-start items-start'> <h3 className="text-md font-sans text-gray-900 mb-1">{member.name +' ' +member.surname}</h3>
                 <p className="text-[#bfbfbf] font-sans text-sm mb-3">{member.role?member.role:'this is role'}</p>
+                </div>
+                <div>
+
+                 <Mail className='text-xs text-[#777]'/> 
+                 
+                </div>
                {/*  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p> */}
               </div>
             </div>

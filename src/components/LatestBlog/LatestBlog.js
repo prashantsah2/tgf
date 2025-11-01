@@ -56,8 +56,11 @@ export default function LatestBlogs() {
       <div className="max-w-[1361px] mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Latest Blog Posts</h2>
-          <p className="text-lg text-gray-600">Discover articles on web development, design, and more</p>
+          <h2 className="text-xl md:text-3xl font-bold font-outfit uppercase text-gray-900 mb-1">
+          <span className='text-teal-500'>  LATEST </span> <span className='text-blue-500'>BLOG POSTS</span>
+            
+            </h2>
+          <p className="text-sm text-[#444] text-gray-600">Discover articles on web development, design, and more</p>
         </div>
 
         {/* Blog Grid */}

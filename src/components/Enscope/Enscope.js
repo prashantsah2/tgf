@@ -40,11 +40,11 @@ export default function EnscopeLanding() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-4xl font-outfit  text-gray-900 mb-6 leading-4">
-            Enscope The one stop<br></br> carbon solution
+          <h1 className="text-xl md:text-3xl font-outfit  text-gray-900 mb-6 leading-4 uppercase font-bold">
+            <span className='text-teal-500'>Enscope The one stop</span><br></br> <span className='text-blue-500'>carbon solution</span>
           </h1>
           
-          <p className="text-md font-sans text-gray-600 mb-8 leading-relaxed">
+          <p className="text-sm font-sans text-gray-600 mb-8 leading-relaxed">
             Are you ready to revolutionize the way your company approaches sustainability? Introducing our carbon accounting platform – Enscope, the ultimate solution for businesses with intricate supply chains.
           </p>
 
@@ -52,7 +52,7 @@ export default function EnscopeLanding() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowForm(true)}
-            className="bg-[#2eca0f] text-white text-md font-light py-4 px-8 rounded-full flex items-center gap-3 transition-colors text-lg shadow-lg"
+            className="bg-teal-500 text-white text-md py-2 px-12 rounded-xl flex items-center gap-3 transition-colors text-md"
           >
             Try Now
             <ArrowRight size={20} />
