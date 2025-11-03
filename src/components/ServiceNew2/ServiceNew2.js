@@ -45,9 +45,9 @@ const iconMap = {
 
 export default function ServicesNew2() {
   return (
-    <div className="min-h-screen bg-white py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+    <div className=" bg-white py-12 px-6 md:px-12">
+      <div className="max-w-[1371px] mx-auto">
+        <div className="text-left mb-16 w-full">
           <p className="text-sm text-gray-700 max-w-2xl mx-auto" style={{ lineHeight: '1.6' }}>
             {servicesData.description}
           </p>
@@ -59,8 +59,8 @@ export default function ServicesNew2() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
-                style={{ boxShadow: '0 6px 20px rgba(15, 23, 42, 0.06)' }}
+                className="bg-white rounded-2xl p-6  transition-all duration-300 ease-in-out  hover:-translate-y-1 border-[1px] border-gray-200 border-solid"
+            
               >
                 <div className="flex items-start gap-4">
                   <div 
@@ -85,11 +85,7 @@ export default function ServicesNew2() {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="px-5 py-2.5 rounded-2xl bg-teal-500 text-white uppercase text-sm font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:bg-blue-500 shadow-md">
-            {servicesData.button.text}
-          </button>
-        </div>
+       
       </div>
     </div>
   );

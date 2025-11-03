@@ -1,22 +1,16 @@
-"use client";
+"use client"
 import React, { useState } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
-
+import { ChevronDown, Menu, X, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { title } from 'process';
+import Image from 'next/image';
 
 const Header4 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const servicesMenu = [
-    { title: 'Climate Change', href: '/services/climate-change' },
-    { title: 'Supply Chain', href: '/services/supply-chain' },
-      { title: 'Carbon Services', href: '/services/carbon' },
-      { title: 'Sustainable Business Practices', href: '/services/sustainable-business-practice' },
-      { title: 'Additional Services', href: '/services/additional-services' },
-       { title: 'Enscope', href: '/enscope' },
-        { title: 'Training', href: '/training' },
+    { title: 'e+ certification', href: '/services/e-plus-certification' },
+ 
   ];
 
   const toggleDropdown = (status) => {
@@ -30,42 +24,36 @@ const Header4 = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed w-full z-55220 top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50"
+        className="fixed w-full top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50"
       >
-        <div className="max-w-[1391px] mx-auto px-6 lg:px-8">
+        <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20">
+          <div className='w-[121px] h-20 mr-auto'>
+            <Image src="/logos/tgf.png" alt="TGF Logo" width={121} height={80} className="object-contain h-full mr-auto"/>
+          </div>
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <motion.a
-              className="flex-shrink-0 mr-16 max-sm:mr-4"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-              href='/'
-            >
-              <img 
-                src="/image/enenlogo.avif" 
-                alt="Logo" 
-                className="h-14 w-auto"
-              />
-            </motion.a>
+            {/* Left side - Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1 mr-6" >
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1 ">
-           
-
-               
-
+               <motion.a 
+                href="/aboutus" 
+                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                ABOUT US
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
+              </motion.a>
               {/* Services Dropdown */}
               <div className="relative">
                 <motion.button
-                  onMouseEnter={() => toggleDropdown(true)}
-                 /*  onMouseLeave={()=>{setActiveDropdown(false)}} */
-                  className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium flex items-center gap-1 transition-colors relative group"
+                  onMouseEnter={() => toggleDropdown('services')}
+                  className="text-gray-800 font-outfit text-sm font-medium hover:text-teal-600 px-4 py-2 flex items-center gap-1 transition-colors relative group"
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
-                  OUR SOLUTIONS
+                  SERVICES
                   <motion.div
-                    animate={{ rotate: activeDropdown ? 180 : 0 }}
+                    animate={{ rotate: activeDropdown === 'services' ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     <ChevronDown className="h-4 w-4" />
@@ -74,65 +62,54 @@ const Header4 = () => {
                 </motion.button>
               </div>
 
-              <motion.a 
-                href="/enscope" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-              OUR GREEN FUTURE
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
-
              
 
               <motion.a 
-                href="/aboutus" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                href="/clients" 
+                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                ABOUT US
+                OUR CLIENTS
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
 
               <motion.a 
-                href="#" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                href="/partners" 
+                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                INSIGHTS
+                OUR PARTNERS
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
 
-             
-
               <motion.a 
-                href="/careers" 
-                className="text-[#222] text-xs font-outfit hover:text-teal-600 px-4 py-2 text-sm font-medium transition-colors relative group"
+                href="/faq" 
+                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                CAREERS
+                FAQ
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             </nav>
 
-            {/* Contact Button */}
-            <div className="hidden lg:flex items-center">
+            {/* Right side - Contact Button */}
+            <div className="hidden lg:flex items-center ml-auto">
               <motion.a
                 href="/contact"
-                className="px-6 py-2.5 font-medium font-outfit text-[#222] text-xs border-2 border-gray-300 rounded-full hover:border-teal-600 hover:text-teal-600 transition-colors"
+                className="px-6 py-3 font-medium text-sm font-outfit bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors shadow-md hover:shadow-lg flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <Mail className="h-4 w-4" />
                 CONTACT US
               </motion.a>
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="lg:hidden ml-auto">
               <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-700 hover:text-teal-600 p-2"
@@ -146,22 +123,22 @@ const Header4 = () => {
 
         {/* Services Dropdown Menu */}
         <AnimatePresence>
-          {activeDropdown  && (
+          {activeDropdown === 'services' && (
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute z-50 top-full mt-2 left-1/3 -translate-x-1/2 bg-white shadow-lg rounded-lg border border-gray-200 z-50 min-w-[220px]"
+              className="absolute top-full right-1/3 mt-2 ml-6 bg-white shadow-xl rounded-lg border border-gray-200 min-w-[280px]"
+              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => setActiveDropdown('services')}
             >
-              <div className="py-2" onMouseLeave={()=>{setActiveDropdown(false)}}
-                            onMouseEnter={()=>{setActiveDropdown(true)}}
-                >
+              <div className="py-2">
                 {servicesMenu.map((item, index) => (
                   <motion.a
                     key={index}
                     href={item.href}
-                    className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-teal-600 transition-colors"
+                    className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.05 }}
@@ -186,50 +163,14 @@ const Header4 = () => {
               className="lg:hidden bg-white border-t border-gray-200 overflow-hidden"
             >
               <div className="px-4 pt-2 pb-3 space-y-1">
-                <motion.a 
-                  href="/" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  HOME
-                </motion.a>
-
-
-                
-                <motion.a 
-                  href="/enscope" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  ENSCOPE
-                </motion.a>
-                
-               
-
-                <motion.a 
-                  href="#" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  INSIGHTS
-                </motion.a>
-
-                <motion.a 
-                  href="/training" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  TRAINING
-                </motion.a>
-
                 {/* Mobile Services */}
                 <div>
                   <motion.button
-                    onClick={() => toggleDropdown()}
-                    className="w-full text-left text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
+                    onClick={() => toggleDropdown(activeDropdown === 'mobile-services' ? null : 'mobile-services')}
+                    className="w-full text-left text-gray-700 font-outfit hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
                     whileHover={{ x: 5 }}
                   >
-                    OUR SOLUTIONS
+                    SERVICES
                     <motion.div
                       animate={{ rotate: activeDropdown === 'mobile-services' ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
@@ -238,7 +179,7 @@ const Header4 = () => {
                     </motion.div>
                   </motion.button>
                   <AnimatePresence>
-                    {activeDropdown  && (
+                    {activeDropdown === 'mobile-services' && (
                       <motion.div 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
@@ -249,7 +190,7 @@ const Header4 = () => {
                           <motion.a
                             key={index}
                             href={item.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-teal-600"
+                            className="block px-3 py-2 text-sm font-outfit text-gray-600 hover:text-teal-600"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.05 }}
@@ -263,25 +204,41 @@ const Header4 = () => {
                   </AnimatePresence>
                 </div>
 
-
                 <motion.a 
-                  href="/careers" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  CAREERS
-                </motion.a>
-                 <motion.a 
                   href="/aboutus" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
+                  className="text-gray-700 hover:text-teal-600 block font-outfit px-3 py-2 text-sm font-medium"
                   whileHover={{ x: 5 }}
                 >
                   ABOUT US
                 </motion.a>
 
                 <motion.a 
+                  href="/clients" 
+                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
+                  whileHover={{ x: 5 }}
+                >
+                  OUR CLIENTS
+                </motion.a>
+
+                <motion.a 
+                  href="/partners" 
+                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
+                  whileHover={{ x: 5 }}
+                >
+                  OUR PARTNERS
+                </motion.a>
+
+                <motion.a 
+                  href="/faq" 
+                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
+                  whileHover={{ x: 5 }}
+                >
+                  FAQ
+                </motion.a>
+
+                <motion.a 
                   href="/contact" 
-                  className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-sm font-medium"
+                  className="bg-teal-600 text-white hover:bg-teal-700 font-outfit block px-3 py-2 text-sm font-medium rounded-lg mt-4 text-center"
                   whileHover={{ x: 5 }}
                 >
                   CONTACT US
@@ -297,7 +254,7 @@ const Header4 = () => {
 
       {/* Overlay for dropdown */}
       <AnimatePresence>
-        {activeDropdown && (
+        {activeDropdown === 'services' && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

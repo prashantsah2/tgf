@@ -4,7 +4,10 @@ import { Cloud, Wind, Package, Briefcase, Plus } from 'lucide-react';
 import Footer3 from '@/components/Footer3/Footer3';
 import Header3 from '@/components/Header4/Header4';
 import ServiceMain from '@/components/ServiceMain/ServiceMain';
-import ServiceNew1 from '@/components/ServiceNew1/ServiceNew1';
+import ServiceNew1 from '@/components/ServiceNew2/ServiceNew2';
+import ServicesNew2 from '@/components/ServiceNew2/ServiceNew2';
+import Service2 from '@/components/Service2/Service2';
+import Service3 from '@/components/Service3/Service3';
 
 export default function OptionsInfographic() {
 
@@ -98,7 +101,10 @@ export default function OptionsInfographic() {
       <Header3 />
       <div>
       {/*   <ServiceMain servicesData={servicesData} iconComponents={iconComponents} /> */}
-       <ServiceNew1  />
+         <Service3/>
+       <ServicesNew2  />
+       <Service2/>
+    
       </div>
       <Footer3 />
     </>

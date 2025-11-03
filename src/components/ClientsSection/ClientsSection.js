@@ -25,11 +25,11 @@ const ClientsSection = () => {
   const displayedClients = Array(4).fill(clients).flat();
 
   return (
-    <div className=" bg-white py-8 px-4 overflow-hidden max-w-[1371px] mx-auto pt-12 pb-12 max-sm:pb-6">
+    <div className=" bg-white py-8 px-4 overflow-hidden max-w-[1391px] mx-auto pt-12 pb-12 max-sm:pb-6 lg:px-0">
 
-      <div className='w-full text-3xl text-center max-sm:text-xl'>
-        <h2 className="font-sans mx-auto text-gray-800 mb-6 w-full text-center max-sm:mb-4">
-          OUR <span className="bg-gradient-to-r font-bold font-outfit from-blue-600 to-teal-500 bg-clip-text text-transparent">CREDIBILITY</span>
+      <div className='w-full text-3xl text-left max-sm:text-xl'>
+        <h2 className=" mx-auto text-gray-800 mb-6 font-lora font-semibold w-full text-left max-sm:mb-4 ">
+          Our <span className="bg-gradient-to-r text-gray-700 font-semibold font-lora">Partners</span>
         </h2>
       </div>
       {/* Infinite Scrolling Container */}

@@ -66,7 +66,7 @@ const config: Config = withMT({
       },
       fontFamily: {   // <-- moved here
         'lora': ['Lora', 'serif'],
-        'outfit': ['Outfit', 'sans-serif'],
+        'outfit': ['Arimo', 'sans-serif'],
         'bebas': ['Bebas Neue', 'cursive'],
       },
     },
