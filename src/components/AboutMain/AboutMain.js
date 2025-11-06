@@ -39,7 +39,7 @@ export default function AboutMain() {
       <div className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-3">
+            <h2 className="text-5xl font-bold font-lora text-gray-900 mb-3">
               About <span className="text-teal-600">Us</span>
             </h2>
             <p className="text-gray-600">

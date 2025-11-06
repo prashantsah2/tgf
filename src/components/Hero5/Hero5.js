@@ -6,7 +6,7 @@ export default function Hero5() {
   
   const slides = [
     {
-      title: `Uncovering opportunities  in product life-cycle`,
+      title: `E+ Certification`,
       subtitle: "Sustainability Reporting"
     },
     {
@@ -14,11 +14,11 @@ export default function Hero5() {
       subtitle: "Reducing carbon footprint"
     },
     {
-      title: "Climate Risk Assessment",
+      title: "MSME",
       subtitle: "Understanding environmental impact"
     },
     {
-      title: "Life Cycle Assessment",
+      title: "Young Learners",
       subtitle: "Comprehensive analysis"
     },
     {

@@ -30,32 +30,28 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const faqs = [
-    {
-      question: "What services do you offer?",
-      answer: "We offer a comprehensive range of services including web development, mobile app development, UI/UX design, and digital marketing. Our team specializes in creating custom solutions tailored to your specific business needs."
-    },
-    {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary depending on complexity and scope. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. We'll provide a detailed timeline during our initial consultation."
-    },
-    {
-      question: "What is your pricing structure?",
-      answer: "We offer flexible pricing models including fixed-price projects, hourly rates, and monthly retainers. Pricing depends on project scope, complexity, and timeline. Contact us for a customized quote based on your specific requirements."
-    },
-    {
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes! We offer comprehensive support and maintenance packages to ensure your solution continues to run smoothly. This includes bug fixes, security updates, performance optimization, and feature enhancements as needed."
-    },
-    {
-      question: "Can you work with my existing team?",
-      answer: "Absolutely! We're experienced in collaborating with in-house teams and other vendors. We can integrate seamlessly into your workflow, whether you need us to lead the project or provide specialized expertise to complement your team."
-    },
-    {
-      question: "What technologies do you specialize in?",
-      answer: "We work with modern technologies including React, Next.js, Node.js, Python, and various cloud platforms. We stay current with industry trends and choose the best tech stack for each project based on your specific requirements."
-    }
-  ];
+const faqs = [
+  {
+    question: "Is the consultation only for MSMEs?",
+    answer:
+      "While the program is primarily designed to empower MSMEs, the consultation is open to any industry or organization interested in adopting or improving sustainable practices. Whether you’re a startup, a growing enterprise, or an established business, you’re welcome to join and begin your sustainability journey."
+  },
+  {
+    question: "Do you charge for the consultation?",
+    answer:
+      "No, the consultation is completely free of cost. This initiative by Towards Green Future, in collaboration with ENEN Green, is designed to help businesses explore sustainability opportunities without any financial commitment."
+  },
+  {
+    question: "Am I obligated to take any services after the consultation?",
+    answer:
+      "Not at all. The consultation is purely advisory and aims to guide you in adopting sustainable practices best suited to your operations. You are under no obligation to take any further services after the session."
+  },
+  {
+    question: "What if I am not available on the mentioned date (Saturday)?",
+    answer:
+      "If you’re unavailable on the scheduled consultation day, don’t worry! You can request an alternative slot through our website www.enengreen.com, and our team will arrange a convenient time for your session."
+  }
+];
 
   return (
     <div className="min-h-screen bg-gray-50">

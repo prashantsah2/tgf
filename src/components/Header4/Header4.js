@@ -10,6 +10,15 @@ const Header4 = () => {
 
   const servicesMenu = [
     { title: 'e+ certification', href: '/services/e-plus-certification' },
+     { title: 'Go green , Grow Strong', href: '/services/e-plus-certification' },
+      { title: 'Young Learners', href: '/services/e-plus-certification' },
+ 
+  ];
+
+   const partnerMenu = [
+    { title: 'Our Sponsors', href: '/services/our-sponsors' },
+     { title: 'Program Partners', href: '/services/program-partners' },
+    
  
   ];
 
@@ -51,7 +60,7 @@ const Header4 = () => {
                   whileHover={{ y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
-                  SERVICES
+                 PROGRAMS
                   <motion.div
                     animate={{ rotate: activeDropdown === 'services' ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
@@ -66,23 +75,22 @@ const Header4 = () => {
 
               <motion.a 
                 href="/clients" 
-                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
+                className="flex text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
+                  onMouseEnter={() => toggleDropdown('partners')}
               >
-                OUR CLIENTS
+                OUR NETWORKS
+                <motion.div
+                    animate={{ rotate: activeDropdown === 'partners' ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                  </motion.div>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
 
-              <motion.a 
-                href="/partners" 
-                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                OUR PARTNERS
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
+             
 
               <motion.a 
                 href="/faq" 
@@ -120,6 +128,36 @@ const Header4 = () => {
             </div>
           </div>
         </div>
+
+        <AnimatePresence>
+          {activeDropdown === 'partners' && (
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full right-[12rem] mt-2 ml-6 bg-white shadow-xl rounded-lg border border-gray-200 min-w-[280px]"
+              onMouseLeave={() => setActiveDropdown(null)}
+              onMouseEnter={() => setActiveDropdown('partners')}
+            >
+              <div className="py-2">
+                {partnerMenu.map((item, index) => (
+                  <motion.a
+                    key={index}
+                    href={item.href}
+                    className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ x: 5 }}
+                  >
+                    {item.title}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Services Dropdown Menu */}
         <AnimatePresence>
@@ -170,7 +208,7 @@ const Header4 = () => {
                     className="w-full text-left text-gray-700 font-outfit hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
                     whileHover={{ x: 5 }}
                   >
-                    SERVICES
+                    PROGRAMS
                     <motion.div
                       animate={{ rotate: activeDropdown === 'mobile-services' ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
@@ -212,29 +250,49 @@ const Header4 = () => {
                   ABOUT US
                 </motion.a>
 
-                <motion.a 
-                  href="/clients" 
-                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  OUR CLIENTS
-                </motion.a>
+             
 
-                <motion.a 
-                  href="/partners" 
-                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  OUR PARTNERS
-                </motion.a>
+                <div>
+                  <motion.button
+                    onClick={() => toggleDropdown(activeDropdown === 'mobile-partners' ? null : 'mobile-services')}
+                    className="w-full text-left text-gray-700 font-outfit hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
+                    whileHover={{ x: 5 }}
+                  >
+                    PARTNERS
+                    <motion.div
+                      animate={{ rotate: activeDropdown === 'mobile-services' ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </motion.div>
+                  </motion.button>
+                  <AnimatePresence>
+                    {activeDropdown === 'mobile-partners' && (
+                      <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="pl-4 space-y-1 overflow-hidden"
+                      >
+                        {partnerMenu.map((item, index) => (
+                          <motion.a
+                            key={index}
+                            href={item.href}
+                            className="block px-3 py-2 text-sm font-outfit text-gray-600 hover:text-teal-600"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                            whileHover={{ x: 5 }}
+                          >
+                            {item.title}
+                          </motion.a>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
 
-                <motion.a 
-                  href="/faq" 
-                  className="text-gray-700 hover:text-teal-600 font-outfit block px-3 py-2 text-sm font-medium"
-                  whileHover={{ x: 5 }}
-                >
-                  FAQ
-                </motion.a>
+              
 
                 <motion.a 
                   href="/contact" 
