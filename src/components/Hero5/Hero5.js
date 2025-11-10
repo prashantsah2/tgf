@@ -7,23 +7,19 @@ export default function Hero5() {
   const slides = [
     {
       title: `E+ Certification`,
-      subtitle: "Sustainability Reporting"
+      subtitle: "Sustainability Reporting",
+      image:'/image/E+ Certification-min.png'
     },
-    {
-      title: "Decarbonisation",
-      subtitle: "Reducing carbon footprint"
-    },
+ 
     {
       title: "MSME",
-      subtitle: "Understanding environmental impact"
+      subtitle: "Understanding environmental impact",
+      image:'/image/Chapter MSME-min.png'
     },
     {
       title: "Young Learners",
-      subtitle: "Comprehensive analysis"
-    },
-    {
-      title: "Executive Search",
-      subtitle: "Finding the right talent"
+      subtitle: "Comprehensive analysis",
+      image:'/image/Untitled design (30).png'
     }
   ];
 
@@ -51,7 +47,7 @@ export default function Hero5() {
         className="absolute inset-0 bg-cover bg-center"
       >
         <img 
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop" 
+          src={`${slides[currentSlide].image}`}
           alt="Background" 
           className="w-full h-full object-cover -z-1" 
         />

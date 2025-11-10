@@ -3,10 +3,8 @@ import Header4 from "@/components/Header4/Header4";
 import Teams from "@/components/Teams/Teams";
 import About2 from "@/components/About2/About2";
 import Footer3 from "@/components/Footer3/Footer3";
-import Service1 from "../../components/Service1/Service1";
-import OurStory from "@/components/OurStory/OurStory";
-import WhoWeAre from "@/components/WhoWeAre/WhoWeAre";
-import Stats2 from "@/components/Stats2/Stats2";
+import AboutMain from "@/components/AboutMain/AboutMain";
+import Whyus from "@/components/Whyus/Whyus";
 
 
 
@@ -26,13 +24,8 @@ const teamMember = [
         <>
         <Header4 heading="About Us" text="Learn more about our team and mission."/>
         <div className="flex flex-col justify-center items-center w-full min-h-[91vh] pt-20 max-sm:px-4">
-         <About2/>
-         <WhoWeAre/>
-         <Stats2/>
-         
-         <Teams title={"OUR"} title2={"CORE TEAM"}/>
-            <Teams title={"OUR"} title2={"IT TEAM"} teamMember={teamMember}/>
-        <OurStory/>
+        <AboutMain/>
+        <Whyus/>
         </div>
         <Footer3/>
 
