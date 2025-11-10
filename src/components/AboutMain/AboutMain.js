@@ -42,16 +42,16 @@ export default function AboutMain() {
             <h2 className="text-5xl font-bold font-lora text-gray-900 mb-3">
               About <span className="text-teal-600">Us</span>
             </h2>
-            <p className="text-gray-600">
+            {/* <p className="text-gray-600">
               Leading the way in sustainable e-waste management
-            </p>
+            </p> */}
           </div>
 
 
           
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
+          {/*   <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -106,6 +106,11 @@ export default function AboutMain() {
                   </p>
                 </div>
               </div>
+            </div> */}
+
+            <div className='flex flex-row justify-center items-center text-left font-sm font-outfit text-gray-600'>
+              Towards Green Future (TGF) is a non-profit organization committed to fostering sustainable growth, promoting climate awareness, and driving environmental responsibility across communities. Through its initiatives, TGF aims to empower individuals, institutions, and industries to adopt eco-friendly practices and contribute to a resilient, greener planet for future generations.
+
             </div>
 
             <div>

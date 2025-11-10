@@ -9,22 +9,36 @@ const Header4 = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const servicesMenu = [
-    { title: 'e+ certification', href: '/services/e-plus-certification' },
-     { title: 'Go green , Grow Strong', href: '/services/e-plus-certification' },
-      { title: 'Young Learners', href: '/services/e-plus-certification' },
- 
-  ];
-
-   const partnerMenu = [
-    { title: 'Our Sponsors', href: '/services/our-sponsors' },
-     { title: 'Program Partners', href: '/services/program-partners' },
-    
+    { title: 'e+ certification', href: '/services/e+certification' },
+     { title: 'Chapter msme', href: '/services/chapter-msme' },
+      { title: 'Young Learners', href: '/services/young-learners' },
  
   ];
 
   const toggleDropdown = (status) => {
     setActiveDropdown(status);
   };
+const partnerMenu = [
+  
+
+
+  {
+    title: 'ENEN Green - Know how Partner',
+    href: 'https://www.enengreen.com',
+    subMenu: [
+      { title: 'ENEN Green', href: 'https://www.enengreen.com/' },
+      { title: 'Clan Digital', href: '/services/our-sponsors/community' },
+    ],
+  },
+  {
+    title: 'Clan Digital - Digital Partner',
+    href: 'https://www.clandigital.in',
+    subMenu: [
+        { title: 'ENEN Green', href: 'https://www.enengreen.com/' },
+     
+    ],
+  },
+];
 
   return (
     <>
@@ -92,15 +106,6 @@ const Header4 = () => {
 
              
 
-              <motion.a 
-                href="/faq" 
-                className="text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                FAQ
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
-              </motion.a>
             </nav>
 
             {/* Right side - Contact Button */}
@@ -142,18 +147,35 @@ const Header4 = () => {
             >
               <div className="py-2">
                 {partnerMenu.map((item, index) => (
-                  <motion.a
-                    key={index}
-                    href={item.href}
-                    className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.05 }}
-                    whileHover={{ x: 5 }}
-                  >
-                    {item.title}
-                  </motion.a>
-                ))}
+  <div key={index} className="group relative">
+    <motion.a
+      href={item.href}
+      className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors flex justify-between items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: index * 0.05 }}
+      whileHover={{ x: 5 }}
+    >
+      {item.title}
+     {/*  {item.subMenu && <ChevronDown className="h-4 w-4 ml-2 text-gray-500 group-hover:text-teal-600" />} */}
+    </motion.a>
+
+{/*     {item.subMenu && ( */}
+    {/*   <div className=" left-full top-0 mt-0 bg-white border border-gray-200 rounded-md transition-all duration-300  min-w-[220px]">
+        {item.subMenu.map((sub, subIndex) => (
+          <a
+            key={subIndex}
+            href={sub.href}
+            className="block px-4 py-2 text-sm text-gray-600 hover:bg-teal-50 hover:text-teal-600"
+          >
+            {sub.title}
+          </a>
+        ))}
+      </div> */}
+{/*     )} */}
+  </div>
+))}
+
               </div>
             </motion.div>
           )}

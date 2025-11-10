@@ -10,8 +10,9 @@ export default function QueryForm3() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    contact: "",
+      phone: "",
+    company: "",
+  
     message: "",
     subscribe: false,
     terms: false,
@@ -61,9 +62,7 @@ export default function QueryForm3() {
     if (!validatePhone(formData.phone)) {
       newErrors.phone = "Please enter a valid phone number (10+ digits)"
     }
-    if (!validatePhone(formData.contact)) {
-      newErrors.contact = "Please enter a valid contact number (10+ digits)"
-    }
+   
     if (!formData.message.trim()) {
       newErrors.message = "Message is required"
     }
@@ -85,7 +84,7 @@ export default function QueryForm3() {
         name: "",
         email: "",
         phone: "",
-        contact: "",
+        company: "",
         message: "",
         subscribe: false,
         terms: false,
@@ -110,16 +109,16 @@ export default function QueryForm3() {
   }
 
   return (
-    <main className="min-h-screen bg-white px-4 py-16">
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white px-4 py-16 w-full max-w-[1371px] mx-auto ml-24">
+      <div className="max-w-[1371px]  w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8"
         >
-          <h1 className="text-2xl md:text-3xl font-bold font-lora text-slate-900 mb-4">Get in touch</h1>
+          <h1 className="text-2xl md:text-3xl font-bold font-lora text-slate-900 mb-4">Book your slot</h1>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-teal-500 rounded-full" />
         </motion.div>
 
@@ -127,18 +126,15 @@ export default function QueryForm3() {
           {/* Form Section */}
           <motion.div className="lg:col-span-2" variants={containerVariants} initial="hidden" animate="visible">
             <motion.div variants={itemVariants} className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Send a Message</h2>
-              <p className="text-slate-600 leading-relaxed">
-                Pellentesque in ipsum id orci porta dapibus. Quisque velit nisl, pretium ut lacinia in, elementum id
-                enim. Done
-              </p>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2"> </h2>
+            
             </motion.div>
 
             <motion.form onSubmit={handleSubmit} className="space-y-6" variants={containerVariants}>
               {/* Name and Email */}
               <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Name</label>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">  Name  <span className="text-lg font-outfit text-red-800 mb-2">*</span></label>
                   <input
                     type="text"
                     name="name"
@@ -152,7 +148,7 @@ export default function QueryForm3() {
                   {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Email Address</label>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">Official Email Address  <span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
                     type="email"
                     name="email"
@@ -170,7 +166,7 @@ export default function QueryForm3() {
               {/* Phone and Contact */}
               <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Phone Number</label>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">Phone Number  <span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
                     type="tel"
                     name="phone"
@@ -184,16 +180,16 @@ export default function QueryForm3() {
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Contact Number</label>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">Company Name  <span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
                     type="tel"
                     name="contact"
-                    value={formData.contact || ""}
+                    value={formData.company || ""}
                     onChange={handleChange}
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
                       errors.contact ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
                     }`}
-                    placeholder="(123) 456-7890"
+                    placeholder="your company..."
                   />
                   {errors.contact && <p className="text-red-500 text-xs mt-1">{errors.contact}</p>}
                 </div>
@@ -201,7 +197,7 @@ export default function QueryForm3() {
 
               {/* Message */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Message</label>
+                <label className="block text-sm font-semibold text-slate-900 mb-2">Message  <span className="text-sm font-outfit text-red-800">*</span></label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -210,7 +206,7 @@ export default function QueryForm3() {
                   className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 resize-none ${
                     errors.message ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
                   }`}
-                  placeholder="please tell us more..."
+                  placeholder="Tell us more about your company and services you are interested in..."
                 />
                 {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
               </motion.div>
@@ -255,36 +251,9 @@ export default function QueryForm3() {
           {/* Contact Info Section */}
           <motion.div className="space-y-8 mb-[-24px]" variants={containerVariants} initial="hidden" animate="visible">
             {/* Call Us */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Call Us</h3>
-              <p className="text-slate-600 mb-4 text-sm leading-relaxed">
-                Pellentesque in ipsum id orci porta dapibus. Quisque velit nisl, pretium ut lacinia in, elementum id
-                enim. Done
-              </p>
-              <a
-                href="tel:+12153251353"
-                className="inline-flex items-center gap-2 text-teal-500 hover:text-teal-500 font-semibold transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                (215) 325-1353
-              </a>
-            </motion.div>
+           
 
-            {/* Visit Us */}
-            <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Visit Us</h3>
-              <p className="text-slate-600 mb-4 text-sm leading-relaxed">
-                Pellentesque in ipsum id orci porta dapibus. Quisque velit nisl, pretium ut lacinia in, elementum id
-                enim. Done
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-teal-500 hover:text-teal-500 font-semibold transition-colors"
-              >
-                <MapPin className="w-5 h-5" />
-                1234 Divi St, #1111, San Francisco, CA
-              </a>
-            </motion.div>
+            
           </motion.div>
 
           <motion.div className="text-md bg-[#222] mt-[-24px] w-[121px] cursor-pointer text-white font-outfit rounded-sm px-5 py-2 flex justify-center items-center "

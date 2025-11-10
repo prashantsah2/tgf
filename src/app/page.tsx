@@ -50,7 +50,7 @@ export default function Campaign() {
       <QueryForm2/> */}
       <AboutMain/>
       <Whyus/>
-      <ClientsSection/>
+       <LatestBlogs  />
       <FAQ2/>
       <Reviews/>
       <NewsLetter/>

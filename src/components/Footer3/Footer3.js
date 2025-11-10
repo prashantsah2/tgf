@@ -3,6 +3,9 @@ import Image from "next/image";
 import React from "react";
 
 export default function Footer3() {
+
+  return
+  <></>
   return (
     <footer className="bg-gradient-to-br from-teal-900 via-teal-800 to-blue-900 text-white py-16 px-6">
       <div className="max-w-[1371px] mx-auto">

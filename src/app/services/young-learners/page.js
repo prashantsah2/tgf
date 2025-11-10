@@ -16,33 +16,24 @@ export default function SustainabilityLanding() {
     transition: { duration: 0.6 }
   };
 
-  const faqs = [
-    {
-      q: "Is the consultation only for MSMEs?",
-      a: "While the program is primarily designed to empower MSMEs, the consultation is open to any industry or organization interested in adopting or improving sustainable practices. Whether you're a startup, a growing enterprise, or an established business, you're welcome to join and begin your sustainability journey."
-    },
-    {
-      q: "Do you charge for the consultation?",
-      a: `
-      
-      No, the consultation is completely free of cost. This initiative by Towards Green Future is designed to help businesses explore sustainability opportunities without any financial commitment.
-
-      
-      `
-    },
-    {
-      q: "Am I obligated to take any services after the consultation?",
-      a: "Not at all. The consultation is purely advisory and aims to guide you in adopting sustainable practices best suited to your operations. You are under no obligation to take any further services after the session."
-    },
-    {
-      q: "What if I am not available on the mentioned date?",
-      a: `
-    If you're unavailable on the scheduled consultation day, don't worry! You can book an alternative slot though our booking form. Also, you may request an alternative slot through email. Our team will arrange a convenient time for your session.  
-      
-      `
-    }
-  ];
-
+const faqs = [
+  {
+    q: "Is this program only for college or university students?",
+    a: "No. This initiative is open to colleges, universities, training institutes, and youth-led communities. It is designed for students and young individuals interested in sustainability, climate change, and future-ready leadership skills."
+  },
+  {
+    q: "Is there any fee, and are we required to take any paid services afterward?",
+    a: "No. All sessions, workshops, and lectures are completely free of cost. This program is purely educational and awareness-based. Institutions or students are under no obligation to subscribe to any paid service or certification after the session."
+  },
+  {
+    q: "What is the mode of the session—online or offline?",
+    a: "Sessions can be conducted in both online and offline formats. The mode of delivery will depend on factors such as the institution’s location, the participants’ size, and the interest."
+  },
+  {
+    q: "Can the session be scheduled on a different date if required?",
+    a: "Yes. If the proposed date is not suitable, institutions can reschedule the meeting through our booking form, Also, you may request an alternative slot through email. Our team will coordinate and arrange the session at a mutually convenient time for faculty and students."
+  }
+];
 
   const  scrollToSection = ()=>{
    
@@ -68,17 +59,18 @@ export default function SustainabilityLanding() {
             
             
                       <h1 className="text-5xl max-sm:3xl font-bold font-lora  mb-2 text-white leading-tight">
-              Go Green, Grow Strong
+              EcoVision: Young learners Program
             </h1>
-            <p className='text- text-[#fff]'>Climate & 
-              
-              Sustainability handholding for MSMEs</p>
-               <p className='flex flex-row text-md font-outfit text-white max-w-3xl mt-4'>Accelerate your sustainable growth with our free climate and sustainability consultation!
-Discover how reducing carbon emissions, improving resource efficiency, and aligning with ESG goals can boost your brand value and cut operational costs. 
+            <p className='text- text-[#fff]'>Empower today’s youth with the knowledge that tomorrow will demand!!</p>
 
-our empanelled industry experts will help you identify tailored strategies and compliance opportunities to future-proof your business against evolving environmental regulations
-and revenue generation opportunities through sustainability interventions
- Take the first step toward a greener, more competitive future—book your free session today!</p>
+
+               <p className='flex flex-row text-md font-outfit text-white max-w-3xl mt-4'>Through our free sustainability and climate awareness sessions, we help educational institutions prepare students to become responsible, future-ready leaders in a world where environmental responsibility is no longer optional—but essential.
+</p>
+
+
+               <p className='flex flex-row text-md font-outfit text-white max-w-3xl mt-4'>From climate change awareness and climate mitigation strategies to ESG leadership, carbon footprint reduction, and real-world sustainability practices, our expert-led workshops are designed to inspire critical thinking and action. Students are introduced to key concepts such as ESG ratings and reporting, Life Cycle Assessment (LCA), circular economy models, sustainable product design, and green innovation—helping them understand how industries can shift from linear to regenerative systems. These sessions empower young minds to think responsibly, develop problem-solving abilities, and become active contributors to a sustainable future.
+
+</p>
 
 
             <p className='text text-lg mt-12 font-italic font-outfit text-white'>
@@ -126,34 +118,34 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-lora font-bold mb-12 text-gray-900">
-                {`What You’ll Discover in `}<span className="text-green-600">Our Free Consultation</span>
+                {`Why  `}<span className="text-green-600">Join </span>
               </h2>
               
               <div className="space-y-6">
+                
+
+
+
+
                 <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl">
                   <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" strokeWidth={2} />
                   <p className="text-base text-gray-700 leading-relaxed">
-                    Customized Sustainability Insights: Understand your organization’s current environmental footprint and opportunities for improvement.
+                   Transform curiosity into climate leadership.
                   </p>
                 </div>
                 <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl">
                   <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" strokeWidth={2} />
                   <p className="text-base text-gray-700 leading-relaxed">
-                 Growth & Compliance Benefits: Learn how adopting sustainability can enhance your brand value, meet ESG goals, and align with global standards.
+             Prepare for a sustainability-driven future.
                   </p>
                 </div>
                 <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl">
                   <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" strokeWidth={2} />
                   <p className="text-base text-gray-700 leading-relaxed">
-                   Partnership Opportunities: Explore how TGF can support your sustainability journey through collaborations, awareness programs, and long-term impact initiatives.
+                Lead with purpose, not just profit.
                   </p>
                 </div>
-                <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl">
-                  <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" strokeWidth={2} />
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Expert guidance from our empanelled sustainability specialists
-                  </p>
-                </div>
+                
               </div>
             </div>
 
@@ -176,7 +168,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
             Take the first step toward a <span className="text-blue-600">greener future</span>
           </h2>
           <p className="text-base text-gray-600 mb-12 leading-relaxed">
-            Book your free session today and discover how sustainability can transform your business
+Collaborate with us or book a group session today  let’s create a greener tomorrow, together”
           </p>
           
           <motion.button

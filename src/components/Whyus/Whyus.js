@@ -1,35 +1,49 @@
 import React from 'react';
 import { IndianRupee, ShoppingCart, Truck, CreditCard, Handshake } from 'lucide-react';
+import { Globe2, Users2,Lightbulb, ShieldCheck, Leaf } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Whyus() {
+
+
   const features = [
-    {
-      icon: IndianRupee,
-      title: 'Transparent Pricing',
-      description: 'No hidden charges—what you see is what you get'
-    },
-    {
-      icon: ShoppingCart,
-      title: 'As Easy as Grocery Shopping',
-      description: 'Experience a simple way to sell your used electronics'
-    },
-    {
-      icon: Truck,
-      title: 'Fastest Pickup',
-      description: 'Get your old appliance picked up within 24-48 hours'
-    },
-    {
-      icon: CreditCard,
-      title: 'Secure Transactions',
-      description: 'Payments are processed securely and reliably'
-    },
-    {
-      icon: Handshake,
-      title: 'Trusted Across India',
-      description: 'Serving customers nationwide with reliability and satisfaction'
-    }
-  ];
+  {
+    icon: Globe2,
+    title: 'Holistic Approach',
+    description:
+      'We view sustainability as a shared journey, integrating environmental, social, and economic aspects for lasting impact.'
+  },
+  {
+    icon: Users2,
+    title: 'Expert Team',
+    description:
+      'Our professionals bring strong expertise in environmental science, sustainable development, and community engagement.'
+  },
+  {
+    icon: Handshake,
+    title: 'Collaborative Partnerships',
+    description:
+      'We work closely with organizations, MSMEs, and communities to drive practical, on-ground climate action.'
+  },
+  {
+    icon: Lightbulb,
+    title: 'Innovative Solutions',
+    description:
+      'We develop and promote eco-friendly strategies tailored to local needs and global sustainability goals.'
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Transparency & Accountability',
+    description:
+      'Every initiative is guided by integrity, measurable outcomes, and a commitment to long-term change.'
+  },
+  {
+    icon: Leaf,
+    title: 'Proven Impact',
+    description:
+      'Our efforts consistently empower communities and industries to embrace green growth and build a sustainable future.'
+  }
+];
 
   return (
     <div className=" py-4 md:py-24 bg-gray-50">
