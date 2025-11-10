@@ -13,7 +13,7 @@ export default function Hero5() {
     },
  
     {
-      title: "ChapterMSME",
+      title: "Chapter MSME",
       subtitle: "Understanding environmental impact",
       image:'/image/Chapter MSME-min.png',
         path:'services/chapter-msme'
