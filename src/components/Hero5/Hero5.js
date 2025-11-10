@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Hero5() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,18 +8,21 @@ export default function Hero5() {
     {
       title: `E+ Certification`,
       subtitle: "Sustainability Reporting",
-      image:'/image/E+ Certification-min.png'
+      image:'/image/E+ Certification-min.png',
+      path:'services/e+certification'
     },
  
     {
       title: "MSME",
       subtitle: "Understanding environmental impact",
-      image:'/image/Chapter MSME-min.png'
+      image:'/image/Chapter MSME-min.png',
+        path:'services/chapter-msme'
     },
     {
       title: "Young Learners",
       subtitle: "Comprehensive analysis",
-      image:'/image/Untitled design (30).png'
+      image:'/image/Untitled design (30).png',
+        path:'services/young-learners'
     }
   ];
 
@@ -35,6 +38,14 @@ export default function Hero5() {
     setCurrentSlide(index);
   };
 
+    useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // change 5000 to adjust timing (in ms)
+    return () => clearInterval(interval);
+  }, [currentSlide]);
+
+
   return (
     <div className="relative h-screen overflow-hidden w-full flex justify-center items-center -z-1 ">
       {/* Background Image with Overlay */}
@@ -45,6 +56,7 @@ export default function Hero5() {
         exit={{ scale: 0.95, opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="absolute inset-0 bg-cover bg-center"
+        onClick={()=>{ window.location.href=slides[currentSlide].path}}
       >
         <img 
           src={`${slides[currentSlide].image}`}
@@ -72,6 +84,7 @@ export default function Hero5() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 border-2 border-white text-white font-medium hover:bg-white hover:text-gray-900 transition-all duration-300"
+              onClick={()=>{ window.location.href=slides[currentSlide].path}}
           >
             Read More
           </motion.button>
