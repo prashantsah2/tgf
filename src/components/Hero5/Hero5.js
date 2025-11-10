@@ -13,7 +13,7 @@ export default function Hero5() {
     },
  
     {
-      title: "MSME",
+      title: "ChapterMSME",
       subtitle: "Understanding environmental impact",
       image:'/image/Chapter MSME-min.png',
         path:'services/chapter-msme'
@@ -91,7 +91,7 @@ export default function Hero5() {
         </motion.div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-12 max-sm:overflow-scroll max-w-[100vw]  flex items-start space-x-8 justify-start w-full max-w-7xl z-50">
+       {/*  <div className="absolute bottom-12 max-sm:overflow-scroll max-w-[100vw]  flex items-start space-x-8 justify-start w-full max-w-7xl z-50">
           {slides.map((slide, index) => (
             <button
               key={index}
@@ -115,10 +115,10 @@ export default function Hero5() {
               </div>
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Navigation Arrows */}
-        <div className="absolute  max-w-[100vw] right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
+       {/*  <div className="absolute  max-w-[100vw] right-4 md:right-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -139,7 +139,7 @@ export default function Hero5() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </motion.button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
