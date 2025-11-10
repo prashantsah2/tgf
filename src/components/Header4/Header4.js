@@ -51,7 +51,7 @@ const partnerMenu = [
       >
         <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20">
           <div className='w-[121px] h-20 mr-auto'>
-            <Image src="/logos/tgf.png" alt="TGF Logo" width={121} height={80} className="object-contain h-full mr-auto"/>
+            <Image src="/image/tgf (2).png" alt="TGF Logo" width={121} height={80} className="object-contain h-full mr-auto"/>
           </div>
           <div className="flex justify-between items-center h-20">
             {/* Left side - Navigation */}
