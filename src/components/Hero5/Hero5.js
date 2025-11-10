@@ -8,7 +8,7 @@ export default function Hero5() {
     {
       title: `E+ Certification`,
       subtitle: "Sustainability Reporting",
-      image:'/image/E+ Certification-min.png',
+      image:'/image/E.png',
       path:'services/e+certification'
     },
  
