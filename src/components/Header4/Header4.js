@@ -9,8 +9,8 @@ const Header4 = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const servicesMenu = [
-    { title: 'e+ certification', href: '/services/e+certification' },
-     { title: 'Chapter msme', href: '/services/chapter-msme' },
+    { title: 'E+ Certification', href: '/services/e+certification' },
+     { title: 'Chapter MSME', href: '/services/chapter-msme' },
       { title: 'Young Learners', href: '/services/young-learners' },
  
   ];
@@ -47,11 +47,13 @@ const partnerMenu = [
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed w-full top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50"
+        className="fixed w-full top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 px-8"
       >
-        <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20">
-          <div className='w-[121px] h-20 mr-auto'>
-            <Image src="/image/Untitled design (31).png" alt="TGF Logo" width={121} height={80} className="object-contain h-full mr-auto "/>
+        <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20 ">
+          <div className=' h-20 mr-auto'>
+           <a href='/' className='flex flex-row px-2 justify-center items-center mt-3  ml-8'><Image src="/image/tgf (2).png" alt="TGF Logo" width={71} height={70} className="object-contain  mr-auto px-2 "/>
+            <p className='text-[15px] font-outfit text-left text-[#111] w-max leading-[18px] whitespace-nowrap'>TOWARDS GREEN {/* <br /> */} FUTURE</p>
+           </a> 
           </div>
           <div className="flex justify-between items-center h-20">
             {/* Left side - Navigation */}
@@ -88,7 +90,7 @@ const partnerMenu = [
              
 
               <motion.a 
-                href="/clients" 
+              
                 className="flex text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
@@ -189,7 +191,7 @@ const partnerMenu = [
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full right-1/3 mt-2 ml-6 bg-white shadow-xl rounded-lg border border-gray-200 min-w-[280px]"
+              className="absolute top-full right-1/5 mt-2 ml-6 bg-white shadow-xl rounded-lg border border-gray-200 min-w-[280px]"
               onMouseLeave={() => setActiveDropdown(null)}
               onMouseEnter={() => setActiveDropdown('services')}
             >

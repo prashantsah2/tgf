@@ -115,8 +115,8 @@ export default function AboutMain() {
 
             <div>
               <div className=" rounded-lg  flex items-center justify-center border-2 border-gray-200">
-                <div className="text-center text-gray-400">
-                 <Image src={`/image/1.png`} width={400} height={400} alt="About Us Image" className="mx-auto"/>
+                <div className="text-center text-gray-400 w-full">
+                 <Image src={`/image/About us.png`} width={400} height={400} alt="About Us Image" className="mx-auto  aspect-[2] w-full object-cover"/>
                 </div>
               </div>
             </div>

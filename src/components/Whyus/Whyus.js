@@ -53,9 +53,7 @@ export default function Whyus() {
           <h1 className="text-5xl font-lora font-bold text-gray-900 mb-3">
             Why Choose <span className="text-teal-600">TGF?</span>
           </h1>
-          <p className="text-gray-600">
-           {` Eco-Friendly Recycling by India's largest E-waste Recycler`}
-          </p>
+          
         </div>
 
         {/* Main Content Grid */}
@@ -65,7 +63,7 @@ export default function Whyus() {
             <div className=" rounded-lg  flex items-center justify-center w-full">
                 <div className=" rounded-lg  flex items-center justify-center border-2 border-gray-200">
                 <div className="text-center text-gray-400 w-full">
-                 <Image src={`/image/about.png`} width={400} height={400} alt="About Us Image" className=" w-full"/>
+                 <Image src={`/image/Why Choose TGF (1).png`} width={400} height={400} alt="About Us Image" className=" w-full aspect-[.7] object-cover rounded-xl"/>
                 </div>
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function Campaign() {
       <AboutMain/>
       <Whyus/>
    {/*     <LatestBlogs  /> */}
-      <FAQ2/>
+   {/*    <FAQ2/> */}
    {/*    <Reviews/> */}
       <NewsLetter/>
 

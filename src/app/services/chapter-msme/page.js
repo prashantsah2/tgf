@@ -88,7 +88,7 @@ and revenue generation opportunities through sustainability interventions
           </div>
            
            <div className='flex flex-col justify-end items-end h-full'> 
-            <p className='text-sm text-white'>lead program partners</p>
+            <p className='text-sm text-white'>Lead Program Partners</p>
             <div className='flex flex-row'>
               <Image src={`/image/enenwhite.png`} width={211} height={211} className='w-[91px]' />
             </div>
@@ -96,6 +96,10 @@ and revenue generation opportunities through sustainability interventions
 
         </div>
       </motion.section>
+
+
+        
+      
 
       {/* Value Proposition */}
    {/*    <motion.section 
@@ -158,7 +162,15 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
             </div>
 
             <div className="bg-white border-2 border-gray-200 h-96 rounded-xl flex items-center justify-center">
-              <p className="text-base text-gray-400">Space for colorful illustration</p>
+             <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className=" w-full h-full object-cover"
+      >
+        <source src="/image/SBTSUSTANIBILITY.CFD.mp4" type="video/mp4" />
+      </video>
             </div>
           </div>
         </div>
