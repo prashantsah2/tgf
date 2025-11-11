@@ -16,7 +16,7 @@ export default function OptionsInfographic() {
       <><Header4 />
       <div className='flex flex-col justify-center items-center min-h-screen w-screen'>
     
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen  overflow-x-hidden">
       <video
         autoPlay
         loop
