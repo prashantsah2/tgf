@@ -24,7 +24,7 @@ export default function OptionsInfographic() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/image/coming soon.mp4" type="video/mp4" />
+        <source src="/image/comming soon.mp4" type="video/mp4" />
       </video>
       
       {/* Your content goes here */}
