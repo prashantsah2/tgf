@@ -63,8 +63,8 @@ export default function SustainabilityLanding() {
         className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full"
         {...fadeIn}
       >
-        <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between">
-          <div className="text-left h-full flex flex-col justify-between items-start">
+        <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between h-full">
+          <div className="text-left h-full flex flex-col justify-between items-start h-full">
             
             
                       <h1 className="text-5xl max-sm:3xl font-bold font-lora  mb-2 text-white leading-tight">
@@ -73,24 +73,23 @@ export default function SustainabilityLanding() {
             <p className='text- text-[#fff]'>Climate & 
               
               Sustainability handholding for MSMEs</p>
-               <p className='flex flex-row text-md font-outfit text-white max-w-3xl mt-4'>Accelerate your sustainable growth with our free climate and sustainability consultation!
-Discover how reducing carbon emissions, improving resource efficiency, and aligning with ESG goals can boost your brand value and cut operational costs. 
+               <p className='flex flex-row text-md font-outfit text-white max-w-3xl mt-4'>MSMEs in India have consistently demonstrated resilience and a strong willingness to adapt; however, there remains a gap in awareness and ease of implementing sustainable practices. To address this, TGF has introduced an online session aimed at inspiring and equipping MSMEs to take impactful sustainability actions.<br></br>
 
-our empanelled industry experts will help you identify tailored strategies and compliance opportunities to future-proof your business against evolving environmental regulations
-and revenue generation opportunities through sustainability interventions
- Take the first step toward a greener, more competitive future—book your free session today!</p>
+Accelerate your sustainable growth with our free climate and sustainability consultation! Learn how reducing carbon emissions, enhancing resource efficiency, and aligning with ESG goals can elevate your brand value while lowering operational costs. Our empanelled industry experts will help you identify customized strategies, compliance pathways, and revenue-generating opportunities to future-proof your business amid evolving environmental regulations.<br></br>
+
+Take the first step toward a greener, stronger, and more competitive future — book your free session today!</p>
 
 
-            <p className='text text-lg mt-12 font-italic font-outfit text-white'>
+            <p className='text text-2xl  font-italic font-outfit text-white mt-[131px]'>
               Initiated by TGF
              </p>
 
           </div>
            
            <div className='flex flex-col justify-end items-end h-full'> 
-            <p className='text-sm text-white'>Lead Program Partners</p>
+            <p className='text-xl text-white'>Lead Program Partners</p>
             <div className='flex flex-row'>
-              <Image src={`/image/enenwhite.png`} width={211} height={211} className='w-[91px]' />
+              <Image src={`/image/enenwhite.png`} width={211} height={211} className='w-[121px]' />
             </div>
            </div>
 

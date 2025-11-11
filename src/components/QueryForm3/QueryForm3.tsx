@@ -11,7 +11,10 @@ export default function QueryForm3() {
     name: "",
     email: "",
       phone: "",
-    company: "",
+    InstitutionName: "",
+    yourAssociation:"",
+    designatedAuthority: "",
+
   
     message: "",
     subscribe: false,
@@ -84,7 +87,9 @@ export default function QueryForm3() {
         name: "",
         email: "",
         phone: "",
-        company: "",
+        InstitutionName: "",
+        yourAssociation:"",
+        designatedAuthority: "",
         message: "",
         subscribe: false,
         terms: false,
@@ -179,21 +184,43 @@ export default function QueryForm3() {
                   />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Company Name  <span className="text-sm font-outfit text-red-800">*</span></label>
+                  {/* Institution Name */}
+               
+           
+                 <div>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">Institution Name<span className="text-sm font-outfit text-red-800">*</span> </label>
                   <input
-                    type="tel"
-                    name="contact"
-                    value={formData.company || ""}
+                    type="text"
+                    name="InstitutionName"
+                    value={formData.InstitutionName}
                     onChange={handleChange}
-                    className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
-                      errors.contact ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
-                    }`}
-                    placeholder="your company..."
-                  />
-                  {errors.contact && <p className="text-red-500 text-xs mt-1">{errors.contact}</p>}
-                </div>
+                    className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 `}
+                    placeholder="Institution Name"
+                    
+                  
+                    />
+                    
+                  </div>
               </motion.div>
+
+              <motion.div variants={itemVariants}>
+                 <div>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">You are <span className="text-sm font-outfit text-red-800">*</span></label>
+                  <input
+                    type="text"
+                    name="association"
+                    value={formData.yourAssociation}
+                    onChange={handleChange}
+                    className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 `}
+                    placeholder="A Student/Faculty/Staff/Other"
+                    
+                  
+                    />
+                    
+                  </div>
+              </motion.div>
+
+
 
               {/* Message */}
               <motion.div variants={itemVariants}>
