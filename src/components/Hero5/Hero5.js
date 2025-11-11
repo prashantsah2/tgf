@@ -19,7 +19,7 @@ export default function Hero5() {
         path:'services/chapter-msme'
     },
     {
-      title: <p>Go Green Grow Strong,<br/> Chapter Educational Institute</p>,
+      title: <p>Go Green Grow Strong,<br/> Chapter Educational Institute </p>,
       subtitle: <p>Comprehensive analysis</p>,
       image:'/image/Untitled design (30).png',
         path:'services/young-learners'
