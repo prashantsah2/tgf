@@ -23,7 +23,7 @@ const partnerMenu = [
 
 
   {
-    title: ' Know how Partner',
+    title: ' Know - how Partner',
     href: 'https://www.enengreen.com',
     subMenu: [
       { title: 'ENEN Green', href: 'https://www.enengreen.com/' },
