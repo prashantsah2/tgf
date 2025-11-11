@@ -82,14 +82,17 @@ Take the first step toward a greener, stronger, and more competitive future — 
 
             <p className='text text-2xl  font-italic font-outfit text-white mt-[131px]'>
               Initiated by TGF
+               <div className='flex flex-row w-full'>
+              <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mx-auto rounded-lg mt-4' />
+            </div>
              </p>
 
           </div>
            
-           <div className='flex flex-col justify-end items-end h-full'> 
-            <p className='text-xl text-white'>Lead Program Partners</p>
-            <div className='flex flex-row'>
-              <Image src={`/image/enenwhite.png`} width={211} height={211} className='w-[121px]' />
+           <div className='flex flex-col justify-end items-end h-full mt-4'> 
+            <p className='text-2xl text-white font-outfit text-right mr-2'>Lead Program Partner </p>
+            <div className='flex flex-row w-full'>
+              <Image src={`/image/enenwhite.png`} width={211} height={211} className='w-[121px] mx-auto' />
             </div>
            </div>
 

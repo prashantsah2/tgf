@@ -64,7 +64,7 @@ export default function SustainabilityLanding() {
           <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between">
             <div className="text-left h-full flex flex-col justify-between items-start">
               <h1 className="text-5xl max-sm:3xl font-bold font-lora  mb-2 text-white leading-tight">
-                EcoVision: Young learners Program
+                 Young learners Program
               </h1>
               <p className="text- text-[#fff]">
                 Empower today’s youth with the knowledge that tomorrow will
@@ -92,19 +92,22 @@ export default function SustainabilityLanding() {
                 sustainable future.
               </p>
 
-              <p className="text text-lg mt-12 font-italic font-outfit text-white">
+              <p className="text text-2xl mt-12 font-italic font-outfit text-white">
                 Initiated by TGF
+                 <div className='flex flex-row w-full'>
+              <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mx-auto rounded-lg mt-4' />
+            </div>
               </p>
             </div>
 
-            <div className="flex flex-col justify-end items-end h-full">
-              <p className="text-sm text-white">Lead Program Partners</p>
+            <div className="flex flex-col justify-end items-end h-full mt-4">
+              <p className="text-2xl text-white mr-2">Lead Program Partner</p>
               <div className="flex flex-row mx-auto">
                 <Image
                   src={`/image/enenwhite.png`}
                   width={211}
                   height={211}
-                  className="w-[91px]"
+                  className="w-[121px]"
                 />
               </div>
             </div>
@@ -178,7 +181,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
               <div className="bg-white border-2 border-gray-200 h-96 rounded-xl flex items-center justify-center">
                 <video
                   autoPlay
-                  loop
+                  
                   muted
                   playsInline
                   className=" w-full h-full object-cover"
@@ -202,7 +205,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold font-lora mb-8 text-gray-900 leading-relaxed">
-              Take the first step toward a{" "}
+              Take the first step towards a{" "}
               <span className="text-blue-600">greener future</span>
             </h2>
             <p className="text-base text-gray-600 mb-12 leading-relaxed">

@@ -7,20 +7,20 @@ export default function Hero5() {
   const slides = [
     {
       title: `E+ Certification`,
-      subtitle: "Sustainability Reporting",
+      subtitle: <p>Sustainability Reporting</p>,
       image:'/image/E.png',
       path:'services/e+certification'
     },
  
     {
-      title: "Chapter MSME",
+      title: <p>Go Green Grow Strong,<br/> Chapter MSME</p>,
       subtitle: "Understanding environmental impact",
       image:'/image/Chapter MSME-min.png',
         path:'services/chapter-msme'
     },
     {
       title: "Young Learners",
-      subtitle: "Comprehensive analysis",
+      subtitle: <p>Comprehensive analysis</p>,
       image:'/image/Untitled design (30).png',
         path:'services/young-learners'
     }

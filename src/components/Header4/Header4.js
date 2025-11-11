@@ -11,7 +11,7 @@ const Header4 = () => {
   const servicesMenu = [
     { title: 'E+ Certification', href: '/services/e+certification' },
      { title: 'Chapter MSME', href: '/services/chapter-msme' },
-      { title: 'Young Learners', href: '/services/young-learners' },
+      { title: 'Chapter Educational Institute', href: '/services/young-learners' },
  
   ];
 
@@ -23,7 +23,7 @@ const partnerMenu = [
 
 
   {
-    title: 'ENEN Green - Know how Partner',
+    title: ' Know how Partner',
     href: 'https://www.enengreen.com',
     subMenu: [
       { title: 'ENEN Green', href: 'https://www.enengreen.com/' },
@@ -31,7 +31,7 @@ const partnerMenu = [
     ],
   },
   {
-    title: 'Clan Digital - Digital Partner',
+    title: ' Digital Partner',
     href: 'https://www.clandigital.in',
     subMenu: [
         { title: 'ENEN Green', href: 'https://www.enengreen.com/' },
@@ -51,8 +51,8 @@ const partnerMenu = [
       >
         <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20 ">
           <div className=' h-20 mr-auto'>
-           <a href='/' className='flex flex-row px-2 justify-center items-center mt-3  ml-8'><Image src="/image/tgf (2).png" alt="TGF Logo" width={71} height={70} className="object-contain  mr-auto px-2 "/>
-            <p className='text-[15px] font-outfit text-left text-[#111] w-max leading-[18px] whitespace-nowrap'>TOWARDS GREEN {/* <br /> */} FUTURE</p>
+           <a href='/' className='flex flex-row px-2 justify-center items-center mt-3  ml-8'><Image src="/image/Towards Green Future (6).png" alt="TGF Logo" width={71} height={70} className="object-contain  mr-auto px-2 "/>
+            <p className='text-[15px] font-outfit text-left text-[#111] w-max leading-[18px] whitespace-nowrap'>TOWARDS GREEN {/* <br /> */} FUTURE ( TGF )</p>
            </a> 
           </div>
           <div className="flex justify-between items-center h-20">
