@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Header4 from "@/components/Header4/Header4";
 import Footer3 from "@/components/Footer3/Footer3";
-import QueryForm3 from "@/components/QueryForm3/QueryForm3";
+import QueryForm4 from "@/components/QueryForm4/QueryForm4";
 import Image from "next/image";
 
 export default function SustainabilityLanding() {
@@ -284,7 +284,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* Footer */}
         <section id="form" className="py-16 px-6">
-          <QueryForm3 />
+          <QueryForm4 />
         </section>
       </div>
       <Footer3 />
