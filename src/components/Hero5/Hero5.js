@@ -6,7 +6,7 @@ export default function Hero5() {
   
   const slides = [
     {
-      title: `E+ Certification`,
+      title: <p>Go green Go Strong <br/> E+ Certification</p>,
       subtitle: <p>Sustainability Reporting</p>,
       image:'/image/E.png',
       path:'services/e+certification'
