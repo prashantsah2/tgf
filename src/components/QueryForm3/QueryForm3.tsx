@@ -184,7 +184,7 @@ export default function QueryForm3() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-slate-900 mb-2">Company  <span className="text-sm font-outfit text-red-800">*</span></label>
+                  <label className="block text-sm font-semibold text-slate-900 mb-2">Organization<span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
                     type="tel"
                     name="phone"
