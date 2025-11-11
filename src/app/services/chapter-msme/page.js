@@ -166,7 +166,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
             <div className="bg-white border-2 border-gray-200 h-96 rounded-xl flex items-center justify-center">
              <video
         autoPlay
-        loop
+        
         muted
         playsInline
         className=" w-full h-full object-cover"
@@ -187,7 +187,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold font-lora mb-8 text-gray-900 leading-relaxed">
-            Take the first step toward a <span className="text-blue-600">greener future</span>
+            Take the first step towards a <span className="text-blue-600">greener future</span>
           </h2>
           <p className="text-base text-gray-600 mb-12 leading-relaxed">
             Book your free session today and discover how sustainability can transform your business
