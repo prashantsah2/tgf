@@ -17,6 +17,7 @@ export default function QueryForm3() {
 
   
     message: "",
+    type:'query2',
     subscribe: false,
     terms: false,
   })
@@ -52,50 +53,72 @@ export default function QueryForm3() {
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const newErrors: Record<string, string> = {}
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
-    }
-    if (!validateEmail(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
-    }
-    if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number (10+ digits)"
-    }
-   
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
-    }
-    if (!formData.terms) {
-      newErrors.terms = "You must agree to the terms and conditions"
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-      return
-    }
-
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-      setSubmitted(true)
-      setTimeout(() => setSubmitted(false), 3000)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        InstitutionName: "",
-        yourAssociation:"",
-        designatedAuthority: "",
-        message: "",
-        subscribe: false,
-        terms: false,
-      })
-    }, 1500)
+  if (!formData.name.trim()) {
+    newErrors.name = "Name is required";
   }
+  if (!validateEmail(formData.email)) {
+    newErrors.email = "Please enter a valid email address";
+  }
+  if (!validatePhone(formData.phone)) {
+    newErrors.phone = "Please enter a valid phone number (10+ digits)";
+  }
+  if (!formData.message.trim()) {
+    newErrors.message = "Message is required";
+  }
+  if (!formData.terms) {
+    newErrors.terms = "You must agree to the terms and conditions";
+  }
+
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const response = await fetch("/api/query", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Something went wrong");
+    }
+
+    
+
+    setSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      InstitutionName: "",
+      yourAssociation:"",
+      designatedAuthority: "",  
+      message: "",
+      subscribe: false,
+      type:'query2',
+      terms: false,
+    });
+    setTimeout(() => setSubmitted(false), 3000);
+  } catch (error: any) {
+    
+  } finally {
+    setLoading(false);
+  }
+};
+
+
 
   const containerVariants = {
     hidden: { opacity: 0 },

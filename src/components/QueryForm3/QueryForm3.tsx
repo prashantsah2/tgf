@@ -51,49 +51,69 @@ export default function QueryForm3() {
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const newErrors: Record<string, string> = {}
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
-    }
-    if (!validateEmail(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
-    }
-    if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number (10+ digits)"
-    }
-   
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
-    }
-    if (!formData.terms) {
-      newErrors.terms = "You must agree to the terms and conditions"
-    }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-      return
-    }
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const newErrors: Record<string, string> = {};
 
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-      setSubmitted(true)
-      setTimeout(() => setSubmitted(false), 3000)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        companyName: "",
-      
-        message: "",
-        subscribe: false,
-        terms: false,
-      })
-    }, 1500)
+  if (!formData.name.trim()) {
+    newErrors.name = "Name is required";
   }
+  if (!validateEmail(formData.email)) {
+    newErrors.email = "Please enter a valid email address";
+  }
+  if (!validatePhone(formData.phone)) {
+    newErrors.phone = "Please enter a valid phone number (10+ digits)";
+  }
+  if (!formData.message.trim()) {
+    newErrors.message = "Message is required";
+  }
+  if (!formData.terms) {
+    newErrors.terms = "You must agree to the terms and conditions";
+  }
+
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const response = await fetch("/api/query", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Something went wrong");
+    }
+
+    
+
+    setSubmitted(true);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      companyName: "",
+      message: "",
+      subscribe: false,
+      terms: false,
+    });
+    setTimeout(() => setSubmitted(false), 3000);
+  } catch (error: any) {
+    
+  } finally {
+    setLoading(false);
+  }
+};
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -193,7 +213,7 @@ export default function QueryForm3() {
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
                       errors.phone ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
                     }`}
-                    placeholder="(123) 456-7890"
+                    placeholder="your organization name"
                   />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
                 </div>

@@ -1,10 +1,25 @@
 // app/api/contact/route.js
 import nodemailer from "nodemailer";
+import { type } from "os";
 
 export async function POST(req) {
   try {
-    const { name, email, message } = await req.json();
+    const {   name,
+    email,
+      phone,
+    companyName,
+  
 
+  
+    message,
+    subscribe,
+     InstitutionName,
+      yourAssociation,
+      designatedAuthority ,
+    terms,} = await req.json();
+
+
+    
     if (!name || !email || !message) {
       return Response.json({ error: "Missing fields" }, { status: 400 });
     }
@@ -24,11 +39,29 @@ export async function POST(req) {
     const mailOptions = {
       from: `"Website Contact" <${process.env.SMTP_USER}>`,
       to: recipients,
-      subject: "New Query Submission",
-      text: `
-Name: ${name}
-Email: ${email}
-Message: ${message}
+      subject: type=='query2'?"New Query Submission For Young Learners":"New Query Submission For Contact Page ",
+      text: type=='query2'? `
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Company Name: ${companyName}
+      Message: ${message}
+      Subscribe: ${subscribe}
+      Terms Accepted: ${terms}
+
+      `:`
+      
+       Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Company Name: ${companyName}
+      Message: ${message}
+      Subscribe: ${subscribe}
+      Terms Accepted: ${terms}
+      Institution Name: ${InstitutionName}
+      Your Association: ${yourAssociation}
+      Designated Authority: ${designatedAuthority}
+      
       `,
     };
 
