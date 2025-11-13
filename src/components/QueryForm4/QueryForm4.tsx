@@ -17,7 +17,7 @@ export default function QueryForm3() {
 
   
     message: "",
-    type:'query2',
+    type:'query4',
     subscribe: false,
     terms: false,
   })
@@ -107,7 +107,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       designatedAuthority: "",  
       message: "",
       subscribe: false,
-      type:'query2',
+      type:'query4',
       terms: false,
     });
     setTimeout(() => setSubmitted(false), 3000);
@@ -231,7 +231,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <label className="block text-sm font-semibold text-slate-900 mb-2">You are <span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
                     type="text"
-                    name="association"
+                    name="yourAssociation"
                     value={formData.yourAssociation}
                     onChange={handleChange}
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 `}
@@ -308,7 +308,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
           <motion.div className="text-md bg-[#222] mt-[-24px] w-[121px] cursor-pointer text-white font-outfit rounded-sm px-5 py-2 flex justify-center items-center "
            
-          
+          onClick={handleSubmit}
                  
           >
           {loading ? (

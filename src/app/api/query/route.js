@@ -54,13 +54,13 @@ export async function POST(req) {
        Name: ${name}
       Email: ${email}
       Phone: ${phone}
-      Company Name: ${companyName}
+      
       Message: ${message}
       Subscribe: ${subscribe}
       Terms Accepted: ${terms}
       Institution Name: ${InstitutionName}
       Your Association: ${yourAssociation}
-      Designated Authority: ${designatedAuthority}
+     
       
       `,
     };

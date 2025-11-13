@@ -12,6 +12,7 @@ export default function QueryForm3() {
     email: "",
       phone: "",
     companyName: "",
+    type:'query2',
   
 
   
@@ -104,6 +105,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       phone: "",
       companyName: "",
       message: "",
+      type:'query2',
       subscribe: false,
       terms: false,
     });
@@ -206,16 +208,16 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-2">Organization<span className="text-sm font-outfit text-red-800">*</span></label>
                   <input
-                    type="tel"
-                    name="phone"
+                    type="text"
+                    name="companyName"
                     value={formData.companyName}
                     onChange={handleChange}
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
-                      errors.phone ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
+                      errors.companyName ? "border-red-500 focus:border-red-500" : "border-slate-300 focus:border-teal-500"
                     }`}
                     placeholder="your organization name"
                   />
-                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
+                  {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
                 </div>
                 
               </motion.div>
@@ -287,7 +289,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
           <motion.div className="text-md bg-[#222] mt-[-24px] w-[121px] cursor-pointer text-white font-outfit rounded-sm px-5 py-2 flex justify-center items-center "
            
-          
+          onClick={handleSubmit}
                  
           >
           {loading ? (
