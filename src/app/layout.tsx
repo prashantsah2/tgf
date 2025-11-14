@@ -65,7 +65,7 @@ export default function RootLayout({
         </Layout>
          <div style={{ position: "fixed", bottom: "99px", right: "40px", zIndex: 1000,borderRadius: "51%",cursor: "pointer" }}>
           <a href="mailto:info@towardsgreenfuture.com" target="_blank" rel="noopener noreferrer" >
-            <Mail size={44} color="#0a06ce" className="rounded-full bg-[#fff] p-2 " />
+            <Image src="/image/email-icon.png" alt="Email Us" width={60} height={60} className="bg-[#fff] rounded-full shadow-lg" />
           </a>
        </div>
 

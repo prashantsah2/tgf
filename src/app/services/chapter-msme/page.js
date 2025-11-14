@@ -60,7 +60,7 @@ export default function SustainabilityLanding() {
     <div className="">
       {/* Hero Section */}
       <motion.section 
-        className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full max-sm:px-3"
+        className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full max-sm:px-3 max-sm:pt-12"
         {...fadeIn}
       >
         <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between h-full max-sm:flex-col max-sm:justify-start max-sm:items-center">
@@ -80,7 +80,7 @@ Accelerate your sustainable growth with our free climate and sustainability cons
 Take the first step toward a greener, stronger, and more competitive future — book your free session today!</p>
 
 
-            <p className='text text-2xl  font-italic font-outfit text-white mt-[131px] max-sm:mr-auto max-sm:mt-2'>
+            <p className='text text-2xl  font-italic font-outfit text-white mt-[131px] max-sm:mr-auto max-sm:mt-6 '>
               Initiated by TGF
                <div className='flex flex-row w-full'>
               <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mx-auto rounded-lg mt-4 ' />

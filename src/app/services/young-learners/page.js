@@ -58,7 +58,7 @@ export default function SustainabilityLanding() {
       <div className="">
         {/* Hero Section */}
         <motion.section
-          className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full max-sm:px-3"
+          className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full max-sm:px-3 max-sm:pt-12"
           {...fadeIn}
         >
           <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between max-sm:flex-col max-sm:justify-start max-sm:items-center">
