@@ -46,11 +46,11 @@ export default function Whyus() {
 ];
 
   return (
-    <div className=" py-4 md:py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className=" py-4 md:py-24 bg-gray-50 ">
+      <div className="max-w-6xl mx-auto px-6 py-16 max-sm:py-8 max-sm:px-3">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-lora font-bold text-gray-900 mb-3">
+        <div className="text-center mb-16 max-sm:mb-8">
+          <h1 className="text-5xl font-lora font-bold text-gray-900 mb-3 max-sm:text-2xl">
             Why Choose <span className="text-teal-600">TGF?</span>
           </h1>
           

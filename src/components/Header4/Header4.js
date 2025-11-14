@@ -47,12 +47,12 @@ const partnerMenu = [
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed w-full top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 px-8"
+        className="fixed w-full top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 px-8 max-sm:px-2"
       >
         <div className="max-w-[1391px] mx-auto px-4 pl-0 flex items-center h-20 ">
           <div className=' h-20 mr-auto'>
-           <a href='/' className='flex flex-row px-2 justify-center items-center mt-3  ml-8'><Image src="/image/Towards Green Future (6).png" alt="TGF Logo" width={71} height={70} className="object-contain  mr-auto px-2 "/>
-            <p className='text-[15px] font-outfit text-left text-[#111] w-max leading-[18px] whitespace-nowrap'>TOWARDS GREEN {/* <br /> */} FUTURE ( TGF )</p>
+           <a href='/' className='flex flex-row px-2 justify-center items-center mt-3  ml-8 max-sm:ml-0'><Image src="/image/Towards Green Future (6).png" alt="TGF Logo" width={71} height={70} className="object-contain  mr-auto px-2  "/>
+            <p className='text-[15px] font-outfit text-left text-[#111] w-max leading-[18px] whitespace-nowrap max-sm:hidden' >TOWARDS GREEN {/* <br /> */} FUTURE ( TGF )</p>
            </a> 
           </div>
           <div className="flex justify-between items-center h-20">
@@ -91,7 +91,7 @@ const partnerMenu = [
 
               <motion.a 
               
-                className="flex text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group"
+                className="flex text-gray-800 text-sm font-medium font-outfit hover:text-teal-600 px-4 py-2 transition-colors relative group "
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
                   onMouseEnter={() => toggleDropdown('partners')}
@@ -101,7 +101,7 @@ const partnerMenu = [
                     animate={{ rotate: activeDropdown === 'partners' ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 ml-1 mt-[2px]" />
                   </motion.div>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
@@ -278,7 +278,7 @@ const partnerMenu = [
 
                 <div>
                   <motion.button
-                    onClick={() => toggleDropdown(activeDropdown === 'mobile-partners' ? null : 'mobile-services')}
+                    onClick={() => toggleDropdown(activeDropdown === 'mobile-partners' ? null : 'mobile-partners')}
                     className="w-full text-left text-gray-700 font-outfit hover:text-teal-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
                     whileHover={{ x: 5 }}
                   >

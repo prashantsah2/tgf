@@ -6,20 +6,20 @@ export default function Hero5() {
   
   const slides = [
     {
-      title: <p>Go Green Grow Strong, <br/><span className='text-[21px]'>E+ Certification</span></p>,
+      title: <p>Go Green ,Grow Strong <br/><span className='text-[21px] max-sm:text-[14px]'>E+ Certification</span></p>,
       subtitle: <p>Sustainability Reporting</p>,
       image:'/image/E.png',
       path:'services/e+certification'
     },
  
     {
-      title: <p>Go Green Grow Strong,<br/><span className='text-[21px]'> Chapter MSME</span></p>,
+      title: <p>Go Green, Grow Strong<br/><span className='text-[21px] max-sm:text-[14px]'> Chapter MSME</span></p>,
       subtitle: "Understanding environmental impact",
       image:'/image/Chapter MSME-min.png',
         path:'services/chapter-msme'
     },
     {
-      title: <p>Go Green Grow Strong,<br/><span className='text-[21px]'> Chapter Educational Institute</span></p>,
+      title: <p>Go Green, Grow Strong<br/><span className='text-[21px] max-sm:text-[14px]'> Chapter Educational Institute</span></p>,
       subtitle: <p>Comprehensive analysis</p>,
       image:'/image/Untitled design (30).png',
         path:'services/young-learners'

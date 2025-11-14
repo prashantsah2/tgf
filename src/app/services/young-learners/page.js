@@ -58,12 +58,12 @@ export default function SustainabilityLanding() {
       <div className="">
         {/* Hero Section */}
         <motion.section
-          className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full"
+          className="pt-24 pb-32 px-6 border-b border-gray-200 bg-teal-500 min-h-screen h-full max-sm:px-3"
           {...fadeIn}
         >
-          <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between">
+          <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between max-sm:flex-col max-sm:justify-start max-sm:items-center">
             <div className="text-left h-full flex flex-col justify-between items-start">
-              <h1 className="text-5xl max-sm:3xl font-bold font-lora  mb-2 text-white leading-tight">
+              <h1 className="text-5xl max-sm:text-2xl font-bold font-lora  mb-2 text-white leading-tight">
                  Young learners Program
               </h1>
               <p className="text- text-[#fff]">
@@ -92,7 +92,7 @@ export default function SustainabilityLanding() {
                 sustainable future.
               </p>
 
-              <p className="text text-2xl mt-12 font-italic font-outfit text-white">
+              <p className="text text-2xl mt-12 font-italic font-outfit text-white  max-sm:mr-auto max-sm:mt-6">
                 Initiated by TGF
                  <div className='flex flex-row w-full'>
               <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mx-auto rounded-lg mt-4' />
@@ -100,14 +100,14 @@ export default function SustainabilityLanding() {
               </p>
             </div>
 
-            <div className="flex flex-col justify-end items-end h-full mt-4">
+            <div className="flex flex-col justify-end items-end h-full mt-4 max-sm:mt-6 max-sm:items-start max-sm:w-full">
               <p className="text-2xl text-white mr-2">Lead Program Partner</p>
-              <div className="flex flex-row mx-auto">
+              <div className="flex flex-row mx-auto max-sm:mx-0">
                 <Image
                   src={`/image/enenwhite.png`}
                   width={211}
                   height={211}
-                  className="w-[121px]"
+                  className="w-[121px] mx-auto max-sm:mx-0"
                 />
               </div>
             </div>
@@ -134,15 +134,15 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* Benefits Section */}
         <motion.section
-          className="py-24 px-6 border-b border-gray-200"
+          className="py-24 px-6 border-b border-gray-200 max-sm:px-3 max-sm:py-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           <div className="max-w-[1371px] mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-center max-sm:gap-8">
               <div>
-                <h2 className="text-3xl font-lora font-bold mb-12 text-gray-900">
+                <h2 className="text-3xl font-lora font-bold mb-12 text-gray-900 max-sm:mb-6">
                   {`Why  `}
                   <span className="text-green-600">Join </span>
                 </h2>
@@ -153,11 +153,11 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
                       className="w-6 h-6 text-green-600 flex-shrink-0 mt-1"
                       strokeWidth={2}
                     />
-                    <p className="text-base text-gray-700 leading-relaxed">
+                    <p className="text-base text-gray-700 leading-relaxed max-sm:text-sm">
                       Transform curiosity into climate leadership.
                     </p>
                   </div>
-                  <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl">
+                  <div className="flex gap-4 p-6 border-2 border-gray-200 rounded-xl max-sm:text-sm">
                     <Check
                       className="w-6 h-6 text-green-600 flex-shrink-0 mt-1"
                       strokeWidth={2}
@@ -171,7 +171,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
                       className="w-6 h-6 text-green-600 flex-shrink-0 mt-1"
                       strokeWidth={2}
                     />
-                    <p className="text-base text-gray-700 leading-relaxed">
+                    <p className="text-base text-gray-700 leading-relaxed max-sm:text-sm">
                       Lead with purpose, not just profit.
                     </p>
                   </div>
@@ -198,17 +198,17 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* CTA Section */}
         <motion.section
-          className="py-24 px-6 border-b border-gray-200"
+          className="py-24 px-6 border-b border-gray-200 max-sm:px-8 max-sm:px-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold font-lora mb-8 text-gray-900 leading-relaxed">
+            <h2 className="text-3xl font-bold font-lora mb-8 text-gray-900 leading-relaxed max-sm:text-2xl max-sm:mb-2">
               Take the first step towards a{" "}
               <span className="text-blue-600">greener future</span>
             </h2>
-            <p className="text-base text-gray-600 mb-12 leading-relaxed">
+            <p className="text-base text-gray-600 mb-12 leading-relaxed max-sm:text-sm ">
               Collaborate with us or book a group session today let’s create a
               greener tomorrow, together”
             </p>
@@ -217,7 +217,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClickCapture={scrollToSection}
-              className="px-10 py-4 bg-green-600 text-white text-base font-medium rounded-lg hover:bg-green-700 transition-colors border-2 border-green-600"
+              className="px-10 py-4 bg-green-600 text-white text-base font-medium rounded-lg hover:bg-green-700 transition-colors border-2 border-green-600 nax-sm:px-6 max-sm:py-3 max-sm:text-sm"
             >
               Book Free Consultation
             </motion.button>
@@ -226,13 +226,13 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* FAQ Section */}
         <motion.section
-          className="py-24 px-6 border-b border-gray-200"
+          className="py-24 px-6 border-b border-gray-200 max-sm:px-3 max-sm:py-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-lora font-bold mb-16 text-center text-gray-900">
+            <h2 className="text-3xl font-lora font-bold mb-16 text-center text-gray-900 max-sm:text-2xl max-sm:mb-8">
               Frequently Asked <span className="text-blue-600">Questions</span>
             </h2>
 
@@ -245,9 +245,9 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
+                    className="w-full px-8 py-6 flex justify-between items-center hover:bg-gray-50 transition-colors max-sm:px-4 max-sm:py-3"
                   >
-                    <span className="text-base text-gray-900 text-left font-medium">
+                    <span className="text-base text-gray-900 text-left font-medium max-sm:text-sm">
                       {faq.q}
                     </span>
                     <motion.div
@@ -270,8 +270,8 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-6 border-t-2 border-gray-200 pt-6">
-                      <p className="text-base text-gray-600 leading-relaxed">
+                    <div className="px-8 pb-6 border-t-2 border-gray-200 pt-6 max-sm:px-4 max-sm:pb-4 max-sm:pt-4">
+                      <p className="text-base text-gray-600 leading-relaxed max-sm:text-sm">
                         {faq.a}
                       </p>
                     </div>
@@ -283,7 +283,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
         </motion.section>
 
         {/* Footer */}
-        <section id="form" className="py-16 px-6">
+        <section id="form" className="py-16 px-6 max-sm:px-6 max-sm:py-8">
           <QueryForm4 />
         </section>
       </div>

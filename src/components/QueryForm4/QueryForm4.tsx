@@ -137,7 +137,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 
   return (
-    <main className="min-h-screen bg-white px-4 py-16 w-full max-w-[1371px] mx-auto ml-24">
+    <main className="min-h-screen bg-white px-4 py-16 w-full max-w-[1371px] mx-auto max-sm:px-0">
       <div className="max-w-[1371px]  w-full">
         {/* Header */}
         <motion.div
@@ -150,7 +150,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-teal-500 rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form Section */}
           <motion.div className="lg:col-span-2" variants={containerVariants} initial="hidden" animate="visible">
             <motion.div variants={itemVariants} className="mb-8">
@@ -298,13 +298,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             </motion.form>
           </motion.div>
 
-          {/* Contact Info Section */}
-          <motion.div className="space-y-8 mb-[-24px]" variants={containerVariants} initial="hidden" animate="visible">
-            {/* Call Us */}
-           
-
-            
-          </motion.div>
+        
 
           <motion.div className="text-md bg-[#222] mt-[-24px] w-[121px] cursor-pointer text-white font-outfit rounded-sm px-5 py-2 flex justify-center items-center "
            

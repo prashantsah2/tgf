@@ -36,10 +36,10 @@ export default function AboutMain() {
       {/* Why Choose Section */}
   
       {/* About Us Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold font-lora text-gray-900 mb-3">
+      <div className="bg-gray-50 py-16 max-sm:py-8">
+        <div className="max-w-6xl mx-auto px-6 max-sm:px-3">
+          <div className="text-center mb-16 max-sm:mb-4">
+            <h2 className="text-5xl max-sm:text-2xl font-bold font-lora text-gray-900 mb-3">
               About <span className="text-teal-600">Us</span>
             </h2>
             {/* <p className="text-gray-600">

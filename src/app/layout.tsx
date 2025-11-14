@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Layout } from "@/components";
 import Image from "next/image";
+import Email from "@/components/Email/Email";
+import { Mail } from "lucide-react";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -62,19 +64,14 @@ export default function RootLayout({
        
         </Layout>
          <div style={{ position: "fixed", bottom: "99px", right: "40px", zIndex: 1000,borderRadius: "51%",cursor: "pointer" }}>
-          <a href="tel:918826612805" target="_blank">
-           <Image src={"/image/call icon.png"} alt="whatsapp" width={41} height={41} className="object-cover rounded-full" />
-
+          <a href="mailto:info@towardsgreenfuture.com" target="_blank" rel="noopener noreferrer" >
+            <Mail size={44} color="#0a06ce" className="rounded-full bg-[#fff] p-2 " />
           </a>
-          
        </div>
 
         <div style={{ position: "fixed", bottom: "40px", right: "40px", zIndex: 1000, borderRadius: "50%",cursor: "pointer" }}>
           
-           <a href="https://wa.me/919818793773" target="_blank">
-         <Image src={"/image/whatsapp.png"} alt="whatsapp" width={41} height={41} className="object-cover" />
         
-        </a>
         
        </div>
 
