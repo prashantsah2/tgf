@@ -14,9 +14,9 @@ export default function OptionsInfographic() {
 
   return (
       <><Header4 />
-      <div className='flex flex-col justify-center items-center min-h-screen w-screen overflow-hidden scrollbar-hide scrollbar-width: none;'>
+      <div className='flex flex-col justify-center items-center min-h-screen overflow-hidden scrollbar-hide scrollbar-width: none;'>
     
-    <div className="relative w-full h-screen  overflow-x-hidden " >
+    <div className="relative w-full h-screen  overflow-x-hidden max-sm:w-screen" >
       <video
         autoPlay
         loop
