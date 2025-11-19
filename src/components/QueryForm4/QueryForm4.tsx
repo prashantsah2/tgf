@@ -110,7 +110,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       subscribe: false,
       type:'query4',
       terms: false,
-      title:title
+      title:"TGF-educational"
     });
     setTimeout(() => setSubmitted(false), 3000);
   } catch (error: any) {
