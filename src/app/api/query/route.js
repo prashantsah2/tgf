@@ -15,11 +15,13 @@ export async function POST(req) {
     subscribe,
      InstitutionName,
       yourAssociation,
+      title,
       designatedAuthority ,
-    terms,} = await req.json();
+    terms,type} = await req.json();
 
 
-    
+    console.log('type isssssssss',type)
+
     if (!name || !email || !message) {
       return Response.json({ error: "Missing fields" }, { status: 400 });
     }
@@ -39,7 +41,7 @@ export async function POST(req) {
     const mailOptions = {
       from: `"Website Contact" <${process.env.SMTP_USER}>`,
       to: recipients,
-      subject: type=='query2'?"New Query Submission For Young Learners":"New Query Submission For Contact Page ",
+      subject:`${title}`,
       text: type=='query2'? `
       Name: ${name}
       Email: ${email}

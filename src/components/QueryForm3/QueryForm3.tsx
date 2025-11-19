@@ -6,7 +6,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Phone, MapPin, Check, Loader2 } from "lucide-react"
 
-export default function QueryForm3() {
+export default function QueryForm3({ title }: { title: string }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,6 +19,7 @@ export default function QueryForm3() {
     message: "",
     subscribe: false,
     terms: false,
+    title:title
   })
 
   const [submitted, setSubmitted] = useState(false)
@@ -108,6 +109,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       type:'query2',
       subscribe: false,
       terms: false,
+      title:title
     });
     setTimeout(() => setSubmitted(false), 3000);
   } catch (error: any) {

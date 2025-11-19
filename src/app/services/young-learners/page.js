@@ -284,7 +284,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* Footer */}
         <section id="form" className="py-16 px-6 max-sm:px-6 max-sm:py-8">
-          <QueryForm4 />
+          <QueryForm4 title='TGF-EDUCATIONAL-INSTITUTE' />
         </section>
       </div>
       <Footer3 />
