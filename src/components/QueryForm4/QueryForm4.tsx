@@ -6,7 +6,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Phone, MapPin, Check, Loader2 } from "lucide-react"
 
-export default function QueryForm3(title:{type:string}) {
+export default function QueryForm3() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +20,7 @@ export default function QueryForm3(title:{type:string}) {
     type:'query4',
     subscribe: false,
     terms: false,
-    title:title
+    title:"TGF-EDUCATIONAL"
   })
 
   const [submitted, setSubmitted] = useState(false)

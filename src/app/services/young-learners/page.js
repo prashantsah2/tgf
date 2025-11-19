@@ -17,7 +17,7 @@ import Footer3 from "@/components/Footer3/Footer3";
 import QueryForm4 from "@/components/QueryForm4/QueryForm4";
 import Image from "next/image";
 
-export default function SustainabilityLanding() {
+export default function SustainabilityLanding({title}) {
   const [openFaq, setOpenFaq] = useState(null);
 
   const fadeIn = {
@@ -284,7 +284,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
 
         {/* Footer */}
         <section id="form" className="py-16 px-6 max-sm:px-6 max-sm:py-8">
-          <QueryForm4 title='TGF-EDUCATIONAL-INSTITUTE' />
+          <QueryForm4  />
         </section>
       </div>
       <Footer3 />
