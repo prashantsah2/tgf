@@ -17,7 +17,7 @@ import Footer3 from "@/components/Footer3/Footer3";
 import QueryForm4 from "@/components/QueryForm4/QueryForm4";
 import Image from "next/image";
 
-export default function SustainabilityLanding({title}) {
+export default function SustainabilityLanding() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const fadeIn = {
