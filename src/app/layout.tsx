@@ -13,9 +13,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Green Farm House",
+  title: "Towards Green Future",
   description:
-    'Experience the ultimate luxury and comfort in our green farmhouse.',
+    'Towards Green Future (TGF) is a non-profit organization committed to fostering sustainable growth, promoting climate awareness, and driving environmental responsibility across communities',
 };
 
 export default function RootLayout({
