@@ -280,7 +280,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
         
 
         {/* CTA Section */}
-        <motion.section
+      {/*   <motion.section
           className="py-24 px-6 border-b border-gray-200 max-sm:px-8 max-sm:px-3 bg-[##f9f9f9]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -293,8 +293,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
               <span className="text-blue-600"> to get E+ Certified, </span>
             </h2>
             <p className="text-base text-gray-600 mb-12 leading-relaxed max-sm:text-sm ">
-             {/*  Collaborate with us or book a group session today let’s create a
-              greener tomorrow, together */}
+             
             </p>
 
             <motion.button
@@ -306,7 +305,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
               Fill form
             </motion.button>
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* FAQ Section */}
         <motion.section

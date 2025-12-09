@@ -335,6 +335,8 @@ export default function QueryForm5({ title }: { title: string }) {
                     placeholder="your organization name"
                   /> */}
                   <select
+                   value={formData.aoa}
+                   onChange={handleChange}
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
                       errors.companyName
                         ? "border-red-500 focus:border-red-500"
@@ -377,7 +379,7 @@ export default function QueryForm5({ title }: { title: string }) {
 
               <motion.div>
                 <div>
-                  {formData.aoa === "Other" && (
+                  {formData.aoa == "Other" && (
                     <input
                       type="text"
                       name="aoaOther"
