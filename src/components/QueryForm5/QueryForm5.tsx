@@ -283,8 +283,8 @@ export default function QueryForm5({ title }: { title: string }) {
                     <span className="text-sm font-outfit text-red-800">*</span>
                   </label>
                   <input
-                    type="tel"
-                    name="phone"
+                    type="text"
+                    name="address"
                     value={formData.companyAddress}
                     onChange={handleChange}
                     className={`w-full px-0 py-2 border-b-2 focus:outline-none bg-transparent text-slate-900 transition-colors placeholder-slate-400 ${
@@ -292,7 +292,7 @@ export default function QueryForm5({ title }: { title: string }) {
                         ? "border-red-500 focus:border-red-500"
                         : "border-slate-300 focus:border-teal-500"
                     }`}
-                    placeholder="(123) 456-7890"
+                    placeholder="your organization address"
                   />
                   {errors.phone && (
                     <p className="text-red-500 text-xs mt-1">
@@ -300,13 +300,19 @@ export default function QueryForm5({ title }: { title: string }) {
                     </p>
                   )}
                 </div>
+                <div>
+
+                <label className="block text-sm font-semibold text-slate-900 mb-2">
+                    Pincode{" "}
+                    <span className="text-sm font-outfit text-red-800">*</span>
+                  </label>
 
                 <input
                   type="text"
                   name="pincode"
                   value={formData.pincode || ""}
                   onChange={handleChange}
-                  className={`w-full px-0 py-2 mt-4 border-b-2 focus:outline-none bg-transparent text-slate-900 ${
+                  className={`w-full px-0 py-2  border-b-2 focus:outline-none bg-transparent text-slate-900 ${
                     errors.pincode
                       ? "border-red-500 focus:border-red-500"
                       : "border-slate-300 focus:border-teal-500"
@@ -316,6 +322,8 @@ export default function QueryForm5({ title }: { title: string }) {
                 {errors.pincode && (
                   <p className="text-red-500 text-xs mt-1">{errors.pincode}</p>
                 )}
+
+                </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-900 mb-2">
@@ -344,17 +352,17 @@ export default function QueryForm5({ title }: { title: string }) {
                     }`}
                     name="aoa"
                   >
-                    <option>Environment</option>
-                    <option>Social,</option>
-                    <option> Climate Change impact</option>
-                    <option> others</option>
+                    <option value={'Environment'}>Environment</option>
+                    <option value={'Social'}>Social</option>
+                    <option value={'Climate Change impact'}>Climate Change impact</option>
+                    <option value={'Others'}>Others</option>
                   </select>
                   {errors.companyName && (
                     <p className="text-red-500 text-xs mt-1">{errors.aoa}</p>
                   )}
                 </div>
                 <div>
-                  {formData.aoa === "Other" && (
+                  {formData.aoa == "Others" && (
                     <input
                       type="text"
                       name="aoaOther"

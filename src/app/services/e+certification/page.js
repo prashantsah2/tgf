@@ -28,24 +28,34 @@ export default function SustainabilityLanding() {
   };
 
 
+
+
+
+
+
+
+
+
+
+
   
 
   const faqs = [
   {
-    "q": "Is this program only for college or university students?",
-    "a": "No. This initiative is open to colleges, universities, training institutes, and youth-led communities. It is designed for students and young individuals interested in sustainability, climate change, and future-ready leadership skills."
+    "q": "Is this Certification free?",
+    "a": "Yes, the certification is completely free of cost. This initiative by Towards Green Future is designed to help businesses explore sustainability opportunities without any financial commitment."
   },
   {
-    "q": "Is there any fee, and are we required to take any paid services afterward?",
-    "a": "No. All sessions, workshops, and lectures are completely free of cost. This program is purely educational and awareness-based. Institutions or students are under no obligation to subscribe to any paid service or certification after the session."
+    "q": "Is this just a certificate or do I get anything else?",
+    "a": "No, it's not just a certificate that you would get at the end of the evaluation, if we find your initiative to have a larger impact we would develop a detailed case study which will be published on our website and also promoted by TGF. For all evaluations we would be sharing a two pager report as well.  "
   },
   {
-    "q": "What is the mode of the session—online or offline?",
-    "a": "Sessions can be conducted in both online and offline formats. The mode of delivery depends on factors such as the institution’s location, the number of participants, and the overall interest."
+    "q": "I believe I will not charge anything even if I am based anywhere in India?",
+    "a": "TGF will bear all the cost of the certification, verifier and other charges if your sustainability or climate change action makes its way through our initial assessment. "
   },
   {
-    "q": "Can the session be scheduled on a different date if required?",
-    "a": "Yes. If the proposed date is not suitable, institutions can reschedule the meeting through our booking form. You may also request an alternative slot via email. Our team will coordinate and arrange the session at a mutually convenient time for both faculty and students."
+    "q": "How will this help me? ",
+    "a": "Currently, organizations are spending enormously to showcase their action towards sustainability, we would help you validate your effort in terms of impact and also provide an additional platform to showcase and promote your sustainability efforts."
   }
 ]
 
@@ -67,9 +77,10 @@ export default function SustainabilityLanding() {
         >
           <div className="max-w-[1371px] mx-auto h-full flex flex-row justify-between max-sm:flex-col max-sm:justify-start max-sm:items-center">
             <div className="text-left h-full flex flex-col justify-between items-start">
-              <h1 className="text-2xl max-sm:text-2xl font-bold font-lora  mb-2 text-white leading-tight">
-              E+ Statement Recognizing Voluntary Sustainability Excellence
+              <h1 className="text-2xl sm:text-5xl font-bold font-lora  mb-2 text-white leading-tight">
+              E+ Statement 
               </h1>
+              <p className="max-w-2xl text-white mb-4">Recognizing Voluntary Sustainability Excellence</p>
               <p className="text- text-[#fff] max-w-3xl">
            {`  E+ Statement is a verified recognition statement that highlights and validates a company or an individual's sustainability actions, achievements, and initiatives that are voluntary, self-driven, and exceed compliance expectations.`}
               </p>
@@ -84,22 +95,22 @@ export default function SustainabilityLanding() {
 `}
               </p>
 
-              <p className="text text-2xl mt-12 font-italic font-outfit text-white  max-sm:mr-auto max-sm:mt-6">
+              <p className="text text-sm mt-12 font-italic font-outfit text-white  max-sm:mr-auto max-sm:mt-6">
                 Initiated by TGF
                  <div className='flex flex-row w-full'>
-              <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mx-auto rounded-lg mt-4' />
+              <Image src={`/image/tgf (2).png`} width={211} height={211} className='w-[71px] mr-auto rounded-lg mt-4' />
             </div>
               </p>
             </div>
 
             <div className="flex flex-col justify-end items-end h-full mt-4 max-sm:mt-6 max-sm:items-start max-sm:w-full">
-              <p className="text-2xl text-white mr-2">Lead Program Partner</p>
-              <div className="flex flex-row mx-auto max-sm:mx-0">
+             {/*  <p className="text-2xl text-white mr-2">Lead Program Partner</p> */}
+              <div className="flex flex-row mx-auto max-sm:mx-0 mt-[-25px]">
                 <Image
-                  src={`/image/enenwhite.png`}
+                  src={`https://res.cloudinary.com/dgxiftsm0/image/upload/v1765359124/Untitled_design_60_r663sw.png`}
                   width={211}
                   height={211}
-                  className="w-[121px] mx-auto max-sm:mx-0"
+                  className="w-[121px] lg:w-[221px] mx-auto max-sm:mx-0"
                 />
               </div>
             </div>
@@ -203,7 +214,7 @@ Discover how reducing carbon emissions, improving resource efficiency, and align
                 </div>
               </div>
 
-              <div className=" border-gray-200 h-96 rounded-xl flex items-center justify-center">
+              <div className=" border-gray-200  rounded-xl flex items-center justify-center mt-6 md:mt-0">
                 <div>
                 <h2 className="text-3xl font-lora font-bold mb-12 text-gray-900 max-sm:mb-6">
                   {`How 
